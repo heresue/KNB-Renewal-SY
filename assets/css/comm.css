@@ -464,12 +464,11 @@ legend {
   background: #e0e0e0;
 }
 
-.main-visual {
-<<<<<<< HEAD
+.main-visual-sub1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/images/sub1/main-visual/background.jpg);
   background-size: cover;
 }
-.main-visual .txt-wrap {
+.main-visual-sub1 .txt-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -479,9 +478,10 @@ legend {
   align-items: center;
   flex-direction: column;
 }
-.main-visual .content {
+.main-visual-sub1 .content {
   margin-top: 25px;
-=======
+}
+
+.main-visual {
   background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
->>>>>>> 2d15c21eb4b862f45457e8fd4463e18caa0c2ada
 }/*# sourceMappingURL=comm.css.map */
