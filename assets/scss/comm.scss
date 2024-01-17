@@ -47,20 +47,41 @@
   .sub-tit {
     @include web-tit(28px);
   }
-  .content {
+  .content,
+  .side-bar-li {
     @include web-bd(18px);
   }
   .main-visual {
     .inner {
       @include flexCenter;
+      height: calc(100% - 70px);
+      padding: 0;
+      .txt-wrap {
+        @include flexCenter;
+        flex-direction: column;
+        gap: 12px;
+        .sub-tit {
+          @include web-bd(20px);
+        }
+      }
     }
-  }
-  .mv-txt-wrap {
-    @include flexCenter;
-    flex-direction: column;
-    gap: 12px;
-    .sub-tit {
-      @include web-bd(20px);
+    .side-bar-wrap {
+      height: 70px;
+      padding-left: 80px;
+      .side-bar {
+        @include flexCenter(flex-start);
+      }
+      .side-bar-li {
+        display: block;
+        width: 124px;
+        height: 43px;
+        line-height: 43px;
+        text-align: center;
+        &.active {
+          background: $secondary;
+          border-radius: 43px;
+        }
+      }
     }
   }
 }
