@@ -14,21 +14,27 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 420px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
+  // margin-left: 5.556vw;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .wrap {
-    max-width: none;
+    margin: 0 auto;
+    max-width: 420px;
   }
 }
 #header {
   height: $hd-height;
 }
+.sec {
+  height: 100vh;
+}
 .inner {
-  max-width: 1280px;
+  height: 100%;
+  padding: 6.944vw 5.556vw;
   margin: 0 auto;
-  padding: 0 20px;
+  // max-width: 1280px;
 }
 #main {
   flex-grow: 1;
@@ -39,7 +45,7 @@
 #footer {
   height: $ft-height;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .inner {
     padding: 0;
   }
@@ -53,7 +59,7 @@
 #header {
   .inner {
     // @include flexSpaceBetween;
-    @include flex(space-between);
+    // @include flex(space-between);
     height: $hd-height;
     background-color: $gray-500;
   }
@@ -63,23 +69,20 @@
   justify-content: space-between;
   flex-direction: row-reverse;
 }
-.gnb-wrap {
-  // display: none;
-}
 
 .util {
   ul {
-    @include flexSpaceBetween;
+    // @include flexSpaceBetween;
     height: 100%;
   }
   .link-g {
-    @include flexSpaceBetween;
+    // @include flexSpaceBetween;
     height: $hd-height;
     &::before {
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
-      @include flex;
-      @include icon;
+      // @include flex;
+      // @include icon;
     }
   }
   .link-lang {

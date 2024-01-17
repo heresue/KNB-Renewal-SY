@@ -133,8 +133,9 @@ input {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: $font-family, "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-family: $font-family;
   color: $txtDefult;
+  background-color: $primary;
 }
 
 /* desktop */
