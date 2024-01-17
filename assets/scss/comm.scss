@@ -25,21 +25,44 @@
   }
 }
 #header {
+  position: fixed;
   height: $hd-height;
-}
-.sec {
-  height: 100vh;
-}
-.inner {
-  height: 100%;
-  padding: 6.944vw 5.556vw;
-  margin: 0 auto;
-  // max-width: 1280px;
 }
 #main {
   flex-grow: 1;
   // min-height: cal(100vh - $hd-height - $ft-height);
   // main에 min-height를 줌으로써 항상 풋터가 바닥에 붙어있게 설정
+  .sec {
+    height: 100vh;
+  }
+  .inner {
+    height: 100%;
+    padding: 6.944vw 5.556vw;
+    margin: 0 auto;
+    // max-width: 1280px;
+  }
+  .tit {
+    @include web-tit;
+  }
+  .sub-tit {
+    @include web-tit(28px);
+  }
+  .content {
+    @include web-bd(18px);
+  }
+  .main-visual {
+    .inner {
+      @include flexCenter;
+    }
+  }
+  .mv-txt-wrap {
+    @include flexCenter;
+    flex-direction: column;
+    gap: 12px;
+    .sub-tit {
+      @include web-bd(20px);
+    }
+  }
 }
 
 #footer {
