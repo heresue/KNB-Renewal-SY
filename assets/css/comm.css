@@ -464,6 +464,7 @@ legend {
   background: #e0e0e0;
 }
 
+<<<<<<< HEAD
 .main-visual-sub1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(/images/sub1/main-visual/background.jpg);
   background-size: cover;
@@ -483,5 +484,66 @@ legend {
 }
 
 .main-visual {
+=======
+.main-visual-sub2 {
+>>>>>>> 09e44fedbf27c6f9153fcad0938743e5ec91e50a
   background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
+}
+
+.performance-info .inner {
+  padding: 0 !important;
+}
+.performance-info .tit-page {
+  height: 100vh;
+  padding: 6.944vw 5.556vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.performance-info .tit-page .txt-wrap {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.performance-info .tit-page .tit {
+  margin-right: 12px;
+}
+.performance-info .tit-page .behind-tit {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  font-size: 140px;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #fff;
+  letter-spacing: -7px;
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+}
+.performance-info .poster {
+  height: 100vh;
+  padding: 0;
+}
+.performance-info .poster-1 {
+  background: conic-gradient(from -43deg at 44.72% 48.26%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.89%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 50%/cover;
+}
+.performance-info .poster-2 {
+  background: conic-gradient(from -42deg at 44.48% 50.03%, rgba(0, 0, 0, 0.5) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.88%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0.3) 208.1094431877deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 50%/cover;
+}
+.performance-info .poster-3 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 50%/cover;
+}
+.performance-info .poster-4 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-4.jpg) no-repeat 50% 50%/cover;
+}
+.performance-info .poster-5 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 50%/cover;
+}
+.performance-info .poster-6 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-6.jpg) no-repeat 50% 50%/cover;
 }/*# sourceMappingURL=comm.css.map */
