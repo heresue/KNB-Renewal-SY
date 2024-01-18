@@ -51,12 +51,14 @@ q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
+blockquote:before,
+blockquote:after {
   content: "";
   content: none;
 }
 
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -86,11 +88,14 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type=text], input[type=password], input[type=submit], input[type=search] {
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="search"] {
   -webkit-appearance: none;
   border-radius: 0;
 }
-input:checked[type=checkbox] {
+input:checked[type="checkbox"] {
   background-color: #666;
   -webkit-appearance: checkbox;
 }
@@ -100,11 +105,14 @@ button {
   border-radius: 0;
 }
 
-input[type=button], input[type=submit], input[type=reset], input[type=file] {
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"] {
   -webkit-appearance: button;
   border-radius: 0;
 }
-input[type=search]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -113,7 +121,10 @@ input[type=search]::-webkit-search-cancel-button {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", "Pretendard", "-apple-system",
+    "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #fff;
   background-color: #000;
 }
@@ -129,7 +140,8 @@ a {
   color: #fff;
   text-decoration: none;
 }
-a:active, a:hover {
+a:active,
+a:hover {
   text-decoration: none;
 }
 
@@ -148,7 +160,7 @@ hr {
   display: none;
 }
 
-input[type=password] {
+input[type="password"] {
   font-family: "Malgun Gothic";
 }
 
@@ -464,64 +476,6 @@ legend {
   background: #e0e0e0;
 }
 
-.main-visual-sub2 {
-  background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
-}
-
-.performance-info .inner {
-  padding: 0 !important;
-}
-.performance-info .tit-page {
-  height: 100vh;
-  padding: 6.944vw 5.556vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.performance-info .tit-page .txt-wrap {
-  display: flex;
-  align-items: baseline;
-  position: relative;
-}
-.performance-info .tit-page .tit {
-  margin-right: 12px;
-}
-.performance-info .tit-page .behind-tit {
-  font-family: "Source Sans 3", sans-serif;
-  font-weight: 700;
-  font-size: 140px;
-  letter-spacing: normal;
-  line-height: normal;
-  color: #fff;
-  letter-spacing: -7px;
-  position: absolute;
-  top: -100px;
-  left: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: -1;
-}
-.performance-info .poster {
-  height: 100vh;
-  padding: 0;
-}
-.performance-info .poster-1 {
-  background: conic-gradient(from -43deg at 44.72% 48.26%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.89%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 50%/cover;
-}
-.performance-info .poster-2 {
-  background: conic-gradient(from -42deg at 44.48% 50.03%, rgba(0, 0, 0, 0.5) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.88%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0.3) 208.1094431877deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 50%/cover;
-}
-.performance-info .poster-3 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 50%/cover;
-}
-.performance-info .poster-4 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-4.jpg) no-repeat 50% 50%/cover;
-}
-.performance-info .poster-5 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 50%/cover;
-}
-.performance-info .poster-6 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-6.jpg) no-repeat 50% 50%/cover;
-}/*# sourceMappingURL=comm.css.map */
+.before-monthly-schedule .highlight-tit {
+  font-family: "Telex", sans-serif;
+} /*# sourceMappingURL=comm.css.map */
