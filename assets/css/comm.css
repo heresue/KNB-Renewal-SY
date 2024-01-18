@@ -283,7 +283,7 @@ legend {
 }
 #main .inner {
   height: 100%;
-  padding: 6.944vw 5.556vw;
+  max-width: 1280px;
   margin: 0 auto;
 }
 #main .tit {
@@ -697,6 +697,9 @@ legend {
   background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
 }
 
+.performance-info {
+  margin-bottom: 200px;
+}
 .performance-info .inner {
   padding: 0 !important;
 }
@@ -715,26 +718,36 @@ legend {
 .performance-info .tit-page .tit {
   margin-right: 12px;
 }
-.performance-info .tit-page .behind-tit {
-  font-family: "Source Sans 3", sans-serif;
+.performance-info .poster {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6.944vw 5.556vw;
+  gap: 52px;
+}
+.performance-info .post-tit {
+  display: block;
+  height: 70px;
+  width: 373px;
   font-weight: 700;
-  font-size: 140px;
+  font-size: 40px;
   letter-spacing: normal;
   line-height: normal;
   color: #fff;
-  letter-spacing: -7px;
-  position: absolute;
-  top: -100px;
-  left: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: -1;
+  margin-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
-.performance-info .poster {
-  height: 100vh;
-  padding: 0;
+.performance-info .poster-4 .post-tit {
+  width: 456px;
+}
+.performance-info .post-date,
+.performance-info .post-locate {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
 }
 .performance-info .poster-1 {
   background: conic-gradient(from -43deg at 44.72% 48.26%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.89%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 50%/cover;
@@ -753,4 +766,154 @@ legend {
 }
 .performance-info .poster-6 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-6.jpg) no-repeat 50% 50%/cover;
+}
+
+.before-monthly-schedule::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #d92b2b -27.29%, rgba(217, 43, 43, 0.41) 15.39%, rgba(0, 0, 0, 0) 100.12%);
+  transform: rotate(180deg);
+}
+.before-monthly-schedule .inner {
+  padding: 12.5vw 5.556vw 0 !important;
+}
+.before-monthly-schedule .highlight-tit {
+  font-family: "Telex", sans-serif;
+  font-size: 70px;
+  text-align: right;
+  line-height: 120%;
+  margin-bottom: 11px;
+}
+.before-monthly-schedule .highlight-sub-tit,
+.before-monthly-schedule .arr-down {
+  text-align: right;
+}
+.before-monthly-schedule .arr-down {
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+.before-monthly-schedule .arr-down-icon {
+  transform: rotate(90deg) scale(2);
+}
+
+.monthly-schedule .txt-wrap {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.monthly-schedule .tit {
+  margin-right: 12px;
+}
+
+.chronological-list .txt-wrap {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.chronological-list .tit {
+  margin-right: 12px;
+}
+.chronological-list .scroll-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 112px 0 0;
+}
+.chronological-list .scroll-tit {
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #fff;
+  margin-top: 190px;
+}
+.chronological-list .content {
+  padding: 50px 0;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+.chronological-list .content-4,
+.chronological-list .content-8 {
+  border-bottom: none;
+}
+.chronological-list .cont-txt-wrap {
+  width: 528px;
+}
+.chronological-list .cont-tit {
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.chronological-list .txt-list {
+  display: flex;
+  gap: 72px;
+}
+.chronological-list .txt-list-month {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+}
+.chronological-list .txt-list-cont {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+}
+.chronological-list .more-info {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  height: 59px;
+  width: 47px;
+}
+.chronological-list .more-info .more-icon {
+  position: absolute;
+}
+
+.more-chronological-list .tit {
+  text-align: center;
+}
+.more-chronological-list .date-btn {
+  width: 149px;
+  height: 59px;
+  margin-left: 12px;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.more-chronological-list .date-btn.active {
+  background: #d92b2b;
+  border-color: #d92b2b;
+}
+
+.behind-tit {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
+  font-size: 140px;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #fff;
+  letter-spacing: -7px;
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
 }/*# sourceMappingURL=comm.css.map */
