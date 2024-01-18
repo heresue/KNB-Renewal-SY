@@ -5,7 +5,9 @@
       cover;
 }
 // -----------------------performance-info-----------------------
+
 .performance-info {
+  margin-bottom: 200px;
   .inner {
     padding: 0 !important;
   }
@@ -23,28 +25,38 @@
     .tit {
       margin-right: 12px;
     }
-    .behind-tit {
-      font-family: "Source Sans 3", sans-serif;
-      @include web-tit(140px);
-      letter-spacing: -7px;
-      position: absolute;
-      top: -100px;
-      left: 10px;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.15) 22.61%,
-        rgba(255, 255, 255, 0) 71.86%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      z-index: -1;
-    }
   }
   .poster {
     height: 100vh;
-    padding: 0;
+    // padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6.944vw 5.556vw;
+    gap: 52px;
+    .txt-wrap,
+    .go-to-link {
+      max-width: 1280px;
+      width: 1280px;
+      margin: 0 auto;
+    }
+  }
+  .post-tit {
+    display: block;
+    height: 70px;
+    width: 373px;
+    @include web-tit(40px);
+    margin-bottom: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  }
+  .poster-4 {
+    .post-tit {
+      width: 456px;
+    }
+  }
+  .post-date,
+  .post-locate {
+    @include web-bd(16px);
   }
   .poster-1 {
     background: conic-gradient(
@@ -153,4 +165,180 @@
       url(../../images/sub2/perfermance-info/poster-6.jpg) no-repeat 50% 50% /
         cover;
   }
+}
+// -----------------------before-monthly-schedule-----------------------
+.before-monthly-schedule {
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(
+      90deg,
+      #d92b2b -27.29%,
+      rgba(217, 43, 43, 0.41) 15.39%,
+      rgba(0, 0, 0, 0) 100.12%
+    );
+    transform: rotate(180deg);
+  }
+  .inner {
+    padding: 12.5vw 5.556vw 0 !important;
+  }
+  .highlight-tit {
+    font-family: "Telex", sans-serif;
+    font-size: 70px;
+    text-align: right;
+    line-height: 120%;
+    margin-bottom: 11px;
+  }
+  .highlight-sub-tit,
+  .arr-down {
+    text-align: right;
+  }
+  .arr-down {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 50px;
+  }
+  .arr-down-icon {
+    transform: rotate(90deg) scale(2);
+  }
+}
+// -----------------------monthly-schedule-----------------------
+.monthly-schedule {
+  .txt-wrap {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+  .tit {
+    margin-right: 12px;
+  }
+}
+// -----------------------chronological-list-----------------------
+.chronological-list {
+  .txt-wrap {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+  .tit {
+    margin-right: 12px;
+  }
+  .scroll-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 112px 0 0;
+  }
+  .scroll-tit {
+    @include web-tit(80px);
+    margin-top: 190px;
+  }
+  .content {
+    padding: 50px 0;
+    border-bottom: solid 1px $txtSub2;
+    position: relative;
+  }
+  .content-4,
+  .content-8 {
+    border-bottom: none;
+  }
+  .cont-txt-wrap {
+    width: 528px;
+  }
+  .cont-tit {
+    display: block;
+    @include web-tit(32px);
+    margin-bottom: 20px;
+  }
+  .txt-list {
+    display: flex;
+    gap: 72px;
+  }
+  .txt-list-month {
+    @include web-bd(28px);
+    color: $txtSub1;
+  }
+  .txt-list-cont {
+    @include web-bd(18px);
+    color: $txtSub1;
+  }
+  .more-info {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 59px;
+    width: 47px;
+
+    .more-icon {
+      position: absolute;
+    }
+  }
+}
+// -----------------------more-chronological-list-----------------------
+.more-chronological-list {
+  .tit {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .date-btn-wrap {
+    text-align: center;
+  }
+  .date-btn {
+    width: 149px;
+    height: 59px;
+    margin-left: 12px;
+    // padding: 124px 63px;
+    color: $primaryWhite;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    &.active {
+      background: $secondary;
+      border-color: $secondary;
+    }
+  }
+  .contents-wrap {
+    padding: 65px 80px;
+  }
+  .content {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .cont-date {
+    @include web-bd(20px);
+    margin-right: 30px;
+    line-height: 48px;
+  }
+  .cont-txt {
+    @include web-bd(16px);
+    color: $txtSub1;
+  }
+  .cont-right,
+  .cont-left {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+// -----------------------common-----------------------
+.behind-tit {
+  font-family: "Source Sans 3", sans-serif;
+  @include web-tit(140px);
+  letter-spacing: -7px;
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15) 22.61%,
+    rgba(255, 255, 255, 0) 71.86%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  z-index: -1;
 }
