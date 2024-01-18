@@ -639,10 +639,58 @@ legend {
 }
 .main-visual-sub1 .content {
   margin-top: 13px;
+  font-size: 20px !important;
 }
 
-.sec-about .sub-tit {
-  color: rgba(255, 255, 255, 0.6);
+.sec-about .inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 230px;
+}
+.sec-about .txt-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sec-about .txt-profile .txt-wrap .sub-tit {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.sec-about .txt-profile .txt-wrap .tit {
+  margin-top: 50px;
+}
+.sec-about .txt-profile .txt-wrap .contents {
+  margin-top: 50px;
+}
+.sec-about .txt-profile .txt-wrap .content {
+  margin-top: 30px;
+}
+.sec-about .txt-profile .profile-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sec-about .txt-profile .profile-wrap .name-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.sec-about .txt-profile .profile-wrap .sub-tit {
+  font-size: 36px !important;
+}
+.sec-about .txt-profile .profile-wrap .position {
+  color: #d92b2b;
+}
+.sec-about .pofile-img-wrap {
+  position: relative;
+}
+.sec-about .pofile-img-wrap .profile-img {
+  height: 100%;
+}
+.sec-about .pofile-img-wrap .sign-img {
+  position: absolute;
+  top: 70%;
+  left: -45%;
 }
 
 .main-visual-sub2 {
