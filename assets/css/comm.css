@@ -305,7 +305,7 @@ legend {
   font-weight: 400;
   font-size: 18px;
   letter-spacing: normal;
-  line-height: normal;
+  line-height: 1.5;
   color: #fff;
 }
 #main .main-visual .inner {
@@ -326,7 +326,7 @@ legend {
   font-weight: 400;
   font-size: 20px;
   letter-spacing: normal;
-  line-height: normal;
+  line-height: 1.5;
   color: #fff;
 }
 #main .main-visual .side-bar-wrap {
@@ -624,6 +624,25 @@ legend {
 }
 .inner-fp-ptn .logo-wrap a img {
   height: 30px;
+}
+
+.main-visual-sub1 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(/images/sub1/main-visual/background.jpg);
+  background-size: cover;
+}
+.main-visual-sub1 .txt-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.main-visual-sub1 .content {
+  margin-top: 13px;
+}
+
+.sec-about .sub-tit {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .main-visual-sub2 {
