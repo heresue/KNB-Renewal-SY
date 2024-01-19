@@ -70,8 +70,52 @@
         }
         .sign-img {
             position: absolute;
-            top: 70%;
-            left: -45%;
+            top: 75%;
+            left: -35%;
+        }
+    }
+}
+
+// sec-work-----------------------------------------------------
+.sec-work {
+    position: relative;
+
+    .txt-goto {
+        @include posXY;
+
+        .txt-wrap {
+            text-align: center;
+    
+            .content {
+                margin-top: 20px;
+            }
+        }
+    
+        .goto {
+            text-align: center;
+            margin-top: 45px;
+    
+            .goto-a {
+                border-radius: 50px;
+                padding: 8px 25px;
+                font-size: 18px;
+                background: $secondary;
+                transition: all 0.2s;
+    
+                &:hover {
+                    font-weight: 700;
+                    color: $secondary;
+                    background: $primaryWhite;
+                }
+            }
+        }
+    }
+
+    .posters {
+        display: flex;
+
+        .poster-list {
+            display: flex;            
         }
     }
 }

@@ -690,8 +690,46 @@ legend {
 }
 .sec-about .pofile-img-wrap .sign-img {
   position: absolute;
-  top: 70%;
-  left: -45%;
+  top: 75%;
+  left: -35%;
+}
+
+.sec-work {
+  position: relative;
+}
+.sec-work .txt-goto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sec-work .txt-goto .txt-wrap {
+  text-align: center;
+}
+.sec-work .txt-goto .txt-wrap .content {
+  margin-top: 20px;
+}
+.sec-work .txt-goto .goto {
+  text-align: center;
+  margin-top: 45px;
+}
+.sec-work .txt-goto .goto .goto-a {
+  border-radius: 50px;
+  padding: 8px 25px;
+  font-size: 18px;
+  background: #d92b2b;
+  transition: all 0.2s;
+}
+.sec-work .txt-goto .goto .goto-a:hover {
+  font-weight: 700;
+  color: #d92b2b;
+  background: #fff;
+}
+.sec-work .posters {
+  display: flex;
+}
+.sec-work .posters .poster-list {
+  display: flex;
 }
 
 .main-visual-sub2 {
