@@ -32,9 +32,6 @@
   flex-grow: 1;
   // min-height: cal(100vh - $hd-height - $ft-height);
   // main에 min-height를 줌으로써 항상 풋터가 바닥에 붙어있게 설정
-  .sec {
-    height: 100vh;
-  }
   .inner {
     height: 100%;
     padding: 6.944vw 0;

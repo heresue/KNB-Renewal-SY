@@ -278,9 +278,6 @@ legend {
 #main {
   flex-grow: 1;
 }
-#main .sec {
-  height: 100vh;
-}
 #main .inner {
   height: 100%;
   padding: 6.944vw 0;
