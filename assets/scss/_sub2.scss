@@ -221,7 +221,33 @@
     border-color: $secondary;
   }
   .calendar {
-    margin-top: 20px;
+    margin-top: 50px;
+  }
+  .fc-theme-standard th {
+    border: none;
+  }
+  .fc-theme-standard td {
+    border-right: none;
+    border-bottom: none;
+    border-color: $txtSub2;
+  }
+  .fc-theme-standard .fc-scrollgrid {
+    border: none;
+  }
+  .fc-col-header {
+    height: 44px;
+    background: rgb(217, 43, 43, 0.3);
+    line-height: 44px;
+  }
+  .fc-daygrid-day-top {
+    flex-direction: row;
+  }
+  .fc-col-header-cell-cushion,
+  .fc-daygrid-day-number {
+    font-weight: 400;
+    &:hover {
+      color: white;
+    }
   }
 }
 // -----------------------chronological-list-----------------------
@@ -265,6 +291,8 @@
     gap: 72px;
   }
   .txt-list-month {
+    display: block;
+    width: 35px;
     @include web-bd(28px);
     color: $txtSub1;
   }
@@ -306,6 +334,26 @@
       background: $secondary;
       border-color: $secondary;
     }
+  }
+  table {
+    max-width: 1280px;
+    width: 1280px;
+  }
+  th {
+    border-bottom: 1px solid $txtSub2;
+    padding-top: 20px;
+    @include web-bd(20px);
+  }
+  td {
+    padding-top: 10px;
+    @include web-bd(16px);
+    // padding-bottom: 10px;
+  }
+  table,
+  th,
+  td {
+    // border: 1px solid $primaryWhite;
+    text-align: left;
   }
   .contents-wrap {
     padding: 65px 80px;
