@@ -16,7 +16,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@700&display=swap"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/comm.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="fullcalendar/dist/index.global.js"></script>
+    <script defer src="./assets/js/calendar.js"></script>
     <script src="./assets/js/comm.js"></script>
   </head>
   <body>
@@ -230,14 +242,14 @@
             </div>
           </div>
         </section>
-        <section class="sec monthly-schedule">
+        <section class="sec-except monthly-schedule">
           <div class="inner">
             <div class="txt-wrap">
               <h2 class="tit">월간일정</h2>
               <em class="sub-tit">Monthly Schedule</em>
               <p class="behind-tit">MONTHLY SCHEDULE</p>
             </div>
-            <div class="calendar"></div>
+            <div id="calendar" class="calendar"></div>
           </div>
         </section>
         <section class="sec-except chronological-list">
