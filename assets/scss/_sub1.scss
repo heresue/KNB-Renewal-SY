@@ -1,6 +1,7 @@
 // sec-visual---------------------------------------------------
 .main-visual-sub1 {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%), url(/images/sub1/main-visual/background.jpg);
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), url(/images/sub1/main-visual/background.jpg);
     background-size: cover;
 
     .txt-wrap {
@@ -19,14 +20,10 @@
     .inner {
         display: flex;
         justify-content: space-between;
-        gap: 225px;
+        gap: 230px;
     }
 
     .txt-profile {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
         .txt-wrap {
             .sub-tit {
                 color: $txtSub2 !important;
@@ -39,13 +36,18 @@
             }
             .content {
                 margin-top: 30px;
+
+                &:nth-child(1) {
+                    margin: 0;
+                }
             }
         }
 
         .profile-wrap {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            margin-top: 85px;
+            gap: 15px;
 
             .name-wrap {
                 display: flex;
@@ -80,28 +82,32 @@
 .sec-work {
     position: relative;
 
+    .inner {
+        max-width: none !important;
+    }
+
     .txt-goto {
         @include posXY;
 
         .txt-wrap {
             text-align: center;
-    
+
             .content {
                 margin-top: 20px;
             }
         }
-    
+
         .goto {
             text-align: center;
             margin-top: 45px;
-    
+
             .goto-a {
                 border-radius: 50px;
                 padding: 8px 25px;
                 font-size: 18px;
                 background: $secondary;
                 transition: all 0.2s;
-    
+
                 &:hover {
                     font-weight: 700;
                     color: $secondary;
@@ -113,9 +119,18 @@
 
     .posters {
         display: flex;
+        justify-content: space-between;
+        mask: linear-gradient(to top, transparent 1%, black 20%);
 
         .poster-list {
-            display: flex;            
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+            img {
+                filter: brightness(0.5);
+                width: 100%;
+            }
         }
     }
 }
