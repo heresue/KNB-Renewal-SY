@@ -168,6 +168,7 @@
 }
 // -----------------------before-monthly-schedule-----------------------
 .before-monthly-schedule {
+  height: 100vh;
   &::before {
     display: block;
     content: "";
@@ -208,6 +209,7 @@
 }
 // -----------------------monthly-schedule-----------------------
 .monthly-schedule {
+  // height: 100vh;
   .txt-wrap {
     display: flex;
     align-items: baseline;
@@ -315,6 +317,7 @@
 }
 // -----------------------more-chronological-list-----------------------
 .more-chronological-list {
+  height: 100vh;
   .tit {
     text-align: center;
     margin-bottom: 40px;
@@ -328,7 +331,7 @@
     margin-left: 12px;
     // padding: 124px 63px;
     color: $primaryWhite;
-    border-radius: 10px;
+    border-radius: 59px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     &.active {
       background: $secondary;
@@ -336,13 +339,27 @@
     }
   }
   table {
-    max-width: 1280px;
-    width: 1280px;
+    // max-width: 1280px;
+    // width: 1280px;
+    width: 1200px;
+    margin: 0 auto;
   }
   th {
-    border-bottom: 1px solid $txtSub2;
-    padding-top: 20px;
+    // border-bottom: 1px solid $txtSub2;
+    // border-color: rgba(255, 255, 255, 1), rgba(255, 255, 255, 0);
+    padding-top: 50px;
     @include web-bd(20px);
+    &:after {
+      display: block;
+      content: "";
+      height: 1px;
+      width: 50%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
+    }
   }
   td {
     padding-top: 10px;
@@ -356,7 +373,7 @@
     text-align: left;
   }
   .contents-wrap {
-    padding: 65px 80px;
+    padding: 30px 80px;
   }
   .content {
     display: flex;
