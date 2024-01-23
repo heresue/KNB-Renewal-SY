@@ -819,6 +819,11 @@ legend {
   font-size: 130px;
   color: rgba(255, 255, 255, 0.5);
 }
+.bg-txt .txt-2 {
+  font-weight: 700;
+  font-size: 180px;
+  color: rgba(217, 43, 43, 0.9);
+}
 
 .main-visual-sub2 {
   background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
