@@ -817,12 +817,12 @@ legend {
 .bg-txt .bg-txt-wrap {
   position: relative;
 }
-.bg-txt .txt-1 {
+.bg-txt .bg-txt-wrap .txt-1 {
   font-weight: 700;
   font-size: 130px;
   color: rgba(255, 255, 255, 0.5);
 }
-.bg-txt .txt-2 {
+.bg-txt .bg-txt-wrap .txt-2 {
   position: absolute;
   right: 0;
   top: 0;

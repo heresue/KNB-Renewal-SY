@@ -228,20 +228,20 @@
 
     .bg-txt-wrap {
         position: relative;
-    }
 
-    .txt-1 {
-        font-weight: 700;
-        font-size: 130px;
-        color: rgb(255, 255, 255, 0.5);
-    }
-
-    .txt-2 {
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-weight: 700;
-        font-size: 180px;
-        color: rgb(217, 43, 43, 0.9);
+        .txt-1 {
+            font-weight: 700;
+            font-size: 130px;
+            color: rgb(255, 255, 255, 0.5);
+        }
+    
+        .txt-2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-weight: 700;
+            font-size: 180px;
+            color: rgb(217, 43, 43, 0.9);
+        }
     }
 }
