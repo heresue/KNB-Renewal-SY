@@ -28,6 +28,10 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
     <script src="fullcalendar/dist/index.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script defer src="./assets/js/calendar.js"></script>
     <script defer src="./assets/js/comm.js"></script>
   </head>
@@ -62,155 +66,157 @@
               </div>
             </div>
           </div>
-          <div class="poster poster-1">
-            <div class="txt-wrap">
-              <strong class="post-tit">백조의 호수</strong>
-              <p class="post-date">2024.03.27 - 03.31</p>
-              <p class="post-locate">LG아트센터 서울</p>
+          <div class="poster-wrap">
+            <div class="poster poster-1">
+              <div class="txt-wrap">
+                <strong class="post-tit">백조의 호수</strong>
+                <p class="post-date">2024.03.27 - 03.31</p>
+                <p class="post-locate">LG아트센터 서울</p>
+              </div>
+              <a href="#" class="go-to-link">
+                <span class="blind">더보기</span>
+                <svg
+                  class="arr-icon"
+                  width="47"
+                  height="15"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
-            <a href="#" class="go-to-link">
-              <span class="blind">더보기</span>
-              <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14H46L35.875 1"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="poster poster-2">
-            <div class="txt-wrap">
-              <strong class="post-tit">인어공주</strong>
-              <p class="post-date">2024.06.05 - 06.09</p>
-              <p class="post-locate">예술의전당 오페라극장</p>
+            <div class="poster poster-2">
+              <div class="txt-wrap">
+                <strong class="post-tit">인어공주</strong>
+                <p class="post-date">2024.06.05 - 06.09</p>
+                <p class="post-locate">예술의전당 오페라극장</p>
+              </div>
+              <a href="#" class="go-to-link">
+                <span class="blind">더보기</span>
+                <svg
+                  class="arr-icon"
+                  width="47"
+                  height="15"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
-            <a href="#" class="go-to-link">
-              <span class="blind">더보기</span>
-              <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14H46L35.875 1"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="poster poster-3">
-            <div class="txt-wrap">
-              <strong class="post-tit">돈키호테</strong>
-              <p class="post-date">2024.05.01 - 05.05</p>
-              <p class="post-locate">예술의전당 오페라극장</p>
+            <div class="poster poster-3">
+              <div class="txt-wrap">
+                <strong class="post-tit">돈키호테</strong>
+                <p class="post-date">2024.05.01 - 05.05</p>
+                <p class="post-locate">예술의전당 오페라극장</p>
+              </div>
+              <a href="#" class="go-to-link">
+                <span class="blind">더보기</span>
+                <svg
+                  class="arr-icon"
+                  width="47"
+                  height="15"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
-            <a href="#" class="go-to-link">
-              <span class="blind">더보기</span>
-              <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14H46L35.875 1"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="poster poster-4">
-            <div class="txt-wrap">
-              <strong class="post-tit">KNB Movement Series 9</strong>
-              <p class="post-date">2024.06.22 - 06.23</p>
-              <p class="post-locate">국립극장 하늘극장</p>
+            <div class="poster poster-4">
+              <div class="txt-wrap">
+                <strong class="post-tit">KNB Movement Series 9</strong>
+                <p class="post-date">2024.06.22 - 06.23</p>
+                <p class="post-locate">국립극장 하늘극장</p>
+              </div>
+              <a href="#" class="go-to-link">
+                <span class="blind">더보기</span>
+                <svg
+                  class="arr-icon"
+                  width="47"
+                  height="15"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
-            <a href="#" class="go-to-link">
-              <span class="blind">더보기</span>
-              <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14H46L35.875 1"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="poster poster-5">
-            <div class="txt-wrap">
-              <strong class="post-tit">라 바야데르</strong>
-              <p class="post-date">2024.10.30 - 11.03</p>
-              <p class="post-locate">예술의전당 오페라극장</p>
+            <div class="poster poster-5">
+              <div class="txt-wrap">
+                <strong class="post-tit">라 바야데르</strong>
+                <p class="post-date">2024.10.30 - 11.03</p>
+                <p class="post-locate">예술의전당 오페라극장</p>
+              </div>
+              <a href="#" class="go-to-link">
+                <span class="blind">더보기</span>
+                <svg
+                  class="arr-icon"
+                  width="47"
+                  height="15"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
-            <a href="#" class="go-to-link">
-              <span class="blind">더보기</span>
-              <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14H46L35.875 1"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="poster poster-6">
-            <div class="txt-wrap">
-              <strong class="post-tit">호두까기 인형</strong>
-              <p class="post-date">2024.12.14 - 12.25</p>
-              <p class="post-locate">예술의전당 오페라극장</p>
+            <div class="poster poster-6">
+              <div class="txt-wrap">
+                <strong class="post-tit">호두까기 인형</strong>
+                <p class="post-date">2024.12.14 - 12.25</p>
+                <p class="post-locate">예술의전당 오페라극장</p>
+              </div>
+              <a href="#" class="go-to-link">
+                <span class="blind">더보기</span>
+                <svg
+                  class="arr-icon"
+                  width="47"
+                  height="15"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
             </div>
-            <a href="#" class="go-to-link">
-              <span class="blind">더보기</span>
-              <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 14H46L35.875 1"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
           </div>
         </section>
         <section class="sec before-monthly-schedule">
