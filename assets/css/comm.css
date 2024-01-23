@@ -329,12 +329,6 @@ legend {
 }
 #main .main-visual .side-bar-wrap {
   height: 70px;
-  padding-left: 80px;
-}
-#main .main-visual .side-bar-wrap .side-bar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 #main .main-visual .side-bar-wrap .side-bar-li {
   display: block;

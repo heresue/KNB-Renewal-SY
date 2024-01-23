@@ -65,10 +65,10 @@
     }
     .side-bar-wrap {
       height: 70px;
-      padding-left: 80px;
-      .side-bar {
-        @include flexCenter(flex-start);
-      }
+      // padding-left: 80px;
+      // .side-bar {
+      //   @include flexCenter(flex-start);
+      // }
       .side-bar-li {
         display: block;
         width: 124px;
