@@ -8,34 +8,17 @@ var swiper = new Swiper(".swiper-more-chronological-list", {
   },
 });
 
-// $(document).ready(function () {
-//   const poster = $(".poster-wrap");
-//   poster.slick({
-//     infinite: false,
-//     arrows: false,
-//     vertical: true,
-//     dots: true,
-//     speed: 1200,
-//     cssEase: "cubic-bezier(0.86, 0, 0.07, 1)",
-//   });
+gsap.registerPlugin(ScrollTrigger);
+const posters = $(".poster-wrap");
+const posterEl = posters.array.forEach();
+const postersTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: posters,
+    // pin: true, // pin the trigger element while active
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+  },
+});
 
-//   // poster.mousewheel(function (e) {
-//   //   e.preventDefault();
-//   //   if (e.deltaY < 0) {
-//   //     if (
-//   //       $(this).slick("slickCurrentSlide") ===
-//   //       $(this).find(".slick-slide").length - 1
-//   //     ) {
-//   //       return;
-//   //     }
-
-//   //     $(this).slick("slickNext");
-//   //   } else {
-//   //     if ($(this).slick("slickCurrentSlide") === 0) {
-//   //       return;
-//   //     }
-
-//   //     $(this).slick("slickPrev");
-//   //   }
-//   // });
-// });
+postersTl.from(posterEl, { yPercent: -100, autoAlpha: 0 });
