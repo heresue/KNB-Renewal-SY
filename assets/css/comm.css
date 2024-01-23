@@ -625,9 +625,12 @@ legend {
 }
 
 .main-visual-sub1 {
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(/images/sub1/main-visual/background.jpg);
   background-size: cover;
+}
+.main-visual-sub1 .inner {
+  position: relative;
 }
 .main-visual-sub1 .txt-wrap {
   position: absolute;
@@ -702,6 +705,7 @@ legend {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .sec-work .txt-goto .txt-wrap {
   text-align: center;
@@ -739,6 +743,81 @@ legend {
 .sec-work .posters .poster-list img {
   filter: brightness(0.5);
   width: 100%;
+}
+
+.sec-velue .txt-wrap .content {
+  margin-top: 20px;
+}
+.sec-velue .cards {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+.sec-velue .cards .card-list {
+  gap: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 290px;
+  height: 390px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.sec-velue .cards .card-list .material-symbols-rounded {
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.sec-velue .cards .card-list .card-tit {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.sec-velue .cards .card-list .card-content {
+  display: none;
+}
+.sec-velue .cards .card-list:hover {
+  color: #fff;
+}
+.sec-velue .cards .card-list:hover .material-symbols-rounded {
+  color: #fff;
+}
+.sec-velue .cards .card-list:hover .card-tit {
+  display: none;
+}
+.sec-velue .cards .card-list:hover .card-content {
+  padding: 0 35px;
+  text-align: center;
+  display: block;
+  font-size: 18px;
+}
+.sec-velue .cards .card-list:nth-child(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/sub1/cards/card1.png);
+  background-size: cover;
+}
+.sec-velue .cards .card-list:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card2.png);
+  background-size: cover;
+}
+.sec-velue .cards .card-list:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card3.jpg);
+  background-size: cover;
+}
+.sec-velue .cards .card-list:nth-child(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card4.jpg);
+  background-size: cover;
+}
+.sec-velue .cards .hvr-shutter-out-vertical:before {
+  border-radius: 10px;
+  background: #d92b2b;
+}
+
+.bg-txt .inner {
+  max-width: none !important;
+}
+.bg-txt .txt-1 {
+  font-weight: 700;
+  font-size: 130px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .main-visual-sub2 {
