@@ -226,6 +226,10 @@
         max-width: none !important;
     }
 
+    .bg-txt-wrap {
+        position: relative;
+    }
+
     .txt-1 {
         font-weight: 700;
         font-size: 130px;
@@ -233,6 +237,9 @@
     }
 
     .txt-2 {
+        position: absolute;
+        right: 0;
+        top: 0;
         font-weight: 700;
         font-size: 180px;
         color: rgb(217, 43, 43, 0.9);
