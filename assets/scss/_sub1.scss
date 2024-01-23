@@ -231,17 +231,65 @@
 
         .txt-1 {
             font-weight: 700;
-            font-size: 130px;
+            font-size: 150px;
             color: rgb(255, 255, 255, 0.5);
         }
     
         .txt-2 {
             position: absolute;
             right: 0;
-            top: 0;
+            top: 65px;
             font-weight: 700;
-            font-size: 180px;
+            font-size: 200px;
             color: rgb(217, 43, 43, 0.9);
+        }
+    }
+}
+
+// sec-ci-----------------------------------------------------
+.sec-ci {
+    .ci-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+    }
+
+    .logo-box {
+        position: relative;
+        width: 415px;
+        height: 415px;
+        border-radius: 10px;
+        background: rgb(255, 255, 255, 0.15);
+
+        .ci-img {
+            @include posXY;
+            width: 300px;
+        }
+    }
+
+    .txt-down {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 800px;
+
+        .ci-contents {
+            margin-top: 30px;
+
+            .content {
+                &:nth-child(2) {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .down-wrap {
+            display: flex;
+            gap: 90px;
+
+            .down-txt {
+                font-size: 18px;
+            }
         }
     }
 }
