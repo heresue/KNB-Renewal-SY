@@ -163,7 +163,7 @@
         rgba(0, 0, 0, 0.7) 0deg,
         rgba(0, 0, 0, 0) 360deg
       ),
-      url(../../images/sub2/perfermance-info/poster-6.jpg) no-repeat 50% 50% /
+      url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100% /
         cover;
   }
 }
@@ -318,7 +318,7 @@
 }
 // -----------------------more-chronological-list-----------------------
 .more-chronological-list {
-  height: 100vh;
+  margin-bottom: 80px;
   .txt-wrap {
     &:after {
       display: block;
