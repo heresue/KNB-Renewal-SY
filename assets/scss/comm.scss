@@ -16,6 +16,8 @@
   min-height: 100vh;
   max-width: none;
   margin: 0;
+  overflow: hidden;
+
   // margin-left: 5.556vw;
 }
 @media screen and (max-width: 1280px) {
@@ -41,6 +43,7 @@
   }
   .tit {
     @include web-tit;
+    line-height: 1.5;
   }
   .sub-tit {
     @include web-tit(28px);
