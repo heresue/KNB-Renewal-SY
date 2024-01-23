@@ -318,9 +318,18 @@
 // -----------------------more-chronological-list-----------------------
 .more-chronological-list {
   height: 100vh;
+  .txt-wrap {
+    &:after {
+      display: block;
+      content: "";
+      width: 50%;
+      height: 1px;
+      background: linear-gradient(to right, $primaryWhite, $primary);
+    }
+  }
   .tit {
-    text-align: center;
-    margin-bottom: 40px;
+    // text-align: center;
+    margin-bottom: 60px;
   }
   .date-btn-wrap {
     text-align: center;
@@ -337,40 +346,6 @@
       background: $secondary;
       border-color: $secondary;
     }
-  }
-  table {
-    // max-width: 1280px;
-    // width: 1280px;
-    width: 1200px;
-    margin: 0 auto;
-  }
-  th {
-    // border-bottom: 1px solid $txtSub2;
-    // border-color: rgba(255, 255, 255, 1), rgba(255, 255, 255, 0);
-    padding-top: 50px;
-    @include web-bd(20px);
-    &:after {
-      display: block;
-      content: "";
-      height: 1px;
-      width: 50%;
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
-      );
-    }
-  }
-  td {
-    padding-top: 10px;
-    @include web-bd(16px);
-    // padding-bottom: 10px;
-  }
-  table,
-  th,
-  td {
-    // border: 1px solid $primaryWhite;
-    text-align: left;
   }
   .contents-wrap {
     padding: 30px 80px;
@@ -392,6 +367,64 @@
   .cont-left {
     display: flex;
     gap: 30px;
+  }
+  .swiper-more-chronological-list {
+    overflow: visible;
+    padding-top: 20px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 200px px;
+      height: 483px;
+      position: absolute;
+      left: -200px;
+      top: 0;
+      background: $primary;
+      z-index: 1000;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+  .swiper-button-prev {
+    transform: rotate(180deg);
+    top: -50px;
+    left: 85%;
+  }
+  .swiper-button-next {
+    top: -50px;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
+  }
+  .list-sub-tit {
+    @include web-tit(40px);
+    display: block;
+    margin-bottom: 35px;
+  }
+  .cont {
+    color: $txtSub1;
+    margin-bottom: 12px;
+  }
+}
+.more-chronological-list-file-info {
+  background: $secondary;
+  .txt-wrap {
+    margin-bottom: 40px;
+  }
+  .tit-small {
+    @include web-tit(40px);
+  }
+  .file-info {
+    color: $primaryWhite;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    gap: 90px;
   }
 }
 
