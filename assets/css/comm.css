@@ -455,26 +455,15 @@ legend {
 }
 
 .transper {
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
-          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+          mask-image: linear-gradient(to bottom, transparent, black);
   width: 100%;
   height: 200px;
   position: absolute;
   bottom: 0;
   left: 0;
   background: black;
-}
-
-.performance-sec {
-  display: block;
-  padding: 0 0 0 80px;
-}
-.performance-sec .swiper {
-  width: 100%;
-  height: 686px;
-}
-.performance-sec .swiper-container {
-  display: flex;
+  z-index: -1;
 }
 
 .slide-intro swiper-slide,
@@ -489,9 +478,23 @@ legend {
      object-fit: cover;
 }
 
-.performance-inner {
-  margin-right: 20px;
+.main-sec .swiper-pagination {
+  display: none;
 }
+
+.performance-sec {
+  display: block;
+  padding: 0 0 0 80px;
+}
+.performance-sec .swiper {
+  width: 100%;
+  height: 686px;
+}
+.performance-sec .swiper-container {
+  display: flex;
+  width: 10%;
+}
+
 .performance-inner.swiper-slide {
   height: auto;
   width: 367px;
@@ -532,23 +535,39 @@ legend {
 
 .intro-sec .img-wrap {
   position: relative;
-  width: 87vw;
-  height: 60vh;
+  width: 95%;
 }
 .intro-sec .img-wrap.right {
   margin-left: auto;
 }
-.intro-sec .img-wrap img {
+.intro-sec .knb-1 {
+  background-image: url(/images/main/knb_1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
   position: relative;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 666px;
+  z-index: -2;
 }
 .intro-sec .txt-wrap {
-  width: 753px;
+  position: absolute;
   padding: 0 0 0 6%;
-  bottom: 0;
+  margin-top: -119px;
+  width: 90%;
+}
+.intro-sec .txt-wrap h2 {
+  position: relative;
+  right: 0;
+  font-size: 96px;
+  line-height: 62%;
+  opacity: 50%;
+}
+.intro-sec .txt-wrap .tit-word {
+  text-align: right;
+  color: #d92b2b;
+}
+.intro-sec .txt-wrap p {
+  width: 753px;
+  margin: 24px 0 0 5px;
 }
 
 .ytb-bg {
