@@ -311,7 +311,6 @@ legend {
   justify-content: center;
   align-items: center;
   height: calc(100% - 70px);
-  padding: 0;
 }
 #main .main-visual .inner .txt-wrap {
   display: flex;
@@ -334,6 +333,7 @@ legend {
   height: 100%;
   display: flex;
   justify-content: flex-start;
+  padding: 0;
 }
 #main .main-visual .side-bar-wrap .side-bar {
   display: flex;

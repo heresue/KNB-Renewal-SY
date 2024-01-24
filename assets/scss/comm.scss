@@ -54,7 +54,7 @@
     .inner {
       @include flexCenter;
       height: calc(100% - 70px);
-      padding: 0;
+      // padding: 0;
       .txt-wrap {
         @include flexCenter;
         flex-direction: column;
@@ -74,6 +74,7 @@
         height: 100%;
         display: flex;
         justify-content: flex-start;
+        padding: 0;
       }
       .side-bar {
         @include flexCenter(flex-start);
