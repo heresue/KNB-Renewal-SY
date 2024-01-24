@@ -27,7 +27,13 @@
       margin-right: 12px;
     }
   }
+  .poster-wrap {
+    position: relative;
+    height: 100vh;
+  }
   .poster {
+    position: absolute;
+    width: 100%;
     height: 100vh;
     // padding: 0;
     display: flex;
