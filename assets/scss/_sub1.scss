@@ -86,10 +86,6 @@
 .sec-work {
     position: relative;
 
-    .inner {
-        max-width: none !important;
-    }
-
     .txt-goto {
         @include posXY;
         z-index: 1;
@@ -125,7 +121,7 @@
     .posters {
         display: flex;
         justify-content: space-between;
-        mask: linear-gradient(to top, transparent 1%, black 20%);
+        mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
 
         .poster-list {
             display: flex;
@@ -225,11 +221,15 @@
     .inner {
         max-width: none !important;
     }
-
+    
     .bg-txt-wrap {
         position: relative;
+        height: 300px;
 
         .txt-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
             font-weight: 700;
             font-size: 150px;
             color: rgb(255, 255, 255, 0.5);
@@ -238,7 +238,7 @@
         .txt-2 {
             position: absolute;
             right: 0;
-            top: 65px;
+            top: 63px;
             font-weight: 700;
             font-size: 200px;
             color: rgb(217, 43, 43, 0.9);
@@ -284,12 +284,52 @@
         }
 
         .down-wrap {
+            border-bottom: 1px solid rgb(255, 255, 255, 0.3);
             display: flex;
-            gap: 90px;
+            justify-content: space-between;
+            width: 200px;
+            transition: all 0.5s;
 
+            &:hover {
+                border-bottom: 1px solid $txtSub1;
+            }
+            
             .down-txt {
+                padding-bottom: 8px;
                 font-size: 18px;
             }
+            .i-download {
+                padding-bottom: 8px;
+            }
+        }
+    }
+}
+
+// sec-map----------------------------------------------------
+.sec-map {
+    .txt-wrap {
+        .content {
+            margin-top: 20px;
+        }
+    }
+    
+    .map {
+        border: 0;
+        border-radius: 10px;
+        margin-top: 90px;
+        width: 1280px;
+        height: 450px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        .contect {
+            display: flex;
+            gap: 35px;
         }
     }
 }

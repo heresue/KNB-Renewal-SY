@@ -697,9 +697,6 @@ legend {
 .sec-work {
   position: relative;
 }
-.sec-work .inner {
-  max-width: none !important;
-}
 .sec-work .txt-goto {
   position: absolute;
   top: 50%;
@@ -732,8 +729,8 @@ legend {
 .sec-work .posters {
   display: flex;
   justify-content: space-between;
-  -webkit-mask: linear-gradient(to top, transparent 1%, black 20%);
-          mask: linear-gradient(to top, transparent 1%, black 20%);
+  -webkit-mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
+          mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 .sec-work .posters .poster-list {
   display: flex;
@@ -816,8 +813,12 @@ legend {
 }
 .bg-txt .bg-txt-wrap {
   position: relative;
+  height: 300px;
 }
 .bg-txt .bg-txt-wrap .txt-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-weight: 700;
   font-size: 150px;
   color: rgba(255, 255, 255, 0.5);
@@ -825,7 +826,7 @@ legend {
 .bg-txt .bg-txt-wrap .txt-2 {
   position: absolute;
   right: 0;
-  top: 65px;
+  top: 63px;
   font-weight: 700;
   font-size: 200px;
   color: rgba(217, 43, 43, 0.9);
@@ -863,11 +864,42 @@ legend {
   margin-top: 20px;
 }
 .sec-ci .txt-down .down-wrap {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
-  gap: 90px;
+  justify-content: space-between;
+  width: 200px;
+  transition: all 0.5s;
+}
+.sec-ci .txt-down .down-wrap:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
 .sec-ci .txt-down .down-wrap .down-txt {
+  padding-bottom: 8px;
   font-size: 18px;
+}
+.sec-ci .txt-down .down-wrap .i-download {
+  padding-bottom: 8px;
+}
+
+.sec-map .txt-wrap .content {
+  margin-top: 20px;
+}
+.sec-map .map {
+  border: 0;
+  border-radius: 10px;
+  margin-top: 90px;
+  width: 1280px;
+  height: 450px;
+}
+.sec-map .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.sec-map .info .contect {
+  display: flex;
+  gap: 35px;
 }
 
 .main-visual-sub2 {
