@@ -104,43 +104,84 @@
 
 .intro-sec {
   .img-wrap {
-    position: relative;
-    width: 95%;
+    // position: relative;
+    width: 87%;
     &.right {
       margin-left: auto;
     }
   }
-  .knb-1 {
-    background-image: url(/images/main/knb_1.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    height: 666px;
-    z-index: -2;
+  .img::before {
+    content: '';
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
   }
-  
   .txt-wrap {
     position: absolute;
-    padding: 0 0 0 6%;
+    padding: 0 80px;
     margin-top: -119px;
-    width: 90%;
+    width: 100%;
     h2 {
       position: relative;
       right: 0;
       font-size: 96px;
+      font-weight: bold;
       line-height: 62%;
-      opacity: 50%;
-    }
-    .tit-word {
-      text-align: right;
-      color: $secondary
+      color: $txtSub2;
+      &:nth-child(2) {
+        text-align: right;
+        color: $secondary;
+        opacity: 80%;
+      }
     }
     p {
       width: 753px;
       margin: 24px 0 0 5px;
+      &:nth-child(1) {
+        font-size: 50px;
+      }
     }
   }
   
+  // img
+  .knb-1 {
+    background-image: url(/images/main/knb_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 666px;
+    z-index: -2;
+  }
+  .knb-2 {
+    background-image: url(/images/main/knb_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 666px;
+    z-index: -2;
+  }
+  .knba-1 {
+    background-image: url(/images/main/knba_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 666px;
+    z-index: -2;
+  }
+  .knba-2 {
+    background-image: url(/images/main/knba_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 666px;
+    z-index: -2;
+  }
+}
+
+.intro-end {
+  margin-bottom: 197px;
 }
 
 
@@ -150,18 +191,25 @@
 .ytb-bg {
   background-image: url(/images/main/ytb_bg.jpg);
   width: 100%;
-  height: 85%;
+  height: 77%;
   display: flex;
   align-items: center;
   flex-direction: column;
   .txt-wrap {
-    width: 1142px;
+    width: 850px;
     padding-top: 166px;
     display: flex;
     flex-direction: column;
+    h2 {
+      border-bottom: 1px solid white;
+      margin-right: -300px;
+      padding: 25px 0; 
+    }
     .sub-tit {
-      border-top: 1px solid white;
-      padding-top: 15px;
+      padding: 15px 0 5px 0;
+    }
+    p {
+      font-weight: 200 !important;
     }
   }
   .ytb {
@@ -174,35 +222,60 @@
 
 
 // notice section //
-
-.notice-sec .inner {
-  display: flex;
-  justify-content: space-between;
-  a {
+.notice-sec {
+  padding-top: 149px;
+  .inner {
     display: flex;
-    flex-direction: column;
-    padding: 10px 5px;
+    justify-content: space-between;
+    .txt-wrap {
+      display: flex;
+      flex-direction: column;
+      em {
+        padding: 0px 0 24px 0;
+      }
+    }
+
+
+    a {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 5px;
+    }
+
+
+    .mover::before {
+      content: '';
+      background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;;
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+      display: inline-block;
+      margin-right: 8px;
+    }
   }
+}
 
-  .mover::before {
-    content: '';
-    background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;;
-    width: 16px;
-    height: 16px;
-    background-size: contain;
-    display: inline-block;
-    margin-right: 8px;
+.notice-wrap{
+  width: 738px;
+  li {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .list-top {
+    border-top: 3px solid white;
+  }
+  
+  .list {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
   }
 }
 
-.list-top {
-  border-top: 3px solid white;
-}
 
-.list {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-}
+
+
 
 
 // partner section //
