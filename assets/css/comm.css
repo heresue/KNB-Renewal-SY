@@ -755,11 +755,21 @@ legend {
   padding: 12.5vw 5.556vw 0 !important;
 }
 .before-monthly-schedule .highlight-tit {
-  font-family: "Telex", sans-serif;
-  font-size: 70px;
+  font-family: "Roboto", sans-serif;
+  font-size: 90px;
   text-align: right;
   line-height: 120%;
   margin-bottom: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to right, #fff, #fff) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+}
+.before-monthly-schedule .highlight-tit .width-adjust {
+  width: 500px;
+  transform: translateX(616px);
 }
 .before-monthly-schedule .highlight-sub-tit,
 .before-monthly-schedule .arr-down {
@@ -773,7 +783,16 @@ legend {
   margin-top: 50px;
 }
 .before-monthly-schedule .arr-down-icon {
-  transform: rotate(90deg) scale(2);
+  transform: rotate(90deg) scale(1.5);
+  animation: arrDown 0.5s infinite ease alternate;
+}
+@keyframes arrDown {
+  0% {
+    transform: rotate(90deg) scale(1.8) translateX(0);
+  }
+  100% {
+    transform: rotate(90deg) scale(1.8) translateX(10px);
+  }
 }
 
 .monthly-schedule .txt-wrap {
@@ -831,6 +850,7 @@ legend {
   display: flex;
   justify-content: space-between;
   padding: 110px 112px 0 0;
+  position: relative;
 }
 .chronological-list .scroll-tit {
   font-weight: 700;
@@ -839,6 +859,12 @@ legend {
   line-height: normal;
   color: #fff;
   margin-top: 190px;
+}
+.chronological-list .scroll-contents-box {
+  position: absolute;
+  right: 0;
+  height: 1350px;
+  width: 528px;
 }
 .chronological-list .content {
   padding: 50px 0;

@@ -178,6 +178,7 @@
 }
 // -----------------------before-monthly-schedule-----------------------
 .before-monthly-schedule {
+  // margin-bottom: 120px;
   height: 100vh;
   &::before {
     display: block;
@@ -196,11 +197,23 @@
     padding: 12.5vw 5.556vw 0 !important;
   }
   .highlight-tit {
-    font-family: "Telex", sans-serif;
-    font-size: 70px;
+    // font-family: "Telex", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 90px;
     text-align: right;
     line-height: 120%;
     margin-bottom: 11px;
+    color: rgb(255, 255, 255, 0.2);
+    background: linear-gradient(to right, $primaryWhite, $primaryWhite)
+      no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+    .width-adjust {
+      width: 500px;
+      transform: translateX(616px);
+    }
   }
   .highlight-sub-tit,
   .arr-down {
@@ -214,7 +227,16 @@
     margin-top: 50px;
   }
   .arr-down-icon {
-    transform: rotate(90deg) scale(2);
+    transform: rotate(90deg) scale(1.5);
+    animation: arrDown 0.5s infinite ease alternate;
+  }
+  @keyframes arrDown {
+    0% {
+      transform: rotate(90deg) scale(1.8) translateX(0);
+    }
+    100% {
+      transform: rotate(90deg) scale(1.8) translateX(10px);
+    }
   }
 }
 // -----------------------monthly-schedule-----------------------
@@ -273,13 +295,21 @@
     margin-right: 12px;
   }
   .scroll-wrap {
+    // height: 100vh;
     display: flex;
     justify-content: space-between;
     padding: 110px 112px 0 0;
+    position: relative;
   }
   .scroll-tit {
     @include web-tit(80px);
     margin-top: 190px;
+  }
+  .scroll-contents-box {
+    position: absolute;
+    right: 0;
+    height: 1350px;
+    width: 528px;
   }
   .content {
     padding: 50px 0;
