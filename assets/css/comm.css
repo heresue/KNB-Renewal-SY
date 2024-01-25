@@ -698,11 +698,12 @@ legend {
   position: relative;
 }
 .sec-work .txt-goto {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   z-index: 1;
+  transition: opacity 0.3s, visibility 0.3s, top 0.3s;
 }
 .sec-work .txt-goto .txt-wrap {
   text-align: center;
@@ -774,6 +775,8 @@ legend {
 }
 .sec-velue .cards .card-list:hover {
   color: #fff;
+  border-top-right-radius: 50px;
+  transition: all 0.2s;
 }
 .sec-velue .cards .card-list:hover .material-symbols-rounded {
   color: #fff;
@@ -805,6 +808,7 @@ legend {
 }
 .sec-velue .cards .hvr-shutter-out-vertical:before {
   border-radius: 10px;
+  border-top-right-radius: 50px;
   background: #d92b2b;
 }
 

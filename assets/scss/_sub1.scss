@@ -87,8 +87,12 @@
     position: relative;
 
     .txt-goto {
-        @include posXY;
+        position: fixed;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
         z-index: 1;
+        transition: opacity 0.3s, visibility 0.3s, top 0.3s;
 
         .txt-wrap {
             text-align: center;
@@ -174,6 +178,8 @@
 
             &:hover {
                 color: $txtDefult;
+                border-top-right-radius: 50px;
+                transition: all 0.2s;
 
                 .material-symbols-rounded {
                     color: $txtDefult;
@@ -211,6 +217,7 @@
 
         .hvr-shutter-out-vertical:before {
             border-radius: 10px;
+            border-top-right-radius: 50px;
             background: $secondary;
         }
     }
