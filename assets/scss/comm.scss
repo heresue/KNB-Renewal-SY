@@ -52,6 +52,7 @@
   .side-bar-li {
     @include web-bd(18px);
   }
+
   .main-visual {
     .inner {
       @include flexCenter;
@@ -69,12 +70,14 @@
     .side-bar-wrap {
       height: 70px;
       // padding-left: 80px;
+      // .side-bar {
+      //   @include flexCenter(flex-start);
+      // }
       .inner {
         height: 100%;
         display: flex;
         justify-content: flex-start;
         padding: 0;
-        // max-width: 1280px;
       }
       .side-bar {
         @include flexCenter(flex-start);
@@ -85,6 +88,7 @@
         height: 43px;
         line-height: 43px;
         text-align: center;
+        transition: all 0.4s ease;
         &.active {
           background: $secondary;
           border-radius: 43px;
