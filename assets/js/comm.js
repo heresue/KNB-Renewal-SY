@@ -48,22 +48,22 @@ const sectionTl = gsap.timeline({
     trigger: posterWrap,
     pin: posterWrap,
     start: "top top",
-    end: "+=400%",
+    end: "+=700%",
     scrub: 0.5,
     markers: true,
   },
 });
 // 각각의 poster에 대한 애니메이션
 posters.forEach(function (elem, i) {
-  const tlDelay = i * 1.5;
+  const tlDelay = i * 2;
   const contentTl = gsap.timeline();
   const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
   const posterArr = gsap.utils.toArray(".poster .go-to-link");
+  console.log(elem);
   // poster에 인덱스를 부여해 위로 겹칠 수 있도록 설정
   gsap.set(poster, {
     zIndex: (i, target, targets) => i,
   });
-
   // 각각의 poster에 애니메이션 설정
   contentTl
     .to(elem, { autoAlpha: 1 }, tlDelay)
@@ -76,8 +76,13 @@ posters.forEach(function (elem, i) {
     })
     .to(
       [posterTxt[i], posterArr[i]],
-      { autoAlpha: 1, y: 0, duration: 0.8, ease: "power2.out" },
-      tlDelay + 2.5
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+      },
+      tlDelay + 2
     )
     .to(elem, { yPercent: 0, duration: 2 });
 

@@ -348,7 +348,7 @@ legend {
   height: 43px;
   line-height: 43px;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s;
 }
 #main .main-visual .side-bar-wrap .side-bar-li.active {
   background: #d92b2b;
