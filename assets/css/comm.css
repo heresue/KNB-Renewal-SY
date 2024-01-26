@@ -256,6 +256,18 @@ legend {
   content: "";
 }
 
+form {
+  font-family: ' "Pretendard Variable", "Pretendard"', sans-serif;
+}
+
+input {
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+}
+
+button {
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+}
+
 .wrap {
   display: flex;
   flex-direction: column;
@@ -450,6 +462,85 @@ legend {
 
 .util {
   display: none;
+}
+
+#footer .inner {
+  height: 100%;
+  padding: 6.944vw 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.note-sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 46px;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.note-sns .sns-list {
+  display: flex;
+  gap: 15px;
+}
+.note-sns .fa-brands {
+  font-size: 24px;
+  transition: all 0.3s;
+}
+.note-sns .fa-brands:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.info-letter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.info-letter .info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.info-letter .info-list span {
+  color: #fff;
+}
+.info-letter .etc {
+  margin-top: 25px;
+}
+.info-letter .etc .copy {
+  color: rgba(255, 255, 255, 0.6);
+}
+.info-letter .letter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 32px;
+}
+.info-letter .letter input {
+  padding: 0 20px;
+  width: 160px;
+  height: 32px;
+  border-radius: 50px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.info-letter .letter input:nth-child(2) {
+  margin-left: 8px;
+}
+.info-letter .letter button {
+  margin-left: 10px;
+  width: 85px;
+  height: 32px;
+  border-radius: 10px;
+  background: #d92b2b;
+  color: #fff;
+  transition: all 0.3s;
+}
+.info-letter .letter button:hover {
+  background: #fff;
+  color: #d92b2b;
 }
 
 .transper {

@@ -219,7 +219,106 @@
 .util {
   display: none;
 }
-// footer
+
+// footer------------------------------------------
+#footer {
+  .inner {
+    height: 100%;
+    padding: 6.944vw 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  }  
+}
+
+.note-sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 46px;
+  border-top: 1px solid $txtSub2;
+  border-bottom: 1px solid $txtSub2;
+  
+  .sns-list {
+    display: flex;
+    gap: 15px;
+  }
+  .fa-brands {
+    font-size: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $txtSub2;
+    }
+  }
+}
+
+.info-letter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+
+  .info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: $txtSub2;
+
+    span {
+      color: $txtDefult;
+    }
+  }
+
+  .etc {
+    margin-top: 25px;
+
+    .copy {
+      color: $txtSub2;
+    }
+  }
+  
+  .letter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 32px;
+
+    input {
+      padding: 0 20px;
+      width: 160px;
+      height: 32px;
+      border-radius: 50px;
+      border: none;
+      background: rgb(255, 255, 255, 0.2);
+      color: $txtDefult;
+
+      &:nth-child(2) {
+        margin-left: 8px;
+      }
+    }
+
+    button {
+      margin-left: 10px;
+      width: 85px;
+      height: 32px;
+      border-radius: 10px;
+      background: $secondary;
+      color: $txtDefult;
+      transition: all 0.3s;
+
+      &:hover {
+        background: $primaryWhite;
+        color: $secondary;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 328px) {
+  
+};
+// --------------------------------------------------------
+
+
 
 @import "main", "sub1", "sub2";
 
