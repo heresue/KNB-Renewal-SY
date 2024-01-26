@@ -1,3 +1,18 @@
+// --------------------header--------------------
+$(function () {
+  // const dep1Box = $(".dep-1-box");
+  const dep1El = $("#header .dep-1-li");
+  const dep2El = $(".dep-2-el");
+  const dep2Box = $(".dep-2-box");
+
+  dep1El.on("mouseenter", function () {
+    dep1El.removeClass("active");
+    $(this).addClass("active");
+  });
+  dep2Box.on("mouseleave", function () {
+    dep1El.removeClass("active");
+  });
+});
 // --------------------sub1, sub2 sidebar--------------------
 const sidebarEls = $(".side-bar .side-bar-li").toArray();
 const sidebarEl = $(".side-bar .side-bar-li");

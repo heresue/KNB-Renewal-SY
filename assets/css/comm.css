@@ -274,6 +274,133 @@ legend {
 #header {
   position: fixed;
   height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#header .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#header .inner {
+  max-width: 1280px;
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+#header #logo {
+  background: url(../../images/comm/logo-white.png) no-repeat 0 0/100%;
+  width: 135px;
+  height: 45px;
+}
+#header .logo-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#header .depth {
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+#header .dep-1-box {
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+#header .dep-1-li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#header .dep-1-li.active .dep-2-box {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  transition: all 0.6s ease;
+}
+#header .dep-1-li.active .dep-2-box:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(to left, #fff, #000);
+  -webkit-clip-path: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+          clip-path: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+}
+#header .dep-1-el {
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
+  transition: color 0.3s;
+}
+#header .dep-1-el:hover {
+  color: #cbacdf;
+}
+#header .dep-2-box {
+  opacity: 0;
+  visibility: hidden;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+}
+#header .dep-2-el {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+  justify-content: center;
+  gap: 20px;
+  display: block;
+  padding: 13px 0;
+}
+#header .dep-2-el:hover {
+  color: #cbacdf;
+}
+#header .icon-box {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+}
+#header .icon-el {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#header .icon-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#header .hd-icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 30px;
 }
 
 #main {
@@ -364,101 +491,6 @@ legend {
     padding: 0;
   }
 }
-#logo {
-  position: relative;
-  z-index: 1100;
-}
-
-#header .inner {
-  height: 100px;
-  background-color: #9e9e9e;
-}
-
-.col-right {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
-
-.util ul {
-  height: 100%;
-}
-.util .link-g {
-  height: 100px;
-}
-.util .link-g::before {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-.util .link-lang::before {
-  content: "\f0ac";
-}
-.util .link-search::before {
-  content: "\f002";
-}
-.util .link-mypage::before {
-  content: "\f007";
-}
-
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
-  transform: translateY(3px) rotate(45deg);
-}
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
-  display: none;
-}
-.gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
-  transform: translateY(-3px) rotate(-45deg);
-}
-.gnb-wrap .inp-burger:checked ~ #gnb {
-  left: 0;
-}
-
-.label-burger {
-  z-index: 1100;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3px;
-  cursor: pointer;
-}
-.label-burger .bar {
-  width: 20px;
-  height: 2px;
-  background-color: #e0e0e0;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.inp-burger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  bottom: none;
-  opacity: 0;
-  visibility: hidden;
-}
-
-#gnb {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 100%;
-  height: 100vh;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-  padding-top: 100px;
-  transition: left 0.2s;
-}
-
-.util {
-  display: none;
-}
-
 .transper {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
           mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
