@@ -462,9 +462,20 @@ legend {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: #d92b2b;
   border-radius: 10px;
   font-size: 14px;
+  background: #fff;
+}
+#header .select-el:hover {
+  background: #d92b2b;
+}
+#header .select-el:hover .login,
+#header .select-el:hover .request {
+  color: #fff;
+}
+#header .select-el .login,
+#header .select-el .request {
+  color: #000;
 }
 #header .m-language {
   text-align: center;
