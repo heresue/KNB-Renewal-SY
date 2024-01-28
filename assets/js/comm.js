@@ -39,17 +39,20 @@ $(function () {
   const $window = $(window);
   const $header = $("#header");
   gsap.registerPlugin(ScrollTrigger);
+  // mNav에 active 클래스가 없을 때만 동작
   $window.on("scroll", function () {
-    if ($window.scrollTop() >= ($window.width() >= 1280 ? 100 : 60)) {
-      gsap.to($header, {
-        y: $window.width() >= 1280 ? -100 : -60,
-        duration: 0.5,
-      });
-    } else {
-      gsap.to($header, {
-        y: 0,
-        duration: 0.3,
-      });
+    if (!mNav.hasClass("active")) {
+      if ($window.scrollTop() >= ($window.width() >= 1280 ? 100 : 60)) {
+        gsap.to($header, {
+          y: $window.width() >= 1280 ? -100 : -60,
+          duration: 0.5,
+        });
+      } else {
+        gsap.to($header, {
+          y: 0,
+          duration: 0.3,
+        });
+      }
     }
   });
 });
