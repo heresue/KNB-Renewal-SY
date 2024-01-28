@@ -20,6 +20,20 @@ $(function () {
   langIcon.on("mouseleave", function () {
     $(this).removeClass("active");
   });
+
+  // *****m-menu*****
+  const menu = $(".m-menu");
+  const mNav = $(".m-nav");
+  menu.on("click", function () {
+    menu.toggleClass("active");
+    mNav.toggleClass("active");
+  });
+
+  // *****m-nav*****
+  const mdepEl = $(".dep-1-el");
+  mdepEl.on("click", function () {
+    $(this).parent().toggleClass("active");
+  });
 });
 // --------------------sub1, sub2 sidebar--------------------
 const sidebarEls = $(".side-bar .side-bar-li").toArray();
