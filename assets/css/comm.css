@@ -321,20 +321,16 @@ legend {
   display: flex;
   align-items: center;
 }
+#header .dep-1-li.active .dep-1-el {
+  color: #c587ff;
+}
 #header .dep-1-li.active .dep-2-box {
   opacity: 1;
   visibility: visible;
   height: auto;
-  transition: all 0.6s ease;
 }
 #header .dep-1-li.active .dep-2-box:before {
-  position: absolute;
-  content: "";
-  width: 50%;
-  height: 1px;
-  background: linear-gradient(to left, #fff, #000);
-  -webkit-clip-path: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-          clip-path: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  transform: scaleX(100%);
 }
 #header .dep-1-el {
   display: block;
@@ -348,9 +344,6 @@ legend {
   color: #fff;
   transition: color 0.3s;
 }
-#header .dep-1-el:hover {
-  color: #cbacdf;
-}
 #header .dep-2-box {
   opacity: 0;
   visibility: hidden;
@@ -362,6 +355,16 @@ legend {
   left: 0;
   right: 0;
   top: 100px;
+  transition: all 0.5s ease;
+}
+#header .dep-2-box:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  background: radial-gradient(#fff, #000);
+  transform: scaleX(0%);
+  transition: transform 0.5s ease 0.3s;
 }
 #header .dep-2-el {
   font-weight: 400;
@@ -376,7 +379,7 @@ legend {
   padding: 13px 0;
 }
 #header .dep-2-el:hover {
-  color: #cbacdf;
+  color: #c587ff;
 }
 #header .icon-box {
   height: 100%;
@@ -395,12 +398,55 @@ legend {
   align-items: center;
   width: 100%;
   height: 100%;
+  position: relative;
+  transition: all 0.3s;
+}
+#header .icon-inner:hover {
+  color: #c587ff;
+}
+#header .icon-inner.active .lang-el {
+  height: 45px;
+  visibility: visible;
+  opacity: 1;
+  padding: 10px 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#header .icon-inner.active .ko {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 #header .hd-icon {
   display: flex;
   align-items: center;
   height: 100%;
   font-size: 30px;
+}
+#header .select-lang {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  transform: translateX(-41.5px);
+}
+#header .lang-el {
+  display: block;
+  width: 113px;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  text-align: center;
+  color: #000;
+  background: #fff;
+  transition: all 0.3s;
+}
+#header .lang-el:hover {
+  color: #fff;
+  background: blueviolet;
+}
+#header .ko {
+  border-radius: 10px 10px 0 0;
+}
+#header .en {
+  border-radius: 0 0 10px 10px;
 }
 
 #main {
