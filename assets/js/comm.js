@@ -34,6 +34,24 @@ $(function () {
   mdepEl.on("click", function () {
     $(this).parent().toggleClass("active");
   });
+
+  // scroll될 때 애니메이션
+  const $window = $(window);
+  const $header = $("#header");
+  gsap.registerPlugin(ScrollTrigger);
+  $window.on("scroll", function () {
+    if ($window.scrollTop() >= ($window.width() >= 1280 ? 100 : 60)) {
+      gsap.to($header, {
+        y: $window.width() >= 1280 ? -100 : -60,
+        duration: 0.5,
+      });
+    } else {
+      gsap.to($header, {
+        y: 0,
+        duration: 0.3,
+      });
+    }
+  });
 });
 // --------------------sub1, sub2 sidebar--------------------
 const sidebarEls = $(".side-bar .side-bar-li").toArray();

@@ -132,7 +132,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 100px;
+    top: 90px;
     transition: all 0.5s ease;
     &:before {
       position: absolute;
@@ -393,6 +393,10 @@
   #header {
     height: 60px;
   }
+}
+.section {
+  height: 500px;
+  background: #222;
 }
 
 #main {
