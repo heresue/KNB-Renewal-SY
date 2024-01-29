@@ -29,12 +29,12 @@
 #header {
   position: fixed;
   height: $hd-height;
-
   width: 100%;
   display: flex;
   align-items: center;
   background: rgba(0, 0, 0, 0);
   transition: all 0.3s;
+  z-index: 1000;
   .wrapper {
     width: 100%;
     height: 100%;
@@ -430,7 +430,7 @@
   }
   .tit {
     @include web-tit;
-    line-height: 1.5
+    line-height: 1.5;
   }
   .sub-tit {
     @include web-tit(28px);
