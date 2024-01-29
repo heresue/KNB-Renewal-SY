@@ -62,9 +62,11 @@ $(function () {
   // *****m-menu*****
   const menu = $(".m-menu");
   const mNav = $(".m-nav");
+  const body = $(".body");
   menu.on("click", function () {
     menu.toggleClass("active");
     mNav.toggleClass("active");
+    body.css({ overflow: "hidden" });
 
     // 현재 $header의 배경색 확인
     const currentBackgroundColor = $header.css("background-color");
@@ -79,7 +81,13 @@ $(function () {
   // *****m-nav*****
   const mdepEl = $(".dep-1-el");
   mdepEl.on("click", function () {
-    $(this).parent().toggleClass("active");
+    const parentElement = $(this).parent();
+    if (parentElement.hasClass("active")) {
+      parentElement.removeClass("active");
+    } else {
+      mdepEl.parent().removeClass("active");
+      parentElement.addClass("active");
+    }
   });
 
   // scroll될 때 애니메이션
