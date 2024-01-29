@@ -675,7 +675,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   #main .inner {
-    max-width: 320px;
+    max-width: 328px;
   }
 }
 #main .tit {
