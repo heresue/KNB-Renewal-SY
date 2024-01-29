@@ -514,7 +514,7 @@
 #footer {
   .inner {
     height: 100%;
-    padding: 0 0 6.944vw;
+    padding: 0 0 4vw;
     max-width: 1280px;
     margin: 0 auto;
   }  
@@ -571,7 +571,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    height: 32px;
+    height: 100%;
 
     input {
       padding: 0 20px;
@@ -607,8 +607,37 @@
 @media screen and (max-width: 1024px) {
   #footer {
     .inner {
-      padding: 0 12.5vw 6.944vw;
+      padding: 0 12.5vw 4vw;
     }
+  }
+
+  .note-sns {
+    gap: 100px;
+  }
+
+  .info-letter {
+    gap: 110px;
+
+    .letter {
+      flex-direction: column;
+      height: 100%;
+
+      input {
+        &:nth-child(2) {
+          margin-left: 0;
+        }
+      }
+
+      button {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 };
 
@@ -635,16 +664,15 @@
   .info-letter {
     flex-direction: column-reverse;
     margin-top: 30px;
+    gap: 0;
 
     .info-list {
       gap: 10px;
     }
 
     .letter {
-      flex-direction: column;
       justify-content: space-between;
-      height: 180px;
-      gap: 0;
+      gap: 20px;
 
       .tit {
         font-size: 20px;
@@ -653,14 +681,6 @@
 
       input {
         width: 100%;
-
-        &:nth-child(2) {
-          margin-left: 0;
-        }
-      }
-
-      button {
-        margin-left: 0;
       }
     }
 
@@ -670,9 +690,6 @@
     }
 
     .form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       width: 100%;
       gap: 15px;
     }
