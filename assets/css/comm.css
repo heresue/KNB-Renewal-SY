@@ -277,6 +277,8 @@ legend {
   width: 100%;
   display: flex;
   align-items: center;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s;
 }
 #header .wrapper {
   width: 100%;
@@ -305,6 +307,12 @@ legend {
   height: 45px;
 }
 @media screen and (max-width: 1280px) {
+  #header #logo {
+    width: 120px;
+    height: 41px;
+  }
+}
+@media screen and (max-width: 728px) {
   #header #logo {
     width: 100px;
     height: 31px;
@@ -361,6 +369,15 @@ legend {
   color: #fff;
   transition: color 0.3s;
 }
+@media screen and (max-width: 360px) {
+  #header .dep-1-el {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    line-height: normal;
+    color: #fff;
+  }
+}
 #header .dep-2-box {
   opacity: 0;
   visibility: hidden;
@@ -406,6 +423,7 @@ legend {
   left: 100%;
   opacity: 0;
   padding-top: 40px;
+  background: #000;
   z-index: 1000;
   overflow-y: auto;
   transition: all 0.5s;
@@ -413,6 +431,10 @@ legend {
 #header .m-nav.active {
   opacity: 1;
   left: 0;
+  height: 100%;
+}
+#header .m-nav.active #header {
+  background: #000;
 }
 #header .m-dep-2-box {
   height: 0;
@@ -462,7 +484,7 @@ legend {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 40px;
   font-size: 14px;
   background: #fff;
 }

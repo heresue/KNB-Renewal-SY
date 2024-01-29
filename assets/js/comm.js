@@ -1,5 +1,7 @@
 // --------------------header--------------------
 $(function () {
+  const $window = $(window);
+  const $header = $("#header");
   // *****depth*****
   const dep1El = $("#header .dep-1-li");
   const dep2Box = $(".dep-2-box");
@@ -27,6 +29,15 @@ $(function () {
   menu.on("click", function () {
     menu.toggleClass("active");
     mNav.toggleClass("active");
+
+    // 현재 $header의 배경색 확인
+    const currentBackgroundColor = $header.css("background-color");
+    $header.css({
+      backgroundColor:
+        currentBackgroundColor === "rgba(0, 0, 0, 0)"
+          ? "black"
+          : "rgba(0, 0, 0, 0)",
+    });
   });
 
   // *****m-nav*****
@@ -36,16 +47,19 @@ $(function () {
   });
 
   // scroll될 때 애니메이션
-  const $window = $(window);
-  const $header = $("#header");
+
   gsap.registerPlugin(ScrollTrigger);
+
   // mNav에 active 클래스가 없을 때만 동작
-  $window.on("scroll", function () {
+  $window.on("scroll", _.throttle(hdScroll, 300));
+
+  function hdScroll() {
     if (!mNav.hasClass("active")) {
+      console.log("mNav does not have active class"); // 디버깅용 메시지
       if ($window.scrollTop() >= ($window.width() >= 1280 ? 100 : 60)) {
         gsap.to($header, {
           y: $window.width() >= 1280 ? -100 : -60,
-          duration: 0.5,
+          duration: 0.3,
         });
       } else {
         gsap.to($header, {
@@ -54,7 +68,7 @@ $(function () {
         });
       }
     }
-  });
+  }
 });
 // --------------------sub1, sub2 sidebar--------------------
 const sidebarEls = $(".side-bar .side-bar-li").toArray();
