@@ -20,14 +20,10 @@
 
   // margin-left: 5.556vw;
 }
-@media screen and (max-width: 1280px) {
-  .wrap {
-    margin: 0 auto;
-    max-width: 420px;
-  }
-}
 #header {
   position: fixed;
+  top: 0;
+  left: 0;
   height: $hd-height;
   width: 100%;
   display: flex;
@@ -53,6 +49,7 @@
   }
   @media screen and (max-width: 1280px) {
     .inner {
+      max-width: 1024px;
       // min-width: 328px;
       // max-width: 768px;
       margin: 0 5.556vw;
@@ -426,7 +423,16 @@
     padding: 6.944vw 0;
     max-width: 1280px;
     margin: 0 auto;
-    // max-width: 1280px;
+  }
+  @media screen and (max-width: 1280px) {
+    .inner {
+      max-width: 768px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .inner {
+      max-width: 320px;
+    }
   }
   .tit {
     @include web-tit;

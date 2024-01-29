@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // --------------------header--------------------
 $(function () {
   const $window = $(window);

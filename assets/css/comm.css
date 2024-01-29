@@ -277,14 +277,10 @@ button {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1280px) {
-  .wrap {
-    margin: 0 auto;
-    max-width: 420px;
-  }
-}
 #header {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 100px;
   width: 100%;
   display: flex;
@@ -310,6 +306,7 @@ button {
 }
 @media screen and (max-width: 1280px) {
   #header .inner {
+    max-width: 1024px;
     margin: 0 5.556vw;
     justify-content: space-between;
   }
@@ -670,6 +667,16 @@ button {
   padding: 6.944vw 0;
   max-width: 1280px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1280px) {
+  #main .inner {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .inner {
+    max-width: 320px;
+  }
 }
 #main .tit {
   font-weight: 700;
