@@ -64,9 +64,18 @@ $(function () {
   const mNav = $(".m-nav");
   const body = $(".body");
   menu.on("click", function () {
-    menu.toggleClass("active");
-    mNav.toggleClass("active");
-    body.css({ overflow: "hidden" });
+    if (menu.hasClass("active") && mNav.hasClass("active")) {
+      menu.removeClass("active");
+      mNav.removeClass("active");
+      body.css({ overflow: "auto" }); // 원래 상태로 복원하려면 'auto'로 설정
+    } else {
+      menu.addClass("active");
+      mNav.addClass("active");
+      body.css({ overflow: "hidden" });
+    }
+    // menu.addClass("active");
+    // mNav.addClass("active");
+    // body.css({ overflow: "hidden" });
 
     // 현재 $header의 배경색 확인
     const currentBackgroundColor = $header.css("background-color");
@@ -91,7 +100,6 @@ $(function () {
   });
 
   // scroll될 때 애니메이션
-
   gsap.registerPlugin(ScrollTrigger);
 
   // mNav에 active 클래스가 없을 때만 동작
@@ -120,6 +128,26 @@ $(function () {
   sidebarEl.on("click", function () {
     sidebarEls.forEach((el) => $(el).removeClass("active"));
     $(this).addClass("active");
+  });
+
+  $(".smoothscroll").on("click", function (e) {
+    e.preventDefault();
+
+    var target = this.hash,
+      $target = $(target);
+
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $target.offset().top,
+        },
+        1500,
+        "swing",
+        function () {
+          window.location.hash = target;
+        }
+      );
   });
   // --------------------sub2--------------------
   // *****performance-info*****
