@@ -448,7 +448,7 @@ button {
 }
 #header .m-dep-2-box {
   height: 0;
-  opacity: 0;
+  overflow: hidden;
   visibility: hidden;
   transition: opacity 0.3s;
 }
