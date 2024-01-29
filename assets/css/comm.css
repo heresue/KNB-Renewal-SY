@@ -277,14 +277,10 @@ button {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1280px) {
-  .wrap {
-    margin: 0 auto;
-    max-width: 420px;
-  }
-}
 #header {
   position: fixed;
+  top: 0;
+  left: 0;
   height: 100px;
   width: 100%;
   display: flex;
@@ -310,6 +306,7 @@ button {
 }
 @media screen and (max-width: 1280px) {
   #header .inner {
+    max-width: 1024px;
     margin: 0 5.556vw;
     justify-content: space-between;
   }
@@ -433,6 +430,7 @@ button {
   width: 100%;
   height: 100%;
   top: 60px;
+  bottom: 0;
   left: 100%;
   opacity: 0;
   padding-top: 40px;
@@ -444,16 +442,15 @@ button {
 #header .m-nav.active {
   opacity: 1;
   left: 0;
-  height: 100%;
 }
 #header .m-nav.active #header {
   background: #000;
 }
 #header .m-dep-2-box {
   height: 0;
-  opacity: 0;
+  overflow: hidden;
   visibility: hidden;
-  transition: opacity 0.3s;
+  transition: all 0.8s ease;
 }
 #header .m-dep-2-box:before {
   content: "";
@@ -461,8 +458,9 @@ button {
   width: 100%;
   height: 1px;
   transform: scaleX(0%);
+  transform-origin: left;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.6), #000);
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 #header .m-dep-1-li {
   padding: 10px 9.722vw;
@@ -488,29 +486,39 @@ button {
 }
 #header .m-select {
   display: flex;
-  justify-content: center;
-  margin-top: 80px;
+  margin: 50px 9.722vw;
   gap: 10px;
 }
+@media screen and (max-width: 768px) {
+  #header .m-select {
+    margin: 40px 9.722vw;
+  }
+}
 #header .select-el {
-  width: 100px;
-  height: 40px;
-  line-height: 40px;
+  width: 130px;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
-  border-radius: 40px;
-  font-size: 14px;
-  background: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
 }
 #header .select-el:hover {
-  background: #d92b2b;
-}
-#header .select-el:hover .login,
-#header .select-el:hover .request {
-  color: #fff;
+  background: #8a2be2;
 }
 #header .select-el .login,
 #header .select-el .request {
-  color: #000;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  #header .select-el {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
 }
 #header .m-language {
   text-align: center;
@@ -671,6 +679,16 @@ button {
   max-width: 1280px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1280px) {
+  #main .inner {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .inner {
+    max-width: 328px;
+  }
+}
 #main .tit {
   font-weight: 700;
   font-size: 56px;
@@ -734,7 +752,7 @@ button {
   height: 43px;
   line-height: 43px;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s;
 }
 #main .main-visual .side-bar-wrap .side-bar-li.active {
   background: #d92b2b;
