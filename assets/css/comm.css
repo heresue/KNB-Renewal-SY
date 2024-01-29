@@ -655,20 +655,6 @@ legend {
 .notice-sec .inner .txt-wrap em {
   padding: 0px 0 24px 0;
 }
-.notice-sec .inner a {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 5px;
-}
-.notice-sec .inner .mover::before {
-  content: "";
-  background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-  display: inline-block;
-  margin-right: 8px;
-}
 
 .notice-wrap {
   width: 738px;
@@ -679,34 +665,91 @@ legend {
   align-items: center;
 }
 .notice-wrap .list-top {
-  border-top: 3px solid white;
+  border-top: 3px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .notice-wrap .list {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.notice-wrap a {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+.notice-wrap .noti-tit {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.notice-wrap .noti-icon {
+  background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
+  width: 0;
+  height: 0;
+  background-size: contain;
+  display: inline-block;
+  transition: all 0.3s ease-out;
+}
+.notice-wrap .noti-date {
+  color: #616161;
+}
+.notice-wrap li:hover .noti-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
 }
 
-.inner-fp-ptn {
+.ptn-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.inner-fp-ptn h2 {
+.ptn-wrap h2 {
   padding: 50px;
 }
-.inner-fp-ptn .logo-wrap {
+
+.ptn-lg-wrap {
   display: flex;
   height: 100px;
   width: 100%;
   align-items: center;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  overflow: hidden;
+  position: relative;
 }
-.inner-fp-ptn .logo-wrap a {
-  padding: 0 10px;
+.ptn-lg-wrap .ptn-lg-inner {
+  display: block;
+  width: 200%;
+  height: 35px;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 10s linear infinite;
 }
-.inner-fp-ptn .logo-wrap a img {
-  height: 30px;
+.ptn-lg-wrap .ptn-lg {
+  float: left;
+  width: 50%;
+}
+.ptn-lg-wrap .ptn-lg a {
+  padding: 0 80px;
+  width: 300px;
+}
+.ptn-lg-wrap .ptn-lg a img {
+  height: 35px;
+  filter: grayscale(100%);
+}
+.ptn-lg-wrap .ptn-lg a:hover img {
+  filter: none;
+}
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.ptn-lg-wrap .ptn-lg-inner:hover {
+  animation-play-state: paused;
 }
 
 .main-visual-sub1 {
