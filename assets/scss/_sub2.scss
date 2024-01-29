@@ -1,8 +1,12 @@
 // -----------------------main-visual-----------------------
 .main-visual-sub2 {
+  height: 80vh;
   background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%),
     url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50% /
       cover;
+  .txt-wrap {
+    margin-top: 100px;
+  }
 }
 // -----------------------performance-info-----------------------
 
@@ -26,7 +30,13 @@
       margin-right: 12px;
     }
   }
+  .poster-wrap {
+    position: relative;
+    height: 100vh;
+  }
   .poster {
+    position: absolute;
+    width: 100%;
     height: 100vh;
     // padding: 0;
     display: flex;
@@ -69,7 +79,7 @@
         rgba(0, 0, 0, 0.7) 0deg,
         rgba(0, 0, 0, 0) 360deg
       ),
-      url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 50% /
+      url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 100% /
         cover;
   }
   .poster-2 {
@@ -84,7 +94,7 @@
         rgba(0, 0, 0, 0.3) 208.10944318771362deg,
         rgba(0, 0, 0, 0) 360deg
       ),
-      url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 50% /
+      url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 100% /
         cover;
   }
   .poster-3 {
@@ -104,7 +114,7 @@
         rgba(0, 0, 0, 0.7) 0deg,
         rgba(0, 0, 0, 0) 360deg
       ),
-      url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 50% /
+      url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 100% /
         cover;
   }
   .poster-4 {
@@ -143,7 +153,7 @@
         rgba(0, 0, 0, 0.7) 0deg,
         rgba(0, 0, 0, 0) 360deg
       ),
-      url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 50% /
+      url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 100% /
         cover;
   }
   .poster-6 {
@@ -162,12 +172,14 @@
         rgba(0, 0, 0, 0.7) 0deg,
         rgba(0, 0, 0, 0) 360deg
       ),
-      url(../../images/sub2/perfermance-info/poster-6.jpg) no-repeat 50% 50% /
+      url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100% /
         cover;
   }
 }
 // -----------------------before-monthly-schedule-----------------------
 .before-monthly-schedule {
+  // margin-bottom: 120px;
+  height: 100vh;
   &::before {
     display: block;
     content: "";
@@ -185,11 +197,23 @@
     padding: 12.5vw 5.556vw 0 !important;
   }
   .highlight-tit {
-    font-family: "Telex", sans-serif;
-    font-size: 70px;
+    // font-family: "Telex", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 90px;
     text-align: right;
     line-height: 120%;
     margin-bottom: 11px;
+    color: rgb(255, 255, 255, 0.2);
+    background: linear-gradient(to right, $primaryWhite, $primaryWhite)
+      no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 0%;
+    transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+    .width-adjust {
+      width: 500px;
+      transform: translateX(616px);
+    }
   }
   .highlight-sub-tit,
   .arr-down {
@@ -203,11 +227,21 @@
     margin-top: 50px;
   }
   .arr-down-icon {
-    transform: rotate(90deg) scale(2);
+    transform: rotate(90deg) scale(1.5);
+    animation: arrDown 0.5s infinite ease alternate;
+  }
+  @keyframes arrDown {
+    0% {
+      transform: rotate(90deg) scale(1.8) translateX(0);
+    }
+    100% {
+      transform: rotate(90deg) scale(1.8) translateX(10px);
+    }
   }
 }
 // -----------------------monthly-schedule-----------------------
 .monthly-schedule {
+  // height: 100vh;
   .txt-wrap {
     display: flex;
     align-items: baseline;
@@ -215,6 +249,39 @@
   }
   .tit {
     margin-right: 12px;
+  }
+  .fc-button-primary {
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+  .calendar {
+    margin-top: 50px;
+  }
+  .fc-theme-standard th {
+    border: none;
+  }
+  .fc-theme-standard td {
+    border-right: none;
+    border-bottom: none;
+    border-color: $txtSub2;
+  }
+  .fc-theme-standard .fc-scrollgrid {
+    border: none;
+  }
+  .fc-col-header {
+    height: 44px;
+    background: rgb(217, 43, 43, 0.3);
+    line-height: 44px;
+  }
+  .fc-daygrid-day-top {
+    flex-direction: row;
+  }
+  .fc-col-header-cell-cushion,
+  .fc-daygrid-day-number {
+    font-weight: 400;
+    &:hover {
+      color: white;
+    }
   }
 }
 // -----------------------chronological-list-----------------------
@@ -228,13 +295,21 @@
     margin-right: 12px;
   }
   .scroll-wrap {
+    // height: 100vh;
     display: flex;
     justify-content: space-between;
     padding: 110px 112px 0 0;
+    position: relative;
   }
   .scroll-tit {
     @include web-tit(80px);
     margin-top: 190px;
+  }
+  .scroll-contents-box {
+    position: absolute;
+    right: 0;
+    height: 1350px;
+    width: 528px;
   }
   .content {
     padding: 50px 0;
@@ -258,6 +333,8 @@
     gap: 72px;
   }
   .txt-list-month {
+    display: block;
+    width: 35px;
     @include web-bd(28px);
     color: $txtSub1;
   }
@@ -280,9 +357,19 @@
 }
 // -----------------------more-chronological-list-----------------------
 .more-chronological-list {
+  margin-bottom: 80px;
+  .txt-wrap {
+    &:after {
+      display: block;
+      content: "";
+      width: 50%;
+      height: 1px;
+      background: linear-gradient(to right, $primaryWhite, $primary);
+    }
+  }
   .tit {
-    text-align: center;
-    margin-bottom: 40px;
+    // text-align: center;
+    margin-bottom: 60px;
   }
   .date-btn-wrap {
     text-align: center;
@@ -293,7 +380,7 @@
     margin-left: 12px;
     // padding: 124px 63px;
     color: $primaryWhite;
-    border-radius: 10px;
+    border-radius: 59px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     &.active {
       background: $secondary;
@@ -301,7 +388,7 @@
     }
   }
   .contents-wrap {
-    padding: 65px 80px;
+    padding: 30px 80px;
   }
   .content {
     display: flex;
@@ -320,6 +407,64 @@
   .cont-left {
     display: flex;
     gap: 30px;
+  }
+  .swiper-more-chronological-list {
+    overflow: visible;
+    padding-top: 20px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 200px px;
+      height: 483px;
+      position: absolute;
+      left: -200px;
+      top: 0;
+      background: $primary;
+      z-index: 1000;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+  .swiper-button-prev {
+    transform: rotate(180deg);
+    top: -50px;
+    left: 85%;
+  }
+  .swiper-button-next {
+    top: -50px;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
+  }
+  .list-sub-tit {
+    @include web-tit(40px);
+    display: block;
+    margin-bottom: 35px;
+  }
+  .cont {
+    color: $txtSub1;
+    margin-bottom: 12px;
+  }
+}
+.more-chronological-list-file-info {
+  background: blueviolet;
+  .txt-wrap {
+    margin-bottom: 40px;
+  }
+  .tit-small {
+    @include web-tit(40px);
+  }
+  .file-info {
+    color: $primaryWhite;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    gap: 90px;
   }
 }
 
