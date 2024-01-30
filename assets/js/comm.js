@@ -177,7 +177,7 @@ $(function () {
       start: "top top",
       end: "+=700%",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
   // 각각의 poster에 대한 애니메이션
@@ -332,7 +332,7 @@ $(function () {
       start: "top top",
       end: "+=120%",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
   scrollWrap1Tl.fromTo(
@@ -355,7 +355,7 @@ $(function () {
       start: "top top",
       end: "+=120%",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
   scrollWrap2Tl.fromTo(
