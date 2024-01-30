@@ -486,8 +486,28 @@
     @include web-tit;
     line-height: 1.5;
   }
+  @media screen and (max-width: 1280px) {
+    .tit {
+      @include web-tit(42px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .tit {
+      @include mob-tit(32px);
+    }
+  }
   .sub-tit {
     @include web-tit(28px);
+  }
+  @media screen and (max-width: 1280px) {
+    .sub-tit {
+      @include web-tit(18px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .sub-tit {
+      @include web-tit(16px);
+    }
   }
   .content,
   .side-bar-li {
@@ -504,6 +524,16 @@
         gap: 12px;
         .sub-tit {
           @include web-bd(20px);
+        }
+        @media screen and (max-width: 1280px) {
+          .sub-tit {
+            @include web-bd(18px);
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .sub-tit {
+            @include web-bd(16px);
+          }
         }
       }
     }
@@ -532,6 +562,20 @@
         &.active {
           background: $secondary;
           border-radius: 43px;
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        .side-bar-li {
+          width: 115px;
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .side-bar-li {
+          width: 80px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
         }
       }
     }
