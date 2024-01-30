@@ -1109,10 +1109,17 @@ button {
   text-align: center;
 }
 .main-visual-sub1 .content {
-  margin-top: 13px;
   font-size: 20px !important;
 }
 
+@media screen and (max-width: 1280px) {
+  .main-visual-sub1 .content {
+    font-size: 18px !important;
+  }
+  .main-visual-sub1 .tit {
+    font-size: 42px !important;
+  }
+}
 .sec-about .inner {
   display: flex;
   justify-content: space-between;
@@ -1163,6 +1170,15 @@ button {
   left: -35%;
 }
 
+@media screen and (max-width: 1280px) {
+  .sec-about .inner {
+    gap: 0;
+  }
+  .sec-about .pofile-img-wrap .profile-img {
+    width: 350px;
+    height: auto;
+  }
+}
 .sec-work {
   position: relative;
 }
