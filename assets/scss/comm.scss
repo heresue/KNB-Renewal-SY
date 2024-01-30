@@ -510,11 +510,11 @@
   }
 }
 
-// footer------------------------------------------
+// footer-------------------------------------------------------------------------
 #footer {
   .inner {
     height: 100%;
-    padding: 0 0 4vw;
+    padding: 4vw 0;
     max-width: 1280px;
     margin: 0 auto;
   }  
@@ -589,9 +589,9 @@
 
     button {
       margin-left: 10px;
-      width: 85px;
+      width: 75px;
       height: 32px;
-      border-radius: 10px;
+      border-radius: 50px;
       background: $secondary;
       color: $txtDefult;
       transition: all 0.3s;
@@ -604,23 +604,35 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   #footer {
     .inner {
-      padding: 0 12.5vw 4vw;
+      max-width: 768px;
     }
   }
 
   .note-sns {
     gap: 100px;
+
+    .note {
+      font-size: 14px;
+    }
+
+    .sns-list {
+      gap: 10px;
+    }
   }
 
   .info-letter {
-    gap: 110px;
+    gap: 80px;
 
     .letter {
       flex-direction: column;
       height: 100%;
+
+      .tit {
+        font-weight: 700;
+      }
 
       input {
         &:nth-child(2) {
@@ -630,7 +642,12 @@
 
       button {
         margin-left: 0;
+        margin-top: 10px;
       }
+    }
+
+    .info {
+      font-size: 14px;
     }
   }
 
@@ -638,14 +655,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
   }
 };
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
   #footer {
     .inner {
-      max-width: 360px;
-      padding: 27.78vw 4.444vw;
+      max-width: 328px;
     }
   }
 
@@ -656,8 +673,11 @@
     // height: 120px;
 
     .note {
-      font-size: 14px;
       text-align: center;
+    }
+
+    .fa-brands {
+      font-size: 22px;
     }
   }
 
@@ -674,11 +694,6 @@
       justify-content: space-between;
       gap: 20px;
 
-      .tit {
-        font-size: 20px;
-        font-weight: 700;
-      }
-
       input {
         width: 100%;
       }
@@ -686,15 +701,17 @@
 
     .info {
       margin-top: 30px;
-      font-size: 14px;
     }
 
     .form {
       width: 100%;
-      gap: 15px;
+      gap: 10px;
     }
   }
 };
+// footer end-----------------------------------------------------------
+
+
 
 // --------------------------------------------------------
 
