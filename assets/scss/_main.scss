@@ -11,7 +11,6 @@
   z-index: -1;
 }
 
-
 // 슬라이드 이미지 사이즈
 .slide-intro,
 .performance-inner {
@@ -25,17 +24,10 @@
   }
 }
 
-
-
-
-
 // main //
 .main-sec .swiper-pagination {
   display: none;
 }
-
-
-
 
 // performance section //
 
@@ -51,10 +43,7 @@
     display: flex;
     width: 10%;
   }
-
 }
-
-
 
 .performance-inner {
   &.swiper-slide {
@@ -91,14 +80,12 @@
     }
 
     button {
-      background: #D92B2B;
+      background: #d92b2b;
       width: 160px;
       height: 37px;
     }
   }
 }
-
-
 
 // introduce section //
 
@@ -111,7 +98,7 @@
     }
   }
   .img::before {
-    content: '';
+    content: "";
     background: linear-gradient(to top, black, transparent);
     position: absolute;
     height: 30%;
@@ -144,7 +131,7 @@
       }
     }
   }
-  
+
   // img
   .knb-1 {
     background-image: url(/images/main/knb_1.jpg);
@@ -184,8 +171,6 @@
   margin-bottom: 197px;
 }
 
-
-
 // youtube section //
 
 .ytb-bg {
@@ -203,7 +188,7 @@
     h2 {
       border-bottom: 1px solid white;
       margin-right: -300px;
-      padding: 25px 0; 
+      padding: 25px 0;
     }
     .sub-tit {
       padding: 15px 0 5px 0;
@@ -218,8 +203,6 @@
     padding-top: 30px;
   }
 }
-
-
 
 // notice section //
 .notice-sec {
@@ -237,19 +220,19 @@
   }
 }
 
-.notice-wrap{
+.notice-wrap {
   width: 738px;
   // overflow: hidden;
   li {
     height: 90px;
     display: flex;
-    align-items: center;    
+    align-items: center;
   }
   .list-top {
     border-top: 3px solid rgb(255, 255, 255);
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
   }
-  
+
   .list {
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
   }
@@ -267,7 +250,8 @@
   }
 
   .noti-icon {
-    background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;;
+    background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center
+      center;
     width: 0;
     height: 0;
     background-size: contain;
@@ -288,9 +272,6 @@
 
 
 
-
-
-
 // partner section //
 
 .ptn-wrap {
@@ -301,7 +282,6 @@
     padding: 50px;
   }
 }
-
 
 .ptn-lg-wrap {
   display: flex;
@@ -320,7 +300,7 @@
     overflow: hidden;
     animation: marquee 10s linear infinite;
   }
-  
+
   .ptn-lg {
     float: left;
     width: 50%;
@@ -328,22 +308,30 @@
       padding: 0 80px;
       width: 300px;
       img {
-      height: 35px;
-      filter: grayscale(100%);
+        width: 140px;
+        height: 35px;
+        object-fit: contain;
+        filter: grayscale(100%);
       }
     }
-    a:hover img{
+    a:hover img {
       filter: none;
     }
   }
-  
+
   @keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
   }
-  
+
   .ptn-lg-inner:hover {
     animation-play-state: paused;
   }
 }
+
+
 
