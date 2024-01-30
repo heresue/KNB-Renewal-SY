@@ -1,8 +1,9 @@
 // sec-visual---------------------------------------------------
 .main-visual-sub1 {
     height: 80vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), url(/images/sub1/main-visual/background.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), url(/images/sub1/main-visual/background.png);
     background-size: cover;
+    background-position: center;
 
     .inner {
         position: relative;
@@ -22,10 +23,6 @@
     .main-visual-sub1 {
         .content {
             font-size: 18px !important; 
-        }
-
-        .tit {
-            font-size: 42px !important;
         }
     }
 }
@@ -96,13 +93,42 @@
 @media screen and (max-width: 1280px) {
     .sec-about {
         .inner {
+            align-items: center;
             gap: 0;
+        }
+
+        .txt-profile {
+            .txt-wrap {
+                .tit {
+                    margin-top: 20px;
+                }
+            }
+
+            .profile-wrap {
+                gap: 10px;
+                margin-top: 50px;
+    
+                .sub-tit {
+                    font-size: 26px !important;
+                }
+                .name-en {
+                    font-size: 14px;
+                }
+                .position {
+                    font-size: 14px;
+                }
+            }
         }
 
         .pofile-img-wrap {
             .profile-img {
                 width: 350px;
                 height: auto;
+            }
+            .sign-img {
+                width: 200px;
+                top: 90%;
+                left: -25%;
             }
         }
     }
@@ -161,6 +187,16 @@
             img {
                 filter: brightness(0.5);
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .sec-work {
+        .posters {
+            .poster-list {
+                width: 350px;
             }
         }
     }

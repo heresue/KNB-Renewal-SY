@@ -1217,8 +1217,9 @@ button {
 
 .main-visual-sub1 {
   height: 80vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(/images/sub1/main-visual/background.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(/images/sub1/main-visual/background.png);
   background-size: cover;
+  background-position: center;
 }
 .main-visual-sub1 .inner {
   position: relative;
@@ -1237,9 +1238,6 @@ button {
 @media screen and (max-width: 1280px) {
   .main-visual-sub1 .content {
     font-size: 18px !important;
-  }
-  .main-visual-sub1 .tit {
-    font-size: 42px !important;
   }
 }
 .sec-about .inner {
@@ -1294,11 +1292,33 @@ button {
 
 @media screen and (max-width: 1280px) {
   .sec-about .inner {
+    align-items: center;
     gap: 0;
+  }
+  .sec-about .txt-profile .txt-wrap .tit {
+    margin-top: 20px;
+  }
+  .sec-about .txt-profile .profile-wrap {
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .sec-about .txt-profile .profile-wrap .sub-tit {
+    font-size: 26px !important;
+  }
+  .sec-about .txt-profile .profile-wrap .name-en {
+    font-size: 14px;
+  }
+  .sec-about .txt-profile .profile-wrap .position {
+    font-size: 14px;
   }
   .sec-about .pofile-img-wrap .profile-img {
     width: 350px;
     height: auto;
+  }
+  .sec-about .pofile-img-wrap .sign-img {
+    width: 200px;
+    top: 90%;
+    left: -25%;
   }
 }
 .sec-work {
@@ -1350,6 +1370,11 @@ button {
   width: 100%;
 }
 
+@media screen and (max-width: 1280px) {
+  .sec-work .posters .poster-list {
+    width: 350px;
+  }
+}
 .sec-velue .txt-wrap .content {
   margin-top: 20px;
 }
