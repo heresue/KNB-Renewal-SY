@@ -1,3 +1,4 @@
+
 // sub1-----------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const sectionWork = document.querySelector(".sec-work");
@@ -85,9 +86,18 @@ $(function () {
   const mNav = $(".m-nav");
   const body = $(".body");
   menu.on("click", function () {
-    menu.toggleClass("active");
-    mNav.toggleClass("active");
-    body.css({ overflow: "hidden" });
+    if (menu.hasClass("active") && mNav.hasClass("active")) {
+      menu.removeClass("active");
+      mNav.removeClass("active");
+      body.css({ overflow: "auto" }); // 원래 상태로 복원하려면 'auto'로 설정
+    } else {
+      menu.addClass("active");
+      mNav.addClass("active");
+      body.css({ overflow: "hidden" });
+    }
+    // menu.addClass("active");
+    // mNav.addClass("active");
+    // body.css({ overflow: "hidden" });
 
     // 현재 $header의 배경색 확인
     const currentBackgroundColor = $header.css("background-color");
@@ -112,12 +122,11 @@ $(function () {
   });
 
   // scroll될 때 애니메이션
-
+  const $gotoTop = $(".goto-top");
   gsap.registerPlugin(ScrollTrigger);
-
+  gsap.set($gotoTop, { x: 300 });
   // mNav에 active 클래스가 없을 때만 동작
   $window.on("scroll", _.throttle(hdScroll, 300));
-
   function hdScroll() {
     if (!mNav.hasClass("active")) {
       console.log("mNav does not have active class"); // 디버깅용 메시지
@@ -126,14 +135,29 @@ $(function () {
           y: $window.width() >= 1280 ? -100 : -60,
           duration: 0.3,
         });
+        gsap.to($gotoTop, {
+          x: -10,
+          duration: 0.3,
+          delay: 0.2,
+        });
       } else {
         gsap.to($header, {
           y: 0,
-          duration: 0.3,
+          duration: 0.4,
+          ease: "power2.inOut",
+        });
+        gsap.to($gotoTop, {
+          x: 300,
+          duration: 0.4,
+          ease: "power2.inOut",
         });
       }
     }
   }
+  // *****goto-top*****
+  $gotoTop.on("click", function () {
+    gsap.to($window, { scrollTop: 0, duration: 0.8, ease: "power2.inOut" });
+  });
 
   // --------------------sub1, sub2 sidebar--------------------
   const sidebarEls = $(".side-bar .side-bar-li").toArray();
@@ -141,6 +165,24 @@ $(function () {
   sidebarEl.on("click", function () {
     sidebarEls.forEach((el) => $(el).removeClass("active"));
     $(this).addClass("active");
+  });
+
+  $(".smoothscroll").on("click", function (e) {
+    e.preventDefault();
+    var target = this.hash,
+      $target = $(target);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $target.offset().top,
+        },
+        1500,
+        "swing",
+        function () {
+          window.location.hash = target;
+        }
+      );
   });
   // --------------------sub2--------------------
   // *****performance-info*****
@@ -191,7 +233,7 @@ $(function () {
       start: "top top",
       end: "+=700%",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
   // 각각의 poster에 대한 애니메이션
@@ -346,7 +388,7 @@ $(function () {
       start: "top top",
       end: "+=120%",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
   scrollWrap1Tl.fromTo(
@@ -369,7 +411,7 @@ $(function () {
       start: "top top",
       end: "+=120%",
       scrub: 0.5,
-      markers: true,
+      // markers: true,
     },
   });
   scrollWrap2Tl.fromTo(
@@ -396,3 +438,4 @@ $(function () {
     },
   });
 });
+// );
