@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "dayGridMonth",
     // contentHeight: 650,
-    aspectRatio: 2,
+    // aspectRatio: 2,
     headerToolbar: {
       start: "title", // will normally be on the left. if RTL, will be on the right
       center: "",

@@ -61,6 +61,11 @@
       margin: 0 auto;
     }
   }
+  @media screen and (max-width: 1280px) {
+    .poster {
+      gap: 46px;
+    }
+  }
   .post-tit {
     display: block;
     height: 70px;
@@ -71,12 +76,18 @@
   }
   @media screen and (max-width: 1280px) {
     .post-tit {
+      height: 57px;
+      width: 330px;
       @include web-tit(35px);
+      margin-bottom: 2 0px;
     }
   }
   @media screen and (max-width: 768px) {
     .post-tit {
+      height: 50px;
+      width: 200px;
       @include mob-tit(30px);
+      margin-bottom: 10px;
     }
   }
   .poster-4 {
@@ -201,8 +212,18 @@
       url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100% /
         cover;
   }
+  @media screen and (max-width: 1280px) {
+    .arr-icon {
+      width: 40px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .arr-icon {
+      width: 36px;
+    }
+  }
 }
-// -----------------------before-monthly-schedule-----------------------
+// ---------------         --------before-monthly-schedule-----------------------
 .before-monthly-schedule {
   // margin-bottom: 120px;
   height: 100vh;
@@ -220,8 +241,14 @@
     transform: rotate(180deg);
   }
   .inner {
-    padding: 12.5vw 5.556vw 0 !important;
+    padding: 12.5vw 4.444vw 0 0 !important;
   }
+  @media screen and (max-width: 768px) {
+    .inner {
+      padding: 12.5vw 10px !important;
+    }
+  }
+
   .highlight-tit {
     // font-family: "Telex", sans-serif;
     font-family: "Roboto", sans-serif;
@@ -241,9 +268,24 @@
       transform: translateX(616px);
     }
   }
+  @media screen and (max-width: 1280px) {
+    .highlight-tit {
+      font-size: 65px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .highlight-tit {
+      font-size: 35px;
+    }
+  }
   .highlight-sub-tit,
   .arr-down {
     text-align: right;
+  }
+  @media screen and (max-width: 768px) {
+    .highlight-sub-tit {
+      @include mob-bd(14px);
+    }
   }
   .arr-down {
     height: 94px;
@@ -251,6 +293,16 @@
     align-items: center;
     justify-content: flex-end;
     margin-top: 50px;
+  }
+  @media screen and (max-width: 1280px) {
+    .arr-down {
+      margin-top: 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .arr-down {
+      margin-top: 10px;
+    }
   }
   .arr-down-icon {
     transform: rotate(90deg) scale(1.5);
@@ -262,6 +314,16 @@
     }
     100% {
       transform: rotate(90deg) scale(1.8) translateX(10px);
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .arr-down-icon {
+      height: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .arr-down-icon {
+      height: 7px;
     }
   }
 }
@@ -309,6 +371,20 @@
       color: white;
     }
   }
+  @media screen and (max-width: 1280px) {
+    .fc-toolbar-title {
+      font-size: 24px;
+    }
+    .fc-daygrid-day-number,
+    .fc-event-title {
+      font-size: 12px;
+    }
+    .fc-button {
+      width: 35px;
+      height: 35px;
+      padding: 0;
+    }
+  }
 }
 // -----------------------chronological-list-----------------------
 .chronological-list {
@@ -316,6 +392,11 @@
     display: flex;
     align-items: baseline;
     position: relative;
+  }
+  @media screen and (max-width: 768px) {
+    .txt-wrap {
+      flex-direction: column;
+    }
   }
   .tit {
     margin-right: 12px;
@@ -331,32 +412,75 @@
     @include web-tit(80px);
     margin-top: 190px;
   }
+  @media screen and (max-width: 1280px) {
+    .scroll-tit {
+      @include web-tit(50px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .scroll-tit {
+      @include web-tit(26px);
+      margin-top: 0;
+    }
+  }
   .scroll-contents-box {
     position: absolute;
     right: 0;
     height: 1350px;
     width: 528px;
   }
+  @media screen and (max-width: 1280px) {
+    .scroll-contents-box {
+      width: 419px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .scroll-contents-box {
+      width: 308px;
+      left: 0;
+    }
+  }
   .content {
     padding: 50px 0;
     border-bottom: solid 1px $txtSub2;
     position: relative;
   }
+  // @media screen and (max-width: 1280px) {
+  //   .content {
+  //   }
+  // }
   .content-4,
   .content-8 {
     border-bottom: none;
   }
   .cont-txt-wrap {
-    width: 528px;
+    width: 100%;
   }
   .cont-tit {
     display: block;
     @include web-tit(32px);
     margin-bottom: 20px;
   }
+  @media screen and (max-width: 768px) {
+    .cont-tit {
+      @include mob-tit(16px);
+      margin-bottom: 20px;
+    }
+  }
+
   .txt-list {
     display: flex;
     gap: 72px;
+  }
+  @media screen and (max-width: 1280px) {
+    .txt-list {
+      margin-bottom: 8px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .txt-list {
+      gap: 20px;
+    }
   }
   .txt-list-month {
     display: block;
@@ -364,9 +488,35 @@
     @include web-bd(28px);
     color: $txtSub1;
   }
+  @media screen and (max-width: 1280px) {
+    .txt-list-month {
+      width: 32px;
+      @include web-tit(24px);
+      color: $txtSub1;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .txt-list-month {
+      width: 32px;
+      @include mob-tit(14px);
+      color: $txtSub1;
+    }
+  }
   .txt-list-cont {
     @include web-bd(18px);
     color: $txtSub1;
+  }
+  @media screen and (max-width: 1280px) {
+    .txt-list-cont {
+      @include web-bd(16px);
+      color: $txtSub1;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .txt-list-cont {
+      @include mob-bd(14px);
+      color: $txtSub1;
+    }
   }
   .more-info {
     display: block;
@@ -378,6 +528,20 @@
 
     .more-icon {
       position: absolute;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .more-info {
+      width: 40px;
+      // .more-icon {
+
+      // }
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .more-info {
+      width: 30px;
     }
   }
 }

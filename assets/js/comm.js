@@ -1,4 +1,3 @@
-
 // sub1-----------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const sectionWork = document.querySelector(".sec-work");
@@ -129,7 +128,7 @@ $(function () {
   $window.on("scroll", _.throttle(hdScroll, 300));
   function hdScroll() {
     if (!mNav.hasClass("active")) {
-      console.log("mNav does not have active class"); // 디버깅용 메시지
+      // console.log("mNav does not have active class"); // 디버깅용 메시지
       if ($window.scrollTop() >= ($window.width() >= 1280 ? 100 : 60)) {
         gsap.to($header, {
           y: $window.width() >= 1280 ? -100 : -60,
@@ -343,88 +342,93 @@ $(function () {
     });
 
   // *****chronological-list*****
-  const chronologicalList = $(".chronological-list");
-  const scrollWrap1 = $(".scroll-1");
-  const scrollWrap2 = $(".scroll-2");
-  const scrollCont1 = $(".scroll-1 .scroll-contents-box");
-  const scrollCont2 = $(".scroll-2 .scroll-contents-box");
-  const cl_txtWrap = $(".chronological-list .txt-wrap");
-  const cl_behindTit = $(".chronological-list .behind-tit");
-  gsap.set(scrollWrap1, {
-    y: 100,
-    autoAlpha: 0,
-  });
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: chronologicalList,
-        start: "top 80%",
-        end: "center center",
-        scrub: 0.5,
-      },
-    })
-    .from(cl_behindTit, {
-      x: 100,
-      opacity: 0,
-    })
-    .fromTo(
-      cl_txtWrap,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5 }
-    )
-    .to(cl_behindTit, { x: 0, opacity: 1, duration: 0.6, delay: 0.5 })
-    .to(scrollWrap1, {
-      y: 0,
-      autoAlpha: 1,
-      duration: 1,
-      delay: 1,
+
+  if ($window.innerWidth() >= 768) {
+    const chronologicalList = $(".chronological-list");
+    const scrollWrap1 = $(".scroll-1");
+    const scrollWrap2 = $(".scroll-2");
+    const scrollCont1 = $(".scroll-1 .scroll-contents-box");
+    const scrollCont2 = $(".scroll-2 .scroll-contents-box");
+    const cl_txtWrap = $(".chronological-list .txt-wrap");
+    const cl_behindTit = $(".chronological-list .behind-tit");
+
+    gsap.set(scrollWrap1, {
+      y: 100,
+      autoAlpha: 0,
     });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: chronologicalList,
+          start: "top 80%",
+          end: "center center",
+          scrub: 0.5,
+        },
+      })
+      .from(cl_behindTit, {
+        x: 100,
+        opacity: 0,
+      })
+      .fromTo(
+        cl_txtWrap,
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5 }
+      )
+      .to(cl_behindTit, { x: 0, opacity: 1, duration: 0.6, delay: 0.5 })
+      .to(scrollWrap1, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1,
+        delay: 1,
+      });
 
-  const scrollWrap1Tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: scrollWrap1,
-      pin: scrollWrap1,
-      // pinSpacing: false,
-      start: "top top",
-      end: "+=120%",
-      scrub: 0.5,
-      // markers: true,
-    },
-  });
-  scrollWrap1Tl.fromTo(
-    scrollCont1,
-    {
-      yPercent: 50,
-      opacity: 1,
-    },
-    {
-      yPercent: -80,
-      opacity: 1,
-    }
-  );
+    const scrollWrap1Tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: scrollWrap1,
+        pin: scrollWrap1,
+        // pinSpacing: false,
+        start: "top top",
+        end: "+=120%",
+        scrub: 0.5,
+        // markers: true,
+      },
+    });
+    scrollWrap1Tl.fromTo(
+      scrollCont1,
+      {
+        yPercent: 50,
+        opacity: 1,
+      },
+      {
+        yPercent: -80,
+        opacity: 1,
+      }
+    );
 
-  const scrollWrap2Tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: scrollWrap2,
-      pin: scrollWrap2,
-      // pinSpacing: false,
-      start: "top top",
-      end: "+=120%",
-      scrub: 0.5,
-      // markers: true,
-    },
-  });
-  scrollWrap2Tl.fromTo(
-    scrollCont2,
-    {
-      yPercent: 50,
-      opacity: 1,
-    },
-    {
-      yPercent: -80,
-      opacity: 1,
-    }
-  );
+    const scrollWrap2Tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: scrollWrap2,
+        pin: scrollWrap2,
+        // pinSpacing: false,
+        start: "top top",
+        end: "+=120%",
+        scrub: 0.5,
+        // markers: true,
+      },
+    });
+    scrollWrap2Tl.fromTo(
+      scrollCont2,
+      {
+        yPercent: 50,
+        opacity: 1,
+      },
+      {
+        yPercent: -80,
+        opacity: 1,
+      }
+    );
+  }
+
   // chronologicalListTl.add(scrollWrap1Tl, "-=0.2");
   // chronologicalListTl.add(scrollWrap2Tl, "-=0.2");
 
