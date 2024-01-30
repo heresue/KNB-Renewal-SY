@@ -731,12 +731,50 @@ button {
   color: #fff;
   line-height: 1.5;
 }
+@media screen and (max-width: 1280px) {
+  #main .tit {
+    font-weight: 700;
+    font-size: 42px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .tit {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+}
 #main .sub-tit {
   font-weight: 700;
   font-size: 28px;
   letter-spacing: normal;
   line-height: normal;
   color: #fff;
+}
+@media screen and (max-width: 1280px) {
+  #main .sub-tit {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .sub-tit {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
 }
 #main .content,
 #main .side-bar-li {
@@ -766,6 +804,24 @@ button {
   line-height: 1.5;
   color: #fff;
 }
+@media screen and (max-width: 1280px) {
+  #main .main-visual .inner .txt-wrap .sub-tit {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .main-visual .inner .txt-wrap .sub-tit {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
 #main .main-visual .side-bar-wrap {
   height: 70px;
 }
@@ -791,6 +847,20 @@ button {
 #main .main-visual .side-bar-wrap .side-bar-li.active {
   background: #d92b2b;
   border-radius: 43px;
+}
+@media screen and (max-width: 1280px) {
+  #main .main-visual .side-bar-wrap .side-bar-li {
+    width: 115px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .main-visual .side-bar-wrap .side-bar-li {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
 }
 
 #footer {
