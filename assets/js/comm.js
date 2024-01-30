@@ -66,7 +66,7 @@ $(function () {
   // scroll될 때 애니메이션
   const $gotoTop = $(".goto-top");
   gsap.registerPlugin(ScrollTrigger);
-  gsap.set($gotoTop, { x: -100 });
+  gsap.set($gotoTop, { x: 300 });
   // mNav에 active 클래스가 없을 때만 동작
   $window.on("scroll", _.throttle(hdScroll, 300));
   function hdScroll() {
