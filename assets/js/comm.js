@@ -132,9 +132,9 @@ $(function () {
     }
   }
   // *****goto-top*****
-$gotoTop.on("click", function () {
-  gsap.to($window, { scrollTop: 0, duration: 0.8, ease: "power2.inOut" });
-});
+  $gotoTop.on("click", function () {
+    gsap.to($window, { scrollTop: 0, duration: 0.8, ease: "power2.inOut" });
+  });
 
   // --------------------sub1, sub2 sidebar--------------------
   const sidebarEls = $(".side-bar .side-bar-li").toArray();
@@ -417,4 +417,3 @@ $gotoTop.on("click", function () {
     },
   });
 });
-);
