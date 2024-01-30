@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>국립발레단 소개</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hover.css/css/hover-min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/comm.css"/>
@@ -171,6 +169,14 @@
                   </div>
                 </div>
                 <div class="m-nav">
+                  <div class="m-select">
+                    <div class="select-el login-box">
+                      <a href="#" class="login"> LOGIN </a>
+                    </div>
+                    <div class="select-el request-box">
+                      <a href="#" class="request">1:1문의</a>
+                    </div>
+                  </div>
                   <ul class="m-dep-1-box">
                     <li class="m-dep-1-li">
                       <a href="#" class="dep-1-el"
@@ -311,14 +317,7 @@
                       </ul>
                     </li>
                   </ul>
-                  <div class="m-select">
-                    <div class="select-el login-box">
-                      <a href="#" class="login"> LOGIN </a>
-                    </div>
-                    <div class="select-el request-box">
-                      <a href="#" class="request">1:1문의</a>
-                    </div>
-                  </div>
+                  
                   <div class="m-language">
                     <a href="#" class="lang ko">KOR</a>
                     <a href="#" class="lang en">ENG</a>
@@ -329,12 +328,12 @@
                 </div>
               </div>
             </div>
-          </header>
+        </header>
         <main id="main">
             <section class="sec main-visual main-visual-sub1">
                 <div class="inner">
                     <div class="txt-wrap">
-                        <h2 class="tit">
+                        <h2 class="tit tit-sub1">
                             국립발레단 소개
                         </h2>
                         <p class="content">
@@ -345,16 +344,16 @@
                 <div class="side-bar-wrap">
                     <div class="inner">
                         <ul class="side-bar">
-                        <li class="side-bar-li active"><a href="#">인사말</a></li>
-                        <li class="side-bar-li"><a href="#">대표작품</a></li>
-                        <li class="side-bar-li"><a href="#">핵심가치</a></li>
-                        <li class="side-bar-li"><a href="#">CI소개</a></li>
-                        <li class="side-bar-li"><a href="#">오시는길</a></li>
+                        <li class="side-bar-li  active"><a class="smoothscroll" href="#sec-about">인사말</a></li>
+                        <li class="side-bar-li"><a class="smoothscroll" href="#sec-work">대표작품</a></li>
+                        <li class="side-bar-li"><a class="smoothscroll" href="#sec-velue">핵심가치</a></li>
+                        <li class="side-bar-li"><a class="smoothscroll" href="#sec-ci">CI소개</a></li>
+                        <li class="side-bar-li"><a class="smoothscroll" href="#sec-map">오시는길</a></li>
                         </ul>
                     </div>
                 </div>
             </section>
-            <section class="sec sec-about">
+            <section id="sec-about" class="sec sec-about smoothscroll">
                 <div class="inner">
                     <div class="txt-profile">
                         <div class="txt-wrap">
@@ -393,7 +392,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sec sec-work">
+            <section id="sec-work" class="sec sec-work smoothscroll">
                 <div class="inner-box">
                     <div class="txt-goto">
                         <div class="txt-wrap">
@@ -430,7 +429,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="sec sec-velue">
+            <section id="sec-velue" class="sec sec-velue smoothscroll">
                 <div class="inner">
                     <div class="txt-wrap" data-aos="fade-up">
                         <h2 class="tit">
@@ -508,7 +507,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sec sec-ci">
+            <section id="sec-ci" class="sec sec-ci smoothscroll">
                 <div class="inner">
                     <h2 class="tit" data-aos="fade-up">
                         CI 소개
@@ -545,7 +544,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sec sec-map">
+            <section id="sec-map" class="sec sec-map smoothscroll">
                 <div class="inner">
                     <div class="txt-wrap" data-aos="fade-up">
                         <h2 class="tit">
@@ -574,6 +573,66 @@
                 </div>
             </section>
         </main>
+        <footer id="footer">
+          <div class="inner">
+              <div class="note-sns">
+                  <p class="note">
+                      (재)국립발레단은 공직유관단체로서 부정청탁 및 금품 등 수수의 금지에 관한 법률(청탁금지법) 적용대상 기관임을 알립니다.
+                  </p>
+                  <div class="sns-wrap">
+                        <ul class="sns-list">
+                              <li class="sns-item">
+                                  <a href="#" class="sns-link">
+                                      <i class="fa-brands fa-instagram"></i>
+                                      <span class="blind">instagram link</span>
+                                  </a>
+                              </li>
+                              <li class="sns-item">
+                                  <a href="#" class="sns-link">
+                                      <i class="fa-brands fa-facebook"></i>
+                                      <span class="blind">facebook link</span>
+                                  </a>
+                              </li>
+                              <li class="sns-item">
+                                  <a href="#" class="sns-link">
+                                      <i class="fa-brands fa-twitter"></i>
+                                      <span class="blind">twitter link</span>
+                                  </a>
+                              </li>
+                              <li class="sns-item">
+                                  <a href="#" class="sns-link">
+                                      <i class="fa-brands fa-youtube"></i>
+                                      <span class="blind">youtube link</span>
+                                  </a>
+                              </li>
+                        </ul>
+                  </div>
+              </div>
+              <div class="info-letter">
+                  <div class="info">
+                      <ul class="info-list">
+                          <li><span>주소 </span> 서울시 서초구 남부순환로 2406 예술의전당 오페라하우스 4층 (재)국립발레단 (우 06757)</li>
+                          <li><span>국립발레단 </span> Tel. 02-587-6180~5  |  Fax. 02-587-6186  |  Email. kballet@knballet.kr</li>
+                          <li><span>아카데미 </span>Tel. 02-587-6199</li>
+                      </ul>
+                      <div class="etc">
+                          <a href="#">
+                              <p class="pri">개인정보처리방침</p>
+                          </a>
+                          <p class="copy">Copyrightⓒ KOREAN NATIONAL BALLET 2017</p>
+                      </div>
+                  </div>
+                  <div class="letter">
+                      <span class="tit">뉴스레터</span>
+                      <form name="newsletterForm" class="form">
+                          <input type="text" name="uname" placeholder="이름" title="이름">
+                          <input type="text" name="email" placeholder="이메일" title="이메일">
+                          <button type="submit">등록</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </footer>
     </div>
 </body>
 
