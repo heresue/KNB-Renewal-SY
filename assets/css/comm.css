@@ -2011,6 +2011,12 @@ button {
 .more-chronological-list .tit {
   margin-bottom: 60px;
 }
+@media screen and (max-width: 768px) {
+  .more-chronological-list .tit {
+    line-height: 150% !important;
+    margin-bottom: 30px !important;
+  }
+}
 .more-chronological-list .date-btn-wrap {
   text-align: center;
 }
@@ -2076,6 +2082,13 @@ button {
   width: 50px;
   height: 50px;
 }
+@media screen and (max-width: 1280px) {
+  .more-chronological-list .swiper-button-next,
+  .more-chronological-list .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+}
 .more-chronological-list .swiper-button-prev {
   transform: rotate(180deg);
   top: -50px;
@@ -2097,9 +2110,32 @@ button {
   display: block;
   margin-bottom: 35px;
 }
+@media screen and (max-width: 1280px) {
+  .more-chronological-list .list-sub-tit {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .list-sub-tit {
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
 .more-chronological-list .cont {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 12px;
+}
+@media screen and (max-width: 1280px) {
+  .more-chronological-list .cont {
+    margin-bottom: 8px;
+  }
 }
 
 .more-chronological-list-file-info {
@@ -2115,12 +2151,41 @@ button {
   line-height: normal;
   color: #fff;
 }
+@media screen and (max-width: 1280px) {
+  .more-chronological-list-file-info .tit-small {
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list-file-info .tit-small {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+}
 .more-chronological-list-file-info .file-info {
   color: #fff;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   gap: 90px;
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list-file-info .file-info {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    line-height: normal;
+    color: #fff;
+  }
 }
 
 .behind-tit {

@@ -561,6 +561,12 @@
     // text-align: center;
     margin-bottom: 60px;
   }
+  @media screen and (max-width: 768px) {
+    .tit {
+      line-height: 150% !important;
+      margin-bottom: 30px !important;
+    }
+  }
   .date-btn-wrap {
     text-align: center;
   }
@@ -619,6 +625,13 @@
     width: 50px;
     height: 50px;
   }
+  @media screen and (max-width: 1280px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+    }
+  }
   .swiper-button-prev {
     transform: rotate(180deg);
     top: -50px;
@@ -636,9 +649,24 @@
     display: block;
     margin-bottom: 35px;
   }
+  @media screen and (max-width: 1280px) {
+    .list-sub-tit {
+      @include web-tit(32px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .list-sub-tit {
+      @include web-tit(30px);
+    }
+  }
   .cont {
     color: $txtSub1;
     margin-bottom: 12px;
+  }
+  @media screen and (max-width: 1280px) {
+    .cont {
+      margin-bottom: 8px;
+    }
   }
 }
 .more-chronological-list-file-info {
@@ -649,12 +677,27 @@
   .tit-small {
     @include web-tit(40px);
   }
+  @media screen and (max-width: 1280px) {
+    .tit-small {
+      @include web-tit(35px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .tit-small {
+      @include mob-tit(30px);
+    }
+  }
   .file-info {
     color: $primaryWhite;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     gap: 90px;
+  }
+  @media screen and (max-width: 768px) {
+    .file-info {
+      @include mob-bd(16px);
+    }
   }
 }
 
