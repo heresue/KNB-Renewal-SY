@@ -513,6 +513,16 @@
   .side-bar-li {
     @include web-bd(18px);
   }
+  @media screen and (max-width: 1280px) {
+    .content {
+      @include web-bd(16px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .sub-tit {
+      @include mob-bd(14px);
+    }
+  }
   .main-visual {
     .inner {
       @include flexCenter;
@@ -582,7 +592,6 @@
   }
 }
 
-
 @media screen and (max-width: 1280px) {
   .inner {
     padding: 0;
@@ -596,7 +605,7 @@
     padding: 4vw 0;
     max-width: 1280px;
     margin: 0 auto;
-  }  
+  }
 }
 
 .note-sns {
@@ -736,7 +745,7 @@
     align-items: center;
     gap: 5px;
   }
-};
+}
 
 @media screen and (max-width: 768px) {
   #footer {
@@ -787,10 +796,8 @@
       gap: 10px;
     }
   }
-};
+}
 // footer end-----------------------------------------------------------
-
-
 
 // --------------------------------------------------------
 

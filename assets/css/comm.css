@@ -784,6 +784,24 @@ button {
   line-height: 1.5;
   color: #fff;
 }
+@media screen and (max-width: 1280px) {
+  #main .content {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main .sub-tit {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.42px;
+    line-height: normal;
+    color: #fff;
+  }
+}
 #main .main-visual .inner {
   display: flex;
   justify-content: center;
