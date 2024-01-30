@@ -101,10 +101,9 @@ $(function () {
 
   // scroll될 때 애니메이션
   gsap.registerPlugin(ScrollTrigger);
-
+  gsap.set($gotoTop, { x: 300 });
   // mNav에 active 클래스가 없을 때만 동작
   $window.on("scroll", _.throttle(hdScroll, 300));
-
   function hdScroll() {
     if (!mNav.hasClass("active")) {
       console.log("mNav does not have active class"); // 디버깅용 메시지
@@ -113,14 +112,29 @@ $(function () {
           y: $window.width() >= 1280 ? -100 : -60,
           duration: 0.3,
         });
+        gsap.to($gotoTop, {
+          x: -10,
+          duration: 0.3,
+          delay: 0.2,
+        });
       } else {
         gsap.to($header, {
           y: 0,
-          duration: 0.3,
+          duration: 0.4,
+          ease: "power2.inOut",
+        });
+        gsap.to($gotoTop, {
+          x: 300,
+          duration: 0.4,
+          ease: "power2.inOut",
         });
       }
     }
   }
+  // *****goto-top*****
+$gotoTop.on("click", function () {
+  gsap.to($window, { scrollTop: 0, duration: 0.8, ease: "power2.inOut" });
+});
 
   // --------------------sub1, sub2 sidebar--------------------
   const sidebarEls = $(".side-bar .side-bar-li").toArray();
@@ -403,3 +417,4 @@ $(function () {
     },
   });
 });
+);
