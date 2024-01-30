@@ -30,6 +30,16 @@
       margin-right: 12px;
     }
   }
+  @media screen and (max-width: 1280px) {
+    .tit-page {
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .tit-page {
+      padding: 0;
+    }
+  }
   .poster-wrap {
     position: relative;
     height: 100vh;
@@ -59,6 +69,16 @@
     margin-bottom: 36px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   }
+  @media screen and (max-width: 1280px) {
+    .post-tit {
+      @include web-tit(35px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .post-tit {
+      @include mob-tit(30px);
+    }
+  }
   .poster-4 {
     .post-tit {
       width: 456px;
@@ -67,6 +87,12 @@
   .post-date,
   .post-locate {
     @include web-bd(16px);
+  }
+  @media screen and (max-width: 768px) {
+    .post-date,
+    .post-locate {
+      @include web-bd(14px);
+    }
   }
   .poster-1 {
     background: conic-gradient(
@@ -486,4 +512,33 @@
   -webkit-text-fill-color: transparent;
 
   z-index: -1;
+}
+@media screen and (max-width: 1280px) {
+  .behind-tit {
+    width: 2000px;
+    top: -70px;
+    @include web-tit(110px);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15) 22.61%,
+      rgba(255, 255, 255, 0) 71.86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .behind-tit {
+    top: -30px;
+    @include web-tit(45px);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15) 22.61%,
+      rgba(255, 255, 255, 0) 71.86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
