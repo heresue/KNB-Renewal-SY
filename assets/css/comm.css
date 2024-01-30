@@ -51,14 +51,12 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after {
+blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: "";
   content: none;
 }
@@ -88,14 +86,11 @@ body {
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
-input[type="text"],
-input[type="password"],
-input[type="submit"],
-input[type="search"] {
+input[type=text], input[type=password], input[type=submit], input[type=search] {
   -webkit-appearance: none;
   border-radius: 0;
 }
-input:checked[type="checkbox"] {
+input:checked[type=checkbox] {
   background-color: #666;
   -webkit-appearance: checkbox;
 }
@@ -105,14 +100,11 @@ button {
   border-radius: 0;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="file"] {
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
   -webkit-appearance: button;
   border-radius: 0;
 }
-input[type="search"]::-webkit-search-cancel-button {
+input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -121,10 +113,7 @@ input[type="search"]::-webkit-search-cancel-button {
 body {
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Pretendard Variable", "Pretendard", "-apple-system",
-    "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #fff;
   background-color: #000;
 }
@@ -140,8 +129,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
-a:active,
-a:hover {
+a:active, a:hover {
   text-decoration: none;
 }
 
@@ -160,7 +148,7 @@ hr {
   display: none;
 }
 
-input[type="password"] {
+input[type=password] {
   font-family: "Malgun Gothic";
 }
 
@@ -676,14 +664,14 @@ button {
   height: 45px;
   background: rgba(217, 43, 43, 0.1);
   -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 45px;
   text-align: center;
   line-height: 45px;
   position: fixed;
   position: fixed;
   top: 900px;
-  right: 65px;
+  right: 25px;
 }
 #header .goto-top:hover {
   background: #d92b2b;
@@ -814,12 +802,8 @@ button {
   }
 }
 .transper {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgb(0, 0, 0)
-  );
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
   width: 100%;
   height: 200px;
   position: absolute;
@@ -849,7 +833,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .performance-inner {
@@ -872,7 +856,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .performance-inner.swiper-slide .txt-wrap {
   width: 100%;
@@ -888,7 +872,7 @@ button {
   border-top: 1px solid white;
 }
 .performance-inner.swiper-slide button {
-  background: #d92b2b;
+  background: #D92B2B;
   width: 160px;
   height: 37px;
 }
@@ -906,7 +890,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .intro-sec .txt-wrap {
   width: 753px;
@@ -991,12 +975,7 @@ button {
 
 .main-visual-sub1 {
   height: 80vh;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 40%,
-      rgb(0, 0, 0) 100%
-    ),
-    url(/images/sub1/main-visual/background.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(/images/sub1/main-visual/background.jpg);
   background-size: cover;
 }
 .main-visual-sub1 .inner {
@@ -1100,20 +1079,8 @@ button {
 .sec-work .posters {
   display: flex;
   justify-content: space-between;
-  -webkit-mask: linear-gradient(
-    to top,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  mask: linear-gradient(
-    to top,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
+  -webkit-mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
+          mask: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 .sec-work .posters .poster-list {
   display: flex;
@@ -1173,23 +1140,19 @@ button {
   font-size: 18px;
 }
 .sec-velue .cards .card-list:nth-child(1) {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/sub1/cards/card1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/sub1/cards/card1.png);
   background-size: cover;
 }
 .sec-velue .cards .card-list:nth-child(2) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/images/sub1/cards/card2.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card2.png);
   background-size: cover;
 }
 .sec-velue .cards .card-list:nth-child(3) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/images/sub1/cards/card3.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card3.jpg);
   background-size: cover;
 }
 .sec-velue .cards .card-list:nth-child(4) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/images/sub1/cards/card4.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card4.jpg);
   background-size: cover;
 }
 .sec-velue .cards .hvr-shutter-out-vertical:before {
@@ -1294,9 +1257,7 @@ button {
 
 .main-visual-sub2 {
   height: 80vh;
-  background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%),
-    url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50% /
-      cover;
+  background: linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0) 78.23%), url(../../images/sub2/main-visual/main-visual-sub2.jpg) no-repeat 50% 50%/cover;
 }
 .main-visual-sub2 .txt-wrap {
   margin-top: 100px;
@@ -1367,111 +1328,22 @@ button {
   color: #fff;
 }
 .performance-info .poster-1 {
-  background: conic-gradient(
-      from -43deg at 44.72% 48.26%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.38% 54.89%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 100% /
-      cover;
+  background: conic-gradient(from -43deg at 44.72% 48.26%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.89%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-2 {
-  background: conic-gradient(
-      from -42deg at 44.48% 50.03%,
-      rgba(0, 0, 0, 0.5) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.59% 54.88%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0.3) 208.1094431877deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 100% /
-      cover;
+  background: conic-gradient(from -42deg at 44.48% 50.03%, rgba(0, 0, 0, 0.5) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.88%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0.3) 208.1094431877deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-2.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-3 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    conic-gradient(
-      from -46deg at 45.14% 53.05%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0.12) 152.508494854deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.38% 54.71%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 100% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-3.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-4 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    conic-gradient(
-      from -46deg at 45.14% 53.05%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0.12) 152.508494854deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.38% 54.71%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-4.jpg) no-repeat 50% 50% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), conic-gradient(from -46deg at 45.14% 53.05%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0.12) 152.508494854deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.71%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-4.jpg) no-repeat 50% 50%/cover;
 }
 .performance-info .poster-5 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    conic-gradient(
-      from -39deg at 43.61% 53.1%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.59% 54.76%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 100% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-5.jpg) no-repeat 50% 100%/cover;
 }
 .performance-info .poster-6 {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    conic-gradient(
-      from -39deg at 43.61% 53.1%,
-      rgba(0, 0, 0, 0.2) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    conic-gradient(
-      from 225deg at 45.59% 54.76%,
-      rgba(0, 0, 0, 0.7) 0deg,
-      rgba(0, 0, 0, 0) 360deg
-    ),
-    url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100% /
-      cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100%/cover;
 }
 
 .before-monthly-schedule {
@@ -1482,12 +1354,7 @@ button {
   content: "";
   width: 100%;
   height: 10px;
-  background: linear-gradient(
-    90deg,
-    #d92b2b -27.29%,
-    rgba(217, 43, 43, 0.41) 15.39%,
-    rgba(0, 0, 0, 0) 100.12%
-  );
+  background: linear-gradient(90deg, #d92b2b -27.29%, rgba(217, 43, 43, 0.41) 15.39%, rgba(0, 0, 0, 0) 100.12%);
   transform: rotate(180deg);
 }
 .before-monthly-schedule .inner {
@@ -1796,13 +1663,9 @@ button {
   position: absolute;
   top: -100px;
   left: 10px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15) 22.61%,
-    rgba(255, 255, 255, 0) 71.86%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -1;
-} /*# sourceMappingURL=comm.css.map */
+}/*# sourceMappingURL=comm.css.map */
