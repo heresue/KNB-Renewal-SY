@@ -572,16 +572,15 @@
       }
       @media screen and (max-width: 768px) {
         .side-bar-li {
-          width: 80px;
-          height: 30px;
-          line-height: 30px;
+          width: 90px;
+          height: 40px;
+          line-height: 40px;
           font-size: 14px;
         }
       }
     }
   }
 }
-
 
 @media screen and (max-width: 1280px) {
   .inner {
@@ -596,7 +595,7 @@
     padding: 4vw 0;
     max-width: 1280px;
     margin: 0 auto;
-  }  
+  }
 }
 
 .note-sns {
@@ -736,7 +735,7 @@
     align-items: center;
     gap: 5px;
   }
-};
+}
 
 @media screen and (max-width: 768px) {
   #footer {
@@ -787,10 +786,8 @@
       gap: 10px;
     }
   }
-};
+}
 // footer end-----------------------------------------------------------
-
-
 
 // --------------------------------------------------------
 
