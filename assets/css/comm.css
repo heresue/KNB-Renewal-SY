@@ -892,9 +892,6 @@ button {
     padding: 0;
   }
 }
-#footer {
-  background: #222;
-}
 #footer .inner {
   height: 100%;
   padding: 4vw 0;
@@ -960,6 +957,14 @@ button {
 .info-letter .letter input:nth-child(2) {
   margin-left: 8px;
 }
+.info-letter .letter input::-moz-placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.info-letter .letter input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
 .info-letter .letter button {
   margin-left: 10px;
   width: 75px;
@@ -976,7 +981,7 @@ button {
 
 @media screen and (max-width: 1280px) {
   #footer .inner {
-    max-width: 768px;
+    padding: 4vw 5.556vw;
   }
   .note-sns {
     gap: 100px;
@@ -1016,7 +1021,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   #footer .inner {
-    max-width: 328px;
+    padding: 4vw 5.556vw;
   }
   .note-sns {
     flex-direction: column;
@@ -1519,12 +1524,15 @@ button {
 }
 
 @media screen and (max-width: 1280px) {
+  .bg-txt .bg-txt-wrap {
+    height: 220px;
+  }
   .bg-txt .bg-txt-wrap .txt-1 {
-    font-size: 120px;
+    font-size: 100px;
   }
   .bg-txt .bg-txt-wrap .txt-2 {
-    top: 44px;
-    font-size: 170px;
+    top: 34px;
+    font-size: 150px;
   }
 }
 .sec-ci .ci-wrap {

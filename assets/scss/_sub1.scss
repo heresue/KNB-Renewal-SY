@@ -375,12 +375,14 @@
 @media screen and (max-width: 1280px) {
     .bg-txt {
         .bg-txt-wrap {
+            height: 220px;
+
             .txt-1 {
-                font-size: 120px;
+                font-size: 100px;
             }
             .txt-2 {
-                top: 44px;
-                font-size: 170px;
+                top: 34px;
+                font-size: 150px;
             }
         }
     }
