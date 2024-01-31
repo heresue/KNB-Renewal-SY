@@ -19,7 +19,12 @@
   overflow: hidden;
 
   // margin-left: 5.556vw;
+
+  ::selection {
+    background-color: $secondary; // 사용자가 텍스트를 선택했을 때의 배경색
+  }
 }
+
 #header {
   position: fixed;
   top: 0;
@@ -673,6 +678,11 @@
       &:nth-child(2) {
         margin-left: 8px;
       }
+
+      &::placeholder {
+        font-size: 16px;
+        color: $txtSub2;
+      }
     }
 
     button {
@@ -695,7 +705,7 @@
 @media screen and (max-width: 1280px) {
   #footer {
     .inner {
-      max-width: 768px;
+      padding: 4vw 5.556vw;
     }
   }
 
@@ -750,7 +760,7 @@
 @media screen and (max-width: 768px) {
   #footer {
     .inner {
-      max-width: 328px;
+      padding: 4vw 5.556vw;
     }
   }
 

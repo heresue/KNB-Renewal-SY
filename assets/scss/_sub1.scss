@@ -1,8 +1,9 @@
 // sec-visual---------------------------------------------------
 .main-visual-sub1 {
     height: 80vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), url(/images/sub1/main-visual/background.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%), url(/images/sub1/main-visual/background.png);
     background-size: cover;
+    background-position: center;
 
     .inner {
         position: relative;
@@ -22,10 +23,6 @@
     .main-visual-sub1 {
         .content {
             font-size: 18px !important; 
-        }
-
-        .tit {
-            font-size: 42px !important;
         }
     }
 }
@@ -96,13 +93,42 @@
 @media screen and (max-width: 1280px) {
     .sec-about {
         .inner {
+            align-items: center;
             gap: 0;
+        }
+
+        .txt-profile {
+            .txt-wrap {
+                .tit {
+                    margin-top: 20px;
+                }
+            }
+
+            .profile-wrap {
+                gap: 10px;
+                margin-top: 50px;
+    
+                .sub-tit {
+                    font-size: 26px !important;
+                }
+                .name-en {
+                    font-size: 14px;
+                }
+                .position {
+                    font-size: 14px;
+                }
+            }
         }
 
         .pofile-img-wrap {
             .profile-img {
                 width: 350px;
                 height: auto;
+            }
+            .sign-img {
+                width: 200px;
+                top: 90%;
+                left: -25%;
             }
         }
     }
@@ -111,6 +137,10 @@
 // sec-work-----------------------------------------------------
 .sec-work {
     position: relative;
+
+    .inner-box {
+        padding: 6.944vw 0;
+    }
 
     .txt-goto {
         position: fixed;
@@ -166,6 +196,16 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+    .sec-work {
+        .posters {
+            .poster-list {
+                width: 350px;
+            }
+        }
+    }
+}
+
 // sec-velue---------------------------------------------------
 .sec-velue {
     .txt-wrap {
@@ -178,73 +218,126 @@
         margin-top: 90px;
         display: flex;
         justify-content: space-between;
+    }
 
-        .card-list {
-            gap: 35px;
-            @include flexCenter;
-            flex-direction: column;
-            border-radius: 10px;
-            width: 290px;
-            height: 390px;
-            background: rgb(255, 255, 255, 0.1);
+    .card-list {
+        gap: 35px;
+        @include flexCenter;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 290px;
+        height: 390px;
+        background: rgb(255, 255, 255, 0.1);
+
+        .material-symbols-rounded {
+            font-size: 90px;
+            color: $txtSub2;
+        }
+
+        .card-tit {
+            font-size: 20px;
+            color: $txtSub1;
+        }
+
+        .card-content {
+            display: none;
+        }
+
+        &:hover {
+            color: $txtDefult;
+            border-top-right-radius: 50px;
+            transition: all 0.2s;
 
             .material-symbols-rounded {
-                font-size: 90px;
-                color: $txtSub2;
+                color: $txtDefult;
             }
 
             .card-tit {
-                font-size: 20px;
-                color: $txtSub1;
-            }
-
-            .card-content {
                 display: none;
             }
 
-            &:hover {
-                color: $txtDefult;
-                border-top-right-radius: 50px;
-                transition: all 0.2s;
-
-                .material-symbols-rounded {
-                    color: $txtDefult;
-                }
-
-                .card-tit {
-                    display: none;
-                }
-
-                .card-content {
-                    padding: 0 35px;
-                    text-align: center;
-                    display: block;
-                    font-size: 18px;
-                }
-            }
-
-            &:nth-child(1) {
-                background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/sub1/cards/card1.png);
-                background-size: cover;
-            }
-            &:nth-child(2) {
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card2.png);
-                background-size: cover;
-            }
-            &:nth-child(3) {
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card3.jpg);
-                background-size: cover;
-            }
-            &:nth-child(4) {
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card4.jpg);
-                background-size: cover;
+            .card-content {
+                padding: 0 35px;
+                text-align: center;
+                display: block;
+                font-size: 18px;
             }
         }
 
-        .hvr-shutter-out-vertical:before {
-            border-radius: 10px;
-            border-top-right-radius: 50px;
-            background: $secondary;
+        &:nth-child(1) {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/sub1/cards/card1.png);
+            background-size: cover;
+        }
+        &:nth-child(2) {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card2.png);
+            background-size: cover;
+        }
+        &:nth-child(3) {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card3.jpg);
+            background-size: cover;
+        }
+        &:nth-child(4) {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sub1/cards/card4.jpg);
+            background-size: cover;
+        }
+    }
+
+    .hvr-shutter-out-vertical:before {
+        border-radius: 10px;
+        border-top-right-radius: 50px;
+        background: $secondary;
+    }
+    
+}
+
+@media screen and (max-width: 1280px) {
+    .sec-velue {
+        .cards {
+            flex-wrap: wrap;
+            margin-top: 70px;
+        }
+        
+        .card-list {
+            gap: 15px;
+            flex-direction: row;
+            width: 375px;
+            height: 170px;
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                margin-top: 20px;
+            }
+
+            &:nth-child(1) {
+                background-position: 50% 30%
+            }
+            &:nth-child(2) {
+                background-position: 50% 70%
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+                background-position: 50% 55%
+            }
+
+            .material-symbols-rounded {
+                font-size: 60px;
+            }
+
+            .card-txt {
+                width: 55%;
+                text-align: center;
+            }
+
+            .card-tit {
+                font-size: 18px;
+            }
+
+            &:hover {
+                .card-content {
+                    padding: 0;
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
@@ -279,6 +372,21 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+    .bg-txt {
+        .bg-txt-wrap {
+            height: 220px;
+
+            .txt-1 {
+                font-size: 100px;
+            }
+            .txt-2 {
+                top: 34px;
+                font-size: 150px;
+            }
+        }
+    }
+}
 // sec-ci-----------------------------------------------------
 .sec-ci {
     .ci-wrap {
@@ -338,6 +446,26 @@
     }
 }
 
+@media screen and (max-width: 1280px) {
+    .sec-ci {
+        .ci-wrap {
+            margin-top: 70px;
+        }
+
+        .logo-box {
+            width: 320px;
+
+            .ci-img {
+                width: 230px;
+            }
+        }
+
+        .txt-down {
+            width: 395px;
+        }
+    }
+}
+
 // sec-map----------------------------------------------------
 .sec-map {
     .txt-wrap {
@@ -363,6 +491,24 @@
         .contect {
             display: flex;
             gap: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .sec-map {
+        .map {
+            margin-top: 70px;
+            width: 768px;
+            height: 360px;
+        }
+
+        .info {
+            flex-direction: column;
+
+            .contect {
+                margin-top: 5px;
+            }
         }
     }
 }
