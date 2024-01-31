@@ -952,7 +952,7 @@ button {
 
 @media screen and (max-width: 1280px) {
   #footer .inner {
-    max-width: 768px;
+    padding: 4vw 5.556vw;
   }
   .note-sns {
     gap: 100px;
@@ -992,7 +992,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   #footer .inner {
-    max-width: 328px;
+    padding: 4vw 5.556vw;
   }
   .note-sns {
     flex-direction: column;
@@ -1711,6 +1711,22 @@ button {
 .before-monthly-schedule .arr-down {
   text-align: right;
 }
+.before-monthly-schedule .highlight-sub-tit {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
+}
+@media screen and (max-width: 1280px) {
+  .before-monthly-schedule .highlight-sub-tit {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
 @media screen and (max-width: 768px) {
   .before-monthly-schedule .highlight-sub-tit {
     font-weight: 400;
@@ -1829,7 +1845,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .monthly-schedule {
-    margin: 100px 0;
+    margin: 120px 0 100px;
   }
 }
 .chronological-list .txt-wrap {
@@ -1859,7 +1875,7 @@ button {
 }
 .chronological-list .scroll-tit {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 90px;
   letter-spacing: normal;
   line-height: normal;
   color: #fff;
@@ -1868,7 +1884,7 @@ button {
 @media screen and (max-width: 1280px) {
   .chronological-list .scroll-tit {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 70px;
     letter-spacing: normal;
     line-height: normal;
     color: #fff;
@@ -1892,8 +1908,15 @@ button {
     padding: 0;
     margin: 0;
     color: #fff;
+    background: blueviolet;
     margin-top: 0;
-    height: 100%;
+    background: blueviolet;
+    margin-top: 0;
+    height: 50px;
+    width: 210px;
+    line-height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
   }
 }
 .chronological-list .scroll-contents-box {
@@ -2231,7 +2254,7 @@ button {
 @media screen and (max-width: 1280px) {
   .more-chronological-list-file-info .tit-small {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: normal;
     line-height: normal;
     color: #fff;

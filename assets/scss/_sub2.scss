@@ -293,6 +293,14 @@
   .arr-down {
     text-align: right;
   }
+  .highlight-sub-tit {
+    @include web-bd(20px);
+  }
+  @media screen and (max-width: 1280px) {
+    .highlight-sub-tit {
+      @include web-bd(16px);
+    }
+  }
   @media screen and (max-width: 768px) {
     .highlight-sub-tit {
       @include mob-bd(14px);
@@ -409,7 +417,7 @@
 }
 @media screen and (max-width: 768px) {
   .monthly-schedule {
-    margin: 100px 0;
+    margin: 120px 0 100px;
   }
 }
 // -----------------------chronological-list-----------------------
@@ -442,12 +450,12 @@
     }
   }
   .scroll-tit {
-    @include web-tit(80px);
+    @include web-tit(90px);
     margin-top: 190px;
   }
   @media screen and (max-width: 1280px) {
     .scroll-tit {
-      @include web-tit(50px);
+      @include web-tit(70px);
     }
   }
   @media screen and (max-width: 768px) {
@@ -462,8 +470,16 @@
     .scroll-tit-mob {
       display: block;
       @include mob-tit(30px);
+      // color: blueviolet;
+      background: blueviolet;
       margin-top: 0;
-      height: 100%;
+      background: blueviolet;
+      margin-top: 0;
+      height: 50px;
+      width: 210px;
+      line-height: 50px;
+      border-radius: 10px;
+      padding-left: 10px;
     }
   }
   .scroll-contents-box {
@@ -752,7 +768,7 @@
   }
   @media screen and (max-width: 1280px) {
     .tit-small {
-      @include web-tit(35px);
+      @include web-tit(30px);
     }
   }
   @media screen and (max-width: 768px) {
