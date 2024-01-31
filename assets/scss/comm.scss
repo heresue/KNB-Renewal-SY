@@ -680,6 +680,11 @@
       &:nth-child(2) {
         margin-left: 8px;
       }
+
+      &::placeholder {
+        font-size: 16px;
+        color: $txtSub2;
+      }
     }
 
     button {
