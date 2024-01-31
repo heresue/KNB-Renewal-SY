@@ -19,7 +19,12 @@
   overflow: hidden;
 
   // margin-left: 5.556vw;
+
+  ::selection {
+    background-color: $secondary; // 사용자가 텍스트를 선택했을 때의 배경색
+  }
 }
+
 #header {
   position: fixed;
   top: 0;
@@ -600,6 +605,8 @@
 
 // footer-------------------------------------------------------------------------
 #footer {
+  background: #222;
+
   .inner {
     height: 100%;
     padding: 4vw 0;
