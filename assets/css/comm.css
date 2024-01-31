@@ -1827,6 +1827,11 @@ button {
     margin: 30px 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .monthly-schedule {
+    margin: 100px 0;
+  }
+}
 .chronological-list .txt-wrap {
   display: flex;
   align-items: baseline;
@@ -1881,7 +1886,7 @@ button {
   .chronological-list .scroll-tit-mob {
     display: block;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
     line-height: normal;
     letter-spacing: normal;
     padding: 0;
@@ -2235,7 +2240,7 @@ button {
 @media screen and (max-width: 768px) {
   .more-chronological-list-file-info .tit-small {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     line-height: normal;
     letter-spacing: normal;
     padding: 0;

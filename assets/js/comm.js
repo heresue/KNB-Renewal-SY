@@ -185,7 +185,9 @@ $(function () {
   });
   // --------------------sub2--------------------
   // *****performance-info*****
+
   gsap.registerPlugin(ScrollTrigger);
+
   const txtWrap = $(".performance-info .txt-wrap");
   const behindTit = $(".behind-tit");
 
