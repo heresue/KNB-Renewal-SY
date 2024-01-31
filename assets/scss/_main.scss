@@ -1,3 +1,17 @@
+section {
+  height: 100vh;
+}
+
+// 이미지 하단 gradient
+.btmgrd :before {
+  content: "";
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  bottom: 0;
+  height: 13%;
+  width: 100%;
+}
+
 // img linear (bottom)
 .transper {
   // mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
@@ -11,37 +25,31 @@
   z-index: -1;
 }
 
-// 슬라이드 이미지 사이즈
-.slide-intro,
-.performance-inner {
-  swiper-slide {
-    height: 100vh;
+// main section //
+
+.main-swiper-wrap {
+  height: 100vh;
+  .main-swiper {
+    height: 100%;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-}
-
-// main //
-.main-sec .swiper-pagination {
-  display: none;
+  .button {
+    color: white;
+  }
 }
 
 // performance section //
 
 .performance-sec {
   display: block;
-  // margin: 130px 0;
+  margin: 130px 0;
   padding: 0 0 0 80px;
-  .swiper {
-    width: 100%;
-    height: 686px;
-  }
-  .swiper-container {
-    display: flex;
-    width: 10%;
+  h2 {
+    padding-bottom: 80px;
   }
 }
 
@@ -56,19 +64,26 @@
     .thumb {
       width: 100%;
       height: 482px;
+
       img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 10px;
       }
     }
 
     .txt-wrap {
       width: 100%;
-      padding: 20px 0;
-      .strong {
+      padding: 0px 0;
+      strong {
         padding-bottom: 4px;
+        font-size: 30px;
+      }
+      button {
+        border-radius: 10px;
+        color: white;
       }
     }
 
@@ -98,14 +113,7 @@
       margin-left: auto;
     }
   }
-  .img::before {
-    content: "";
-    background: linear-gradient(to top, black, transparent);
-    position: absolute;
-    height: 30%;
-    width: 100%;
-    bottom: 0;
-  }
+
   .txt-wrap {
     position: absolute;
     padding: 0 80px;
@@ -125,7 +133,7 @@
       }
     }
     p {
-      width: 60%;
+      width: 70%;
       margin: 24px 0 0 5px;
       &:nth-child(1) {
         font-size: 50px;
@@ -143,7 +151,7 @@
     z-index: -2;
   }
   .knb-2 {
-    background-image: url(/images/main/knb_2.jpg);
+    background-image: url(/images/main/knb_2-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -176,7 +184,7 @@
 .ytb-bg {
   background-image: url(/images/main/ytb_bg.jpg);
   // width: 100%;
-  height: 57%;
+  height: 75%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -204,9 +212,6 @@
   }
 }
 
-
-
-
 // notice section //
 .notice-sec {
   padding-top: 149px;
@@ -224,7 +229,8 @@
 }
 
 .notice-wrap {
-  width: 738px;
+  width: 100%;
+  padding-left: 100px;
   // overflow: hidden;
   li {
     height: 90px;
@@ -274,6 +280,11 @@
 }
 
 // partner section //
+
+.ptn-sec {
+  height: 50vh;
+  padding: 30px 0;
+}
 
 .ptn-wrap {
   display: flex;
@@ -335,6 +346,59 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  // intro-sec
+  .intro-sec {
+    .txt-wrap {
+      h2 {
+        font-size: 72px;
+      }
+    }
+  }
+
+  // notice section //
+  .notice-sec {
+    padding-top: 100px;
+    .inner {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .notice-wrap {
+      padding-left: 0;
+    }
+  }
+}
 
 
+@media screen and (max-width: 728px) {
+  .intro-sec {
+    .txt-wrap {
+      h2 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .ytb-bg {
+    .txt.wrap {
+      width: 343px;
+    }
+    .ytb {
+    }
+  }
+  
+  .notice-wrap {
+    .noti-tit {
+      font-size: 14px;
+    }
+    .noti-date {
+      font-size: 12px;
+    }
+  }
+  
+  
+}
 
