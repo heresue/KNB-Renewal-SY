@@ -1,59 +1,59 @@
 // sub1-----------------------------------------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  const sectionWork = document.querySelector(".sec-work");
-  const txtGoto = document.querySelector(".txt-goto");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const sectionWork = document.querySelector(".sec-work");
+//   const txtGoto = document.querySelector(".txt-goto");
 
-  // txt-goto를 숨김
-  txtGoto.style.opacity = "0";
-  txtGoto.style.visibility = "hidden";
+//   // txt-goto를 숨김
+//   txtGoto.style.opacity = "0";
+//   txtGoto.style.visibility = "hidden";
 
-  document.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-    const { offsetTop: sectionWorkTop, offsetHeight: sectionWorkHeight } =
-      sectionWork;
-    const windowHeight = window.innerHeight;
+//   document.addEventListener("scroll", function () {
+//     const scrollPosition = window.scrollY;
+//     const { offsetTop: sectionWorkTop, offsetHeight: sectionWorkHeight } =
+//       sectionWork;
+//     const windowHeight = window.innerHeight;
 
-    // txt-goto가 sec-work에 도달하면 나타나게
-    if (
-      scrollPosition >= sectionWorkTop &&
-      scrollPosition <= sectionWorkTop + sectionWorkHeight - windowHeight
-    ) {
-      txtGoto.style.opacity = "1";
-      txtGoto.style.visibility = "visible";
-      // txt-goto 화면 중앙에 위치
-      txtGoto.style.top = `${(windowHeight - txtGoto.offsetHeight) / 2}px`;
-    } else {
-      // 스크롤 벗어나면 txt-goto 다시 숨김
-      txtGoto.style.opacity = "0";
-      txtGoto.style.visibility = "hidden";
-    }
-  });
+//     // txt-goto가 sec-work에 도달하면 나타나게
+//     if (
+//       scrollPosition >= sectionWorkTop &&
+//       scrollPosition <= sectionWorkTop + sectionWorkHeight - windowHeight
+//     ) {
+//       txtGoto.style.opacity = "1";
+//       txtGoto.style.visibility = "visible";
+//       // txt-goto 화면 중앙에 위치
+//       txtGoto.style.top = `${(windowHeight - txtGoto.offsetHeight) / 2}px`;
+//     } else {
+//       // 스크롤 벗어나면 txt-goto 다시 숨김
+//       txtGoto.style.opacity = "0";
+//       txtGoto.style.visibility = "hidden";
+//     }
+//   });
 
-  //sidebar-------------------------------------------------
-  $(".smoothscroll").on("click", function (e) {
-    e.preventDefault();
+//   //sidebar-------------------------------------------------
+//   $(".smoothscroll").on("click", function (e) {
+//     e.preventDefault();
 
-    var target = this.hash,
-      $target = $(target);
+//     var target = this.hash,
+//       $target = $(target);
 
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $target.offset().top,
-        },
-        1500,
-        "swing",
-        function () {
-          window.location.hash = target;
-        }
-      );
-  });
+//     $("html, body")
+//       .stop()
+//       .animate(
+//         {
+//           scrollTop: $target.offset().top,
+//         },
+//         1500,
+//         "swing",
+//         function () {
+//           window.location.hash = target;
+//         }
+//       );
+//   });
 
-  AOS.init({
-    duration: 1000,
-  });
-});
+//   AOS.init({
+//     duration: 1000,
+//   });
+// });
 
 // --------------------header--------------------
 $(function () {
@@ -188,6 +188,7 @@ $(function () {
   gsap.registerPlugin(ScrollTrigger);
   const txtWrap = $(".performance-info .txt-wrap");
   const behindTit = $(".behind-tit");
+
   gsap
     .timeline({
       scrollTrigger: {
@@ -212,107 +213,236 @@ $(function () {
   const poster = $(".poster");
   const posters = gsap.utils.toArray(".poster");
   const title = $(".tit-page");
+
   // tit-page 위로 posters 올라올 수 있도록 핀 설정
   const titleTl = gsap.timeline({
     scrollTrigger: {
       trigger: title,
       // pin: title,
-      pinSpacing: false,
+      // pinSpacing: false,
       start: "bottom bottom",
       // end: "+=30%",
       scrub: 0.5,
       // markers: true,
     },
   });
-  // poster-wrap 핀 설정
-  const sectionTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: posterWrap,
-      pin: posterWrap,
-      start: "top top",
-      end: "+=700%",
-      scrub: 0.5,
-      // markers: true,
-    },
-  });
-  // 각각의 poster에 대한 애니메이션
-  posters.forEach(function (elem, i) {
-    const tlDelay = i * 2;
-    const contentTl = gsap.timeline();
-    const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
-    const posterArr = gsap.utils.toArray(".poster .go-to-link");
-    console.log(elem);
-    // poster에 인덱스를 부여해 위로 겹칠 수 있도록 설정
-    gsap.set(poster, {
-      zIndex: (i, target, targets) => i,
-    });
-    // 각각의 poster에 애니메이션 설정
-    contentTl
-      .to(elem, { autoAlpha: 1 }, tlDelay)
-      .to([posterTxt[i], posterArr[i]], { autoAlpha: 0, y: 100 }, tlDelay)
-      // .to(elem, { autoAlpha: 1 })
-      .from(elem, {
-        yPercent: 100,
-        duration: 2,
-        ease: "power2.out",
-      })
-      .to(
-        [posterTxt[i], posterArr[i]],
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 1,
-          ease: "power2.out",
-        },
-        tlDelay + 2
-      )
-      .to(elem, { yPercent: 0, duration: 2 });
-
-    // 각 포스터에 대한 애니메이션을 순차적으로 실행되도록 설정
-    sectionTl.add(contentTl, tlDelay);
-  });
-
-  // *****before-monthly-schedule*****
-  const beforeSchedule = $(".before-monthly-schedule");
-  // const beforeScheduleBf = $(".before-monthly-schedule::before");
-  gsap.set(beforeSchedule, {
-    // xPercent: -100,
-    autoAlpha: 0,
-  });
-  gsap
-    .timeline({
+  if ($window.innerWidth() >= 768) {
+    // poster-wrap 핀 설정
+    const sectionTl = gsap.timeline({
       scrollTrigger: {
-        trigger: beforeSchedule,
-        start: "top center",
-        end: "center center",
+        trigger: posterWrap,
+        pin: posterWrap,
+        start: "top top",
+        end: "+=700%",
         scrub: 0.5,
-      },
-    })
-    .to(beforeSchedule, {
-      // xPercent: 0,
-      autoAlpha: 1,
-    });
-
-  const txtElements = gsap.utils.toArray(".highlight-tit");
-  txtElements.forEach((text) => {
-    gsap.to(text, {
-      backgroundSize: "100%",
-      ease: "none",
-      scrollTrigger: {
-        trigger: text,
-        start: "top bottom",
-        end: "top 60%",
-        scrub: true,
         // markers: true,
       },
     });
-  });
+    // 각각의 poster에 대한 애니메이션
+    posters.forEach(function (elem, i) {
+      const tlDelay = i * 2;
+      const contentTl = gsap.timeline();
+      const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
+      const posterArr = gsap.utils.toArray(".poster .go-to-link");
+      // console.log(elem);
+      // poster에 인덱스를 부여해 위로 겹칠 수 있도록 설정
+      gsap.set(poster, {
+        zIndex: (i, target, targets) => i,
+      });
+      // 각각의 poster에 애니메이션 설정
+      contentTl
+        .to(elem, { autoAlpha: 1 }, tlDelay)
+        .to([posterTxt[i], posterArr[i]], { autoAlpha: 0, y: 100 }, tlDelay)
+        // .to(elem, { autoAlpha: 1 })
+        .from(elem, {
+          yPercent: 100,
+          duration: 2,
+          ease: "power2.out",
+        })
+        .to(
+          [posterTxt[i], posterArr[i]],
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          tlDelay + 2
+        )
+        .to(elem, { yPercent: 0, duration: 2 });
+
+      // 각 포스터에 대한 애니메이션을 순차적으로 실행되도록 설정
+      sectionTl.add(contentTl, tlDelay);
+    });
+  } else {
+    // poster-wrap 핀 설정
+    const sectionTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: posterWrap,
+        start: "top bottom",
+        // end: "+=600%",
+        scrub: 0.5,
+      },
+    });
+    // 각각의 poster에 대한 애니메이션
+    posters.forEach(function (elem, i) {
+      const tlDelay = i * 1;
+      const contentTl = gsap.timeline();
+      const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
+      const posterArr = gsap.utils.toArray(".poster .go-to-link");
+      // 각각의 poster에 애니메이션 설정
+      contentTl
+        .from([posterTxt[i], posterArr[i]], { autoAlpha: 0, y: 100 })
+        .to(posterTxt[i], {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.3,
+          ease: "power2.out",
+          // stagger: 0.2,
+        })
+        .to(posterArr[i], {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          delay: 0.5,
+          // stagger: 0.2,
+        });
+
+      // 각 포스터에 대한 애니메이션을 순차적으로 실행되도록 설정
+      sectionTl.add(contentTl, tlDelay);
+    });
+  }
+
+  // *****before-monthly-schedule*****
+  const beforeSchedule = $(".before-monthly-schedule");
+
+  const setInitialProperties = () => {
+    gsap.set(beforeSchedule, {
+      autoAlpha: 0,
+    });
+  };
+
+  const createTimeline = (start, end) => {
+    return gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: beforeSchedule,
+          start: start,
+          end: end,
+          scrub: 0.5,
+        },
+      })
+      .to(beforeSchedule, {
+        autoAlpha: 1,
+      });
+  };
+
+  const animateText = (trigger, end) => {
+    const txtElements = gsap.utils.toArray(".highlight-tit");
+    txtElements.forEach((text) => {
+      gsap.to(text, {
+        backgroundSize: "100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: text,
+          start: "top bottom",
+          end: end,
+          scrub: true,
+        },
+      });
+    });
+  };
+
+  const handleWindowWidth = () => {
+    if ($window.innerWidth() >= 768) {
+      createTimeline("top center", "center center");
+      animateText("top bottom", "top 60%");
+    } else {
+      createTimeline("top bottom", "center center");
+      animateText("top bottom", "top 60%");
+    }
+
+    setInitialProperties();
+  };
+
+  handleWindowWidth();
+  $window.on("resize", handleWindowWidth);
+  // const beforeSchedule = $(".before-monthly-schedule");
+  // if ($window.innerWidth() >= 768) {
+  //   gsap.set(beforeSchedule, {
+  //     // xPercent: -100,
+  //     autoAlpha: 0,
+  //   });
+  //   gsap
+  //     .timeline({
+  //       scrollTrigger: {
+  //         trigger: beforeSchedule,
+  //         start: "top center",
+  //         end: "center center",
+  //         scrub: 0.5,
+  //       },
+  //     })
+  //     .to(beforeSchedule, {
+  //       // xPercent: 0,
+  //       autoAlpha: 1,
+  //     });
+
+  //   const txtElements = gsap.utils.toArray(".highlight-tit");
+  //   txtElements.forEach((text) => {
+  //     gsap.to(text, {
+  //       backgroundSize: "100%",
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: text,
+  //         start: "top bottom",
+  //         end: "top 60%",
+  //         scrub: true,
+  //         // markers: true,
+  //       },
+  //     });
+  //   });
+  // } else {
+  //   gsap.set(beforeSchedule, {
+  //     // xPercent: -100,
+  //     autoAlpha: 0,
+  //   });
+  //   gsap
+  //     .timeline({
+  //       scrollTrigger: {
+  //         trigger: beforeSchedule,
+  //         start: "top bottom",
+  //         end: "center center",
+  //         scrub: 0.5,
+  //       },
+  //     })
+  //     .to(beforeSchedule, {
+  //       // xPercent: 0,
+  //       autoAlpha: 1,
+  //     });
+
+  //   const txtElements = gsap.utils.toArray(".highlight-tit");
+  //   txtElements.forEach((text) => {
+  //     gsap.to(text, {
+  //       backgroundSize: "100%",
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: text,
+  //         start: "top bottom",
+  //         end: "top 60%",
+  //         scrub: true,
+  //         // markers: true,
+  //       },
+  //     });
+  //   });
+  // }
 
   // *****monthly-schedule*****
   const monthlySchedule = $(".monthly-schedule");
   const calendar = $(".calendar");
   const ms_txtWrap = $(".monthly-schedule .txt-wrap");
   const ms_behindTit = $(".monthly-schedule .behind-tit");
+
   gsap.set(calendar, {
     y: 100,
     autoAlpha: 0,
@@ -332,7 +462,7 @@ $(function () {
       { y: 0, opacity: 1, duration: 0.8 }
     )
     .fromTo(
-      behindTit,
+      ms_behindTit,
       { x: 100, opacity: 0 },
       { x: 0, opacity: 1, duration: 0.6 }
     )
@@ -342,103 +472,229 @@ $(function () {
     });
 
   // *****chronological-list*****
-
-  if ($window.innerWidth() >= 768) {
+  function handleResize() {
     const chronologicalList = $(".chronological-list");
     const scrollWrap1 = $(".scroll-1");
     const scrollWrap2 = $(".scroll-2");
     const scrollCont1 = $(".scroll-1 .scroll-contents-box");
     const scrollCont2 = $(".scroll-2 .scroll-contents-box");
     const cl_txtWrap = $(".chronological-list .txt-wrap");
+    const scrollCont1Tit = $(".scroll-1 .scroll-tit");
+    const scrollCont2Tit = $(".scroll-2 .scroll-tit");
+    const scrollCont1TitMob = $(".scroll-1 .scroll-tit-mob");
+    const scrollCont2TitMob = $(".scroll-2 .scroll-tit-mob");
     const cl_behindTit = $(".chronological-list .behind-tit");
+    if ($window.innerWidth() >= 768) {
+      gsap.set(scrollWrap1, {
+        y: 100,
+        autoAlpha: 0,
+      });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: chronologicalList,
+            start: "top 80%",
+            end: "center center",
+            scrub: 0.5,
+          },
+        })
+        .fromTo(
+          cl_txtWrap,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5 }
+        )
+        .fromTo(
+          cl_behindTit,
+          { x: 100, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.6 }
+        )
+        .to(scrollWrap1, {
+          y: 0,
+          autoAlpha: 1,
+          duration: 1,
+          delay: 1,
+        });
 
-    gsap.set(scrollWrap1, {
-      y: 100,
-      autoAlpha: 0,
-    });
-    gsap
-      .timeline({
+      const scrollWrap1Tl = gsap.timeline({
         scrollTrigger: {
-          trigger: chronologicalList,
-          start: "top 80%",
-          end: "center center",
+          trigger: scrollWrap1,
+          pin: scrollWrap1,
+          // pinSpacing: false,
+          start: "top top",
+          end: "+=120%",
           scrub: 0.5,
+          // markers: true,
         },
-      })
-      .from(cl_behindTit, {
-        x: 100,
-        opacity: 0,
-      })
-      .fromTo(
-        cl_txtWrap,
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5 }
-      )
-      .to(cl_behindTit, { x: 0, opacity: 1, duration: 0.6, delay: 0.5 })
-      .to(scrollWrap1, {
+      });
+      scrollWrap1Tl.fromTo(
+        scrollCont1,
+        {
+          yPercent: 50,
+          opacity: 1,
+        },
+        {
+          yPercent: -80,
+          opacity: 1,
+        }
+      );
+
+      const scrollWrap2Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scrollWrap2,
+          pin: scrollWrap2,
+          // pinSpacing: false,
+          start: "top top",
+          end: "+=120%",
+          scrub: 0.5,
+          // markers: true,
+        },
+      });
+      scrollWrap2Tl.fromTo(
+        scrollCont2,
+        {
+          yPercent: 50,
+          opacity: 1,
+        },
+        {
+          yPercent: -80,
+          opacity: 1,
+        }
+      );
+    } else {
+      gsap.set(calendar, {
+        y: 100,
+        autoAlpha: 0,
+      });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: chronologicalList,
+            start: "top bottom",
+            end: "center center",
+            scrub: 0.5,
+          },
+        })
+        .fromTo(
+          cl_txtWrap,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5 }
+        )
+        .fromTo(
+          cl_behindTit,
+          { x: 100, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.5 }
+        )
+        .to(scrollWrap1, {
+          y: 0,
+          autoAlpha: 1,
+          // duration: 1,
+          delay: 1,
+        });
+
+      gsap.set([scrollCont1, scrollCont2], {
         y: 0,
         autoAlpha: 1,
-        duration: 1,
-        delay: 1,
       });
+      const scrollWrap1Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scrollWrap1,
+          start: "top bottom",
+          end: "+=120%",
+          scrub: 0.5,
+          delay: 1,
+        },
+      });
+      scrollWrap1Tl.fromTo(
+        [scrollCont1TitMob, scrollCont1],
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0.2,
+        }
+      );
 
-    const scrollWrap1Tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: scrollWrap1,
-        pin: scrollWrap1,
-        // pinSpacing: false,
-        start: "top top",
-        end: "+=120%",
-        scrub: 0.5,
-        // markers: true,
-      },
-    });
-    scrollWrap1Tl.fromTo(
-      scrollCont1,
-      {
-        yPercent: 50,
-        opacity: 1,
-      },
-      {
-        yPercent: -80,
-        opacity: 1,
-      }
-    );
-
-    const scrollWrap2Tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: scrollWrap2,
-        pin: scrollWrap2,
-        // pinSpacing: false,
-        start: "top top",
-        end: "+=120%",
-        scrub: 0.5,
-        // markers: true,
-      },
-    });
-    scrollWrap2Tl.fromTo(
-      scrollCont2,
-      {
-        yPercent: 50,
-        opacity: 1,
-      },
-      {
-        yPercent: -80,
-        opacity: 1,
-      }
-    );
+      const scrollWrap2Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scrollWrap2,
+          start: "top bottom",
+          end: "+=120%",
+          scrub: 0.5,
+        },
+      });
+      scrollWrap2Tl.fromTo(
+        [scrollCont2TitMob, scrollCont2],
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0.2,
+        }
+      );
+    }
   }
+  // 초기에 실행
+  handleResize();
 
+  // 창 크기가 변경될 때마다 실행
+  $window.on("resize", handleResize);
   // chronologicalListTl.add(scrollWrap1Tl, "-=0.2");
   // chronologicalListTl.add(scrollWrap2Tl, "-=0.2");
 
   // *****more-chronological-list*****
+  const moreCl = $(".more-chronological-list");
+  const moreClFi = $(".more-chronological-list-file-info");
+  const moreClTl = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: moreCl,
+        start: "top bottom",
+        end: "center center",
+        scrub: 0.5,
+      },
+    })
+    .fromTo(
+      moreCl,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8 }
+    );
+  const moreClFiTl = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: moreClFi,
+        start: "top bottom",
+        end: "center center",
+        scrub: 0.5,
+      },
+    })
+    .fromTo(
+      moreClFi,
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8 }
+    );
   var swiper = new Swiper(".swiper-more-chronological-list", {
     slidesPerView: 2,
     spaceBetween: 30,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      360: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 2,
+      },
     },
   });
 });

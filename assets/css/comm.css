@@ -856,9 +856,9 @@ button {
 }
 @media screen and (max-width: 768px) {
   #main .main-visual .side-bar-wrap .side-bar-li {
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
   }
 }
@@ -1531,12 +1531,18 @@ button {
 }
 @media screen and (max-width: 768px) {
   .performance-info .tit-page {
-    padding: 0;
+    padding: 150px 0;
+    height: auto;
   }
 }
 .performance-info .poster-wrap {
   position: relative;
   height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .performance-info .poster-wrap {
+    height: auto;
+  }
 }
 .performance-info .poster {
   position: absolute;
@@ -1557,6 +1563,11 @@ button {
 @media screen and (max-width: 1280px) {
   .performance-info .poster {
     gap: 46px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .performance-info .poster {
+    position: relative;
   }
 }
 .performance-info .post-tit {
@@ -1663,7 +1674,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .before-monthly-schedule .inner {
-    padding: 12.5vw 10px !important;
+    padding: 12.5vw 0 !important;
   }
 }
 .before-monthly-schedule .highlight-tit {
@@ -1690,7 +1701,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .before-monthly-schedule .highlight-tit {
-    font-size: 35px;
+    font-size: 38px;
   }
 }
 .before-monthly-schedule .highlight-sub-tit,
@@ -1746,6 +1757,11 @@ button {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule {
+    height: auto;
+  }
+}
 .monthly-schedule .txt-wrap {
   display: flex;
   align-items: baseline;
@@ -1774,7 +1790,7 @@ button {
 }
 .monthly-schedule .fc-col-header {
   height: 44px;
-  background: rgba(217, 43, 43, 0.3);
+  background: rgb(217, 43, 43);
   line-height: 44px;
 }
 .monthly-schedule .fc-daygrid-day-top {
@@ -1803,6 +1819,11 @@ button {
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .monthly-schedule {
+    margin: 30px 0;
+  }
+}
 .chronological-list .txt-wrap {
   display: flex;
   align-items: baseline;
@@ -1821,6 +1842,12 @@ button {
   justify-content: space-between;
   padding: 110px 112px 0 0;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .scroll-wrap {
+    flex-direction: column;
+    padding: 50px 0 0;
+  }
 }
 .chronological-list .scroll-tit {
   font-weight: 700;
@@ -1841,12 +1868,24 @@ button {
 }
 @media screen and (max-width: 768px) {
   .chronological-list .scroll-tit {
+    display: none;
+  }
+}
+.chronological-list .scroll-tit-mob {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .scroll-tit-mob {
+    display: block;
     font-weight: 700;
-    font-size: 26px;
-    letter-spacing: normal;
+    font-size: 32px;
     line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
     color: #fff;
     margin-top: 0;
+    height: 100%;
   }
 }
 .chronological-list .scroll-contents-box {
@@ -1862,7 +1901,9 @@ button {
 }
 @media screen and (max-width: 768px) {
   .chronological-list .scroll-contents-box {
+    position: relative;
     width: 308px;
+    height: auto;
     left: 0;
   }
 }
@@ -1890,7 +1931,7 @@ button {
 @media screen and (max-width: 768px) {
   .chronological-list .cont-tit {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 28px;
     line-height: normal;
     letter-spacing: normal;
     padding: 0;
@@ -1998,6 +2039,11 @@ button {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .chronological-list {
+    margin: 100px 0;
+  }
+}
 .more-chronological-list {
   margin-bottom: 80px;
 }
@@ -2007,6 +2053,11 @@ button {
   width: 50%;
   height: 1px;
   background: linear-gradient(to right, #fff, #000);
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .txt-wrap:after {
+    width: 90%;
+  }
 }
 .more-chronological-list .tit {
   margin-bottom: 60px;
@@ -2089,13 +2140,31 @@ button {
     height: 40px;
   }
 }
+@media screen and (max-width: 768px) {
+  .more-chronological-list .swiper-button-next,
+  .more-chronological-list .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}
 .more-chronological-list .swiper-button-prev {
   transform: rotate(180deg);
   top: -50px;
   left: 85%;
 }
+@media screen and (max-width: 768px) {
+  .more-chronological-list .swiper-button-prev {
+    top: -40px;
+    left: 75%;
+  }
+}
 .more-chronological-list .swiper-button-next {
   top: -50px;
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .swiper-button-next {
+    top: -40px;
+  }
 }
 .more-chronological-list .swiper-button-next:after,
 .more-chronological-list .swiper-button-prev:after {
@@ -2188,6 +2257,11 @@ button {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .more-chronological-list-file-info {
+    margin: 100px 0;
+  }
+}
 .behind-tit {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 700;
