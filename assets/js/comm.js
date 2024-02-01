@@ -408,7 +408,9 @@ $(function () {
     // *****monthly-schedule*****
     const monthlySchedule = $(".monthly-schedule");
     const calendar = $(".calendar");
-    const ms_txtWrap = $(".monthly-schedule .txt-wrap");
+    // const ms_txtWrap = $(".monthly-schedule .txt-wrap");
+    const ms_tit = $(".monthly-schedule .txt-wrap .tit");
+    const ms_subtit = $(".monthly-schedule .txt-wrap .sub-tit");
     const ms_behindTit = $(".monthly-schedule .behind-tit");
 
     gsap.set(calendar, {
@@ -425,7 +427,7 @@ $(function () {
         },
       })
       .fromTo(
-        ms_txtWrap,
+        [ms_tit, ms_subtit],
         { y: 100, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8 }
       )
@@ -447,9 +449,10 @@ $(function () {
       const scrollWrap2 = $(".scroll-2");
       const scrollCont1 = $(".scroll-1 .scroll-contents-box");
       const scrollCont2 = $(".scroll-2 .scroll-contents-box");
-      const cl_txtWrap = $(".chronological-list .txt-wrap");
-      const scrollCont1Tit = $(".scroll-1 .scroll-tit");
-      const scrollCont2Tit = $(".scroll-2 .scroll-tit");
+      const cl_tit = $(".chronological-list .txt-wrap .tit");
+      const cl_subtit = $(".chronological-list .txt-wrap .sub-tit");
+      // const scrollCont1Tit = $(".scroll-1 .scroll-tit");
+      // const scrollCont2Tit = $(".scroll-2 .scroll-tit");
       const scrollCont1TitMob = $(".scroll-1 .scroll-tit-mob");
       const scrollCont2TitMob = $(".scroll-2 .scroll-tit-mob");
       const cl_behindTit = $(".chronological-list .behind-tit");
@@ -471,7 +474,7 @@ $(function () {
           })
 
           .fromTo(
-            cl_txtWrap,
+            [cl_tit, cl_subtit],
             { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.5 }
           )
