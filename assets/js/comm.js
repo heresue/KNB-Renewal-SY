@@ -197,6 +197,7 @@ $(function () {
 
   // 이미지 로딩 상태를 확인하는 함수
   function preloadImages(urls, callback) {
+    const images = [];
     let loaded = 0;
 
     urls.forEach((url) => {
@@ -210,6 +211,7 @@ $(function () {
           callback();
         }
       });
+      images.push(img);
     });
   }
 
