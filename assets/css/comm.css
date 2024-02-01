@@ -1375,11 +1375,10 @@ button {
 }
 .sec-work .txt-goto {
   position: fixed;
-  top: 0%;
   left: 50%;
   transform: translate(-50%, 0%);
   z-index: 1;
-  transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+  transition: opacity 0.2s, visibility 0.3s, top 0.3s;
 }
 .sec-work .txt-goto .txt-wrap {
   text-align: center;

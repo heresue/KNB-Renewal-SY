@@ -187,11 +187,11 @@
 
     .txt-goto {
         position: fixed;
-        top: 0%;
+        // top: 100%;
         left: 50%;
         transform: translate(-50%, 0%);
         z-index: 1;
-        transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+        transition: opacity 0.2s, visibility 0.3s, top 0.3s;
 
         .txt-wrap {
             text-align: center;
