@@ -392,7 +392,7 @@ button {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: -0.48px;
-    line-height: normal;
+    line-height: 1.5;
     color: #fff;
   }
 }
@@ -807,7 +807,7 @@ button {
     font-weight: 400;
     font-size: 14px;
     letter-spacing: -0.42px;
-    line-height: normal;
+    line-height: 1.5;
     color: #fff;
   }
 }
@@ -883,9 +883,9 @@ button {
 }
 @media screen and (max-width: 768px) {
   #main .main-visual .side-bar-wrap .side-bar-li {
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
   }
 }
@@ -1232,6 +1232,11 @@ button {
   height: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .sec {
+    margin: 50px 0;
+  }
+}
 .main-visual-sub1 {
   height: 80vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgb(0, 0, 0) 100%), url(/images/sub1/main-visual/background.png);
@@ -1255,6 +1260,14 @@ button {
 @media screen and (max-width: 1280px) {
   .main-visual-sub1 .content {
     font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-visual-sub1 .txt-wrap {
+    width: 100%;
+  }
+  .main-visual-sub1 .content {
+    font-size: 16px !important;
   }
 }
 .sec-about .inner {
@@ -1338,6 +1351,22 @@ button {
     left: -25%;
   }
 }
+@media screen and (max-width: 768px) {
+  .sec-about .inner {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .sec-about .pofile-img-wrap .profile-img {
+    width: 270px;
+  }
+  .sec-about .pofile-img-wrap .sign-img {
+    width: 140px;
+    left: 160px;
+  }
+  .sec-about .txt-profile .txt-wrap .tit {
+    margin-top: 20px !important;
+  }
+}
 .sec-work {
   position: relative;
 }
@@ -1393,6 +1422,18 @@ button {
 @media screen and (max-width: 1280px) {
   .sec-work .posters .poster-list {
     width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sec-work .txt-goto {
+    width: 100%;
+  }
+  .sec-work .txt-goto .goto .goto-a {
+    padding: 8px 22px;
+    font-size: 16px;
+  }
+  .sec-work .posters .poster-list img {
+    filter: brightness(0.3);
   }
 }
 .sec-velue .txt-wrap .content {
@@ -1502,6 +1543,29 @@ button {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 768px) {
+  .sec-velue .cards {
+    margin-top: 50px;
+  }
+  .sec-velue .card-list {
+    gap: 15px;
+    width: 100%;
+    height: 120px;
+  }
+  .sec-velue .card-list:nth-child(2), .sec-velue .card-list:nth-child(3), .sec-velue .card-list:nth-child(4) {
+    margin-top: 10px;
+  }
+  .sec-velue .card-list .material-symbols-rounded {
+    font-size: 50px;
+  }
+  .sec-velue .card-list .card-tit {
+    font-size: 16px;
+  }
+  .sec-velue .card-list:hover .card-content {
+    text-align: left;
+    font-size: 14px;
+  }
+}
 .bg-txt .inner {
   max-width: none !important;
 }
@@ -1527,6 +1591,9 @@ button {
 }
 
 @media screen and (max-width: 1280px) {
+  .bg-txt .inner {
+    min-width: 768px;
+  }
   .bg-txt .bg-txt-wrap {
     height: 220px;
   }
@@ -1536,6 +1603,22 @@ button {
   .bg-txt .bg-txt-wrap .txt-2 {
     top: 34px;
     font-size: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bg-txt .inner {
+    min-width: 328px;
+  }
+  .bg-txt .bg-txt-wrap {
+    height: 90px;
+  }
+  .bg-txt .bg-txt-wrap .txt-1 {
+    width: 100%;
+    font-size: 40px;
+  }
+  .bg-txt .bg-txt-wrap .txt-2 {
+    top: 13px;
+    font-size: 60px;
   }
 }
 .sec-ci .ci-wrap {
@@ -1601,6 +1684,26 @@ button {
     width: 395px;
   }
 }
+@media screen and (max-width: 768px) {
+  .sec-ci .ci-wrap {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .sec-ci .logo-box {
+    width: 100%;
+    height: 185px;
+  }
+  .sec-ci .logo-box .ci-img {
+    width: 210px;
+  }
+  .sec-ci .txt-down {
+    width: 100%;
+  }
+  .sec-ci .download {
+    display: none;
+  }
+}
 .sec-map .txt-wrap .content {
   margin-top: 20px;
 }
@@ -1633,6 +1736,22 @@ button {
   }
   .sec-map .info .contect {
     margin-top: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sec-map .map {
+    margin-top: 50px;
+    width: 100%;
+    height: 225px;
+  }
+  .sec-map .info .content {
+    text-align: center;
+  }
+  .sec-map .info span {
+    display: block;
+  }
+  .sec-map .info .contect {
+    margin-top: 15px;
   }
 }
 .main-visual-sub2 {
