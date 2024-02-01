@@ -550,7 +550,7 @@ $(function () {
             },
           })
           .fromTo(
-            cl_txtWrap,
+            [cl_tit, cl_subtit],
             { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.5 }
           )
