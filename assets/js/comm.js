@@ -167,19 +167,28 @@ $(function () {
 
   // 이미지 주소 배열
   const imageUrls = [
-    "poster-1.jpg",
-    "poster-2.jpg",
-    "poster-3.jpg",
-    "poster-4.jpg",
-    "poster-5.jpg",
-    "poster-6.png",
+    "../../images/sub2/perfermance-info/poster-1.jpg",
+    "../../images/sub2/perfermance-info/poster-2.jpg",
+    "../../images/sub2/perfermance-info/poster-3.jpg",
+    "../../images/sub2/perfermance-info/poster-4.jpg",
+    "../../images/sub2/perfermance-info/poster-5.jpg",
+    "../../images/sub2/perfermance-info/poster-6.png",
   ];
 
   // 이미지 미리로딩 함수
-  function preloadImages(urls) {
+  function preloadImages(urls, callback) {
+    let loaded = 0;
     urls.forEach((url) => {
       const img = new Image();
       img.src = url;
+      img.addEventListener("load", () => {
+        loaded++;
+        console.log(`Image loaded: ${url}`);
+        if (loaded === urls.length) {
+          console.log("All images loaded!");
+          callback();
+        }
+      });
     });
   }
 
@@ -187,35 +196,34 @@ $(function () {
   preloadImages(imageUrls);
 
   // 이미지 로딩 상태를 확인하는 함수
-  function checkImagesLoaded(images, callback) {
+  function preloadImages(urls, callback) {
     let loaded = 0;
 
-    images.forEach((image) => {
-      if (image.complete) {
+    urls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+      img.addEventListener("load", () => {
         loaded++;
-      } else {
-        image.addEventListener("load", () => {
-          loaded++;
-          if (loaded === images.length) {
-            callback();
-          }
-        });
-      }
+        console.log(`Image loaded: ${url}`);
+        if (loaded === urls.length) {
+          console.log("All images loaded!");
+          callback();
+        }
+      });
     });
-
-    if (loaded === images.length) {
-      callback();
-    }
   }
-  // 이미지 로딩 완료 후 애니메이션 실행
-  checkImagesLoaded(document.querySelectorAll(".poster"), startAnimation);
-  gsap.registerPlugin(ScrollTrigger);
+
+  // 이미지 로딩 상태를 확인하고 애니메이션 시작
+  preloadImages(imageUrls, function () {
+    startAnimation();
+  });
 
   // 애니메이션 함수
   function startAnimation() {
     const txtWrap = $(".performance-info .txt-wrap");
     const behindTit = $(".behind-tit");
 
+    gsap.registerPlugin(ScrollTrigger);
     gsap
       .timeline({
         scrollTrigger: {
@@ -253,7 +261,8 @@ $(function () {
         // markers: true,
       },
     });
-    if ($window.innerWidth() >= 768) {
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 768) {
       // poster-wrap 핀 설정
       const sectionTl = gsap.timeline({
         scrollTrigger: {
@@ -340,319 +349,325 @@ $(function () {
         sectionTl.add(contentTl, tlDelay);
       });
     }
-  }
-  // *****before-monthly-schedule*****
-  const beforeSchedule = $(".before-monthly-schedule");
 
-  const setInitialProperties = () => {
-    gsap.set(beforeSchedule, {
+    // *****before-monthly-schedule*****
+    const beforeSchedule = $(".before-monthly-schedule");
+
+    const setInitialProperties = () => {
+      gsap.set(beforeSchedule, {
+        autoAlpha: 0,
+      });
+    };
+
+    const createTimeline = (start, end) => {
+      return gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: beforeSchedule,
+            start: start,
+            end: end,
+            scrub: 0.5,
+          },
+        })
+        .to(beforeSchedule, {
+          autoAlpha: 1,
+        });
+    };
+
+    const animateText = (trigger, end) => {
+      const txtElements = gsap.utils.toArray(".highlight-tit");
+      txtElements.forEach((text) => {
+        gsap.to(text, {
+          backgroundSize: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: text,
+            start: "top bottom",
+            end: end,
+            scrub: true,
+          },
+        });
+      });
+    };
+
+    const handleWindowWidth = () => {
+      if ($window.innerWidth() >= 768) {
+        createTimeline("top center", "center center");
+        animateText("top bottom", "top 60%");
+      } else {
+        createTimeline("top bottom", "center center");
+        animateText("top bottom", "top 60%");
+      }
+
+      setInitialProperties();
+    };
+
+    handleWindowWidth();
+    $window.on("resize", handleWindowWidth);
+    ScrollTrigger.refresh();
+    // *****monthly-schedule*****
+    const monthlySchedule = $(".monthly-schedule");
+    const calendar = $(".calendar");
+    const ms_txtWrap = $(".monthly-schedule .txt-wrap");
+    const ms_behindTit = $(".monthly-schedule .behind-tit");
+
+    gsap.set(calendar, {
+      y: 100,
       autoAlpha: 0,
     });
-  };
-
-  const createTimeline = (start, end) => {
-    return gsap
+    gsap
       .timeline({
         scrollTrigger: {
-          trigger: beforeSchedule,
-          start: start,
-          end: end,
+          trigger: monthlySchedule,
+          start: "top bottom",
+          end: "center center",
           scrub: 0.5,
         },
       })
-      .to(beforeSchedule, {
-        autoAlpha: 1,
-      });
-  };
-
-  const animateText = (trigger, end) => {
-    const txtElements = gsap.utils.toArray(".highlight-tit");
-    txtElements.forEach((text) => {
-      gsap.to(text, {
-        backgroundSize: "100%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: text,
-          start: "top bottom",
-          end: end,
-          scrub: true,
-        },
-      });
-    });
-  };
-
-  const handleWindowWidth = () => {
-    if ($window.innerWidth() >= 768) {
-      createTimeline("top center", "center center");
-      animateText("top bottom", "top 60%");
-    } else {
-      createTimeline("top bottom", "center center");
-      animateText("top bottom", "top 60%");
-    }
-
-    setInitialProperties();
-  };
-
-  handleWindowWidth();
-  $window.on("resize", handleWindowWidth);
-
-  // *****monthly-schedule*****
-  const monthlySchedule = $(".monthly-schedule");
-  const calendar = $(".calendar");
-  const ms_txtWrap = $(".monthly-schedule .txt-wrap");
-  const ms_behindTit = $(".monthly-schedule .behind-tit");
-
-  gsap.set(calendar, {
-    y: 100,
-    autoAlpha: 0,
-  });
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: monthlySchedule,
-        start: "top bottom",
-        end: "center center",
-        scrub: 0.5,
-      },
-    })
-    .fromTo(
-      ms_txtWrap,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8 }
-    )
-    .fromTo(
-      ms_behindTit,
-      { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.6 }
-    )
-    .to(calendar, {
-      y: 0,
-      autoAlpha: 1,
-    });
-
-  // *****chronological-list*****
-  function handleResize() {
-    const chronologicalList = $(".chronological-list");
-    const scrollWrap1 = $(".scroll-1");
-    const scrollWrap2 = $(".scroll-2");
-    const scrollCont1 = $(".scroll-1 .scroll-contents-box");
-    const scrollCont2 = $(".scroll-2 .scroll-contents-box");
-    const cl_txtWrap = $(".chronological-list .txt-wrap");
-    const scrollCont1Tit = $(".scroll-1 .scroll-tit");
-    const scrollCont2Tit = $(".scroll-2 .scroll-tit");
-    const scrollCont1TitMob = $(".scroll-1 .scroll-tit-mob");
-    const scrollCont2TitMob = $(".scroll-2 .scroll-tit-mob");
-    const cl_behindTit = $(".chronological-list .behind-tit");
-    if ($window.innerWidth() >= 768) {
-      gsap.set(scrollWrap1, {
-        y: 100,
-        autoAlpha: 0,
-      });
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: chronologicalList,
-            start: "top 80%",
-            end: "center center",
-            scrub: 0.5,
-          },
-        })
-        .fromTo(
-          cl_txtWrap,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5 }
-        )
-        .fromTo(
-          cl_behindTit,
-          { x: 100, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.6 }
-        )
-        .to(scrollWrap1, {
-          y: 0,
-          autoAlpha: 1,
-          duration: 1,
-          delay: 1,
-        });
-
-      const scrollWrap1Tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: scrollWrap1,
-          pin: scrollWrap1,
-          // pinSpacing: false,
-          start: "top top",
-          end: "+=120%",
-          scrub: 0.5,
-          // markers: true,
-        },
-      });
-      scrollWrap1Tl.fromTo(
-        scrollCont1,
-        {
-          yPercent: 50,
-          opacity: 1,
-        },
-        {
-          yPercent: -80,
-          opacity: 1,
-        }
-      );
-
-      const scrollWrap2Tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: scrollWrap2,
-          pin: scrollWrap2,
-          // pinSpacing: false,
-          start: "top top",
-          end: "+=120%",
-          scrub: 0.5,
-          // markers: true,
-        },
-      });
-      scrollWrap2Tl.fromTo(
-        scrollCont2,
-        {
-          yPercent: 50,
-          opacity: 1,
-        },
-        {
-          yPercent: -80,
-          opacity: 1,
-        }
-      );
-    } else {
-      gsap.set(calendar, {
-        y: 100,
-        autoAlpha: 0,
-      });
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: chronologicalList,
-            start: "top bottom",
-            end: "center center",
-            scrub: 0.5,
-          },
-        })
-        .fromTo(
-          cl_txtWrap,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5 }
-        )
-        .fromTo(
-          cl_behindTit,
-          { x: 100, opacity: 0 },
-          { x: 0, opacity: 1, duration: 0.5 }
-        )
-        .to(scrollWrap1, {
-          y: 0,
-          autoAlpha: 1,
-          // duration: 1,
-          delay: 1,
-        });
-
-      gsap.set([scrollCont1, scrollCont2], {
+      .fromTo(
+        ms_txtWrap,
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8 }
+      )
+      .fromTo(
+        ms_behindTit,
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.6 }
+      )
+      .to(calendar, {
         y: 0,
         autoAlpha: 1,
       });
-      const scrollWrap1Tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: scrollWrap1,
-          start: "top bottom",
-          end: "+=120%",
-          scrub: 0.5,
-          delay: 1,
-        },
-      });
-      scrollWrap1Tl.fromTo(
-        [scrollCont1TitMob, scrollCont1],
-        {
-          y: 100,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.3,
-          stagger: 0.2,
-        }
-      );
 
-      const scrollWrap2Tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: scrollWrap2,
-          start: "top bottom",
-          end: "+=120%",
-          scrub: 0.5,
-        },
-      });
-      scrollWrap2Tl.fromTo(
-        [scrollCont2TitMob, scrollCont2],
-        {
+    // *****chronological-list*****
+
+    function handleResize() {
+      const chronologicalList = $(".chronological-list");
+      const scrollWrap1 = $(".scroll-1");
+      const scrollWrap2 = $(".scroll-2");
+      const scrollCont1 = $(".scroll-1 .scroll-contents-box");
+      const scrollCont2 = $(".scroll-2 .scroll-contents-box");
+      const cl_txtWrap = $(".chronological-list .txt-wrap");
+      const scrollCont1Tit = $(".scroll-1 .scroll-tit");
+      const scrollCont2Tit = $(".scroll-2 .scroll-tit");
+      const scrollCont1TitMob = $(".scroll-1 .scroll-tit-mob");
+      const scrollCont2TitMob = $(".scroll-2 .scroll-tit-mob");
+      const cl_behindTit = $(".chronological-list .behind-tit");
+      if ($window.innerWidth() >= 768) {
+        gsap.set(scrollWrap1, {
           y: 100,
-          opacity: 0,
-        },
-        {
+          autoAlpha: 0,
+        });
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: chronologicalList,
+              start: "top 80%",
+              end: "center center",
+              scrub: 0.5,
+            },
+            onStart: () => console.log("Animation started"),
+            onComplete: () => console.log("Animation completed"),
+          })
+
+          .fromTo(
+            cl_txtWrap,
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5 }
+          )
+          .fromTo(
+            cl_behindTit,
+            { x: 100, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.6 }
+          )
+          .to(scrollWrap1, {
+            y: 0,
+            autoAlpha: 1,
+            duration: 1,
+            delay: 1,
+          });
+
+        const scrollWrap1Tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: scrollWrap1,
+            pin: scrollWrap1,
+            // pinSpacing: false,
+            start: "top top",
+            end: "+=120%",
+            scrub: 0.5,
+            // markers: true,
+          },
+        });
+        scrollWrap1Tl.fromTo(
+          scrollCont1,
+          {
+            yPercent: 50,
+            opacity: 1,
+          },
+          {
+            yPercent: -80,
+            opacity: 1,
+          }
+        );
+
+        const scrollWrap2Tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: scrollWrap2,
+            pin: scrollWrap2,
+            // pinSpacing: false,
+            start: "top top",
+            end: "+=120%",
+            scrub: 0.5,
+            // markers: true,
+          },
+        });
+        scrollWrap2Tl.fromTo(
+          scrollCont2,
+          {
+            yPercent: 50,
+            opacity: 1,
+          },
+          {
+            yPercent: -80,
+            opacity: 1,
+          }
+        );
+      } else {
+        gsap.set(calendar, {
+          y: 100,
+          autoAlpha: 0,
+        });
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: chronologicalList,
+              start: "top bottom",
+              end: "center center",
+              scrub: 0.5,
+            },
+          })
+          .fromTo(
+            cl_txtWrap,
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5 }
+          )
+          .fromTo(
+            cl_behindTit,
+            { x: 100, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.5 }
+          )
+          .to(scrollWrap1, {
+            y: 0,
+            autoAlpha: 1,
+            // duration: 1,
+            delay: 1,
+          });
+
+        gsap.set([scrollCont1, scrollCont2], {
           y: 0,
-          opacity: 1,
-          duration: 0.3,
-          stagger: 0.2,
-        }
-      );
+          autoAlpha: 1,
+        });
+        const scrollWrap1Tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: scrollWrap1,
+            start: "top bottom",
+            end: "+=120%",
+            scrub: 0.5,
+            delay: 1,
+          },
+        });
+        scrollWrap1Tl.fromTo(
+          [scrollCont1TitMob, scrollCont1],
+          {
+            y: 100,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.3,
+            stagger: 0.2,
+          }
+        );
+
+        const scrollWrap2Tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: scrollWrap2,
+            start: "top bottom",
+            end: "+=120%",
+            scrub: 0.5,
+          },
+        });
+        scrollWrap2Tl.fromTo(
+          [scrollCont2TitMob, scrollCont2],
+          {
+            y: 100,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.3,
+            stagger: 0.2,
+          }
+        );
+      }
     }
+    // 초기에 실행
+    handleResize();
+    ScrollTrigger.refresh();
+    // 창 크기가 변경될 때마다 실행
+    $window.on("resize", handleResize);
+
+    // *****more-chronological-list*****
+    const moreCl = $(".more-chronological-list");
+    const moreClFi = $(".more-chronological-list-file-info");
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: moreCl,
+          start: "top bottom",
+          end: "center center",
+          scrub: 0.5,
+        },
+      })
+      .fromTo(
+        moreCl,
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8 }
+      );
+    const moreClFiTl = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: moreClFi,
+          start: "top bottom",
+          end: "center center",
+          scrub: 0.5,
+        },
+      })
+      .fromTo(
+        moreClFi,
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8 }
+      );
+    var swiper = new Swiper(".swiper-more-chronological-list", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        360: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+      },
+    });
   }
-  // 초기에 실행
-  handleResize();
-
-  // 창 크기가 변경될 때마다 실행
-  $window.on("resize", handleResize);
-
-  // *****more-chronological-list*****
-  const moreCl = $(".more-chronological-list");
-  const moreClFi = $(".more-chronological-list-file-info");
-  const moreClTl = gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: moreCl,
-        start: "top bottom",
-        end: "center center",
-        scrub: 0.5,
-      },
-    })
-    .fromTo(
-      moreCl,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8 }
-    );
-  const moreClFiTl = gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: moreClFi,
-        start: "top bottom",
-        end: "center center",
-        scrub: 0.5,
-      },
-    })
-    .fromTo(
-      moreClFi,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8 }
-    );
-  var swiper = new Swiper(".swiper-more-chronological-list", {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      360: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-    },
-  });
 });
+
 // );
