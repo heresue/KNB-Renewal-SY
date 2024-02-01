@@ -431,6 +431,16 @@
 }
 @media screen and (max-width: 1280px) {
   #header {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header {
     height: 60px;
   }
 }
@@ -485,10 +495,20 @@
   }
   @media screen and (max-width: 1280px) {
     .inner {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .inner {
       max-width: 768px;
     }
   }
   @media screen and (max-width: 768px) {
+    .inner {
+      max-width: 480px;
+    }
+  }
+  @media screen and (max-width: 480px) {
     .inner {
       max-width: 328px;
     }
