@@ -1910,9 +1910,7 @@ button {
     padding: 0;
     margin: 0;
     color: #fff;
-    background: blueviolet;
     margin-top: 0;
-    background: blueviolet;
     margin-top: 0;
     height: 50px;
     width: 210px;
@@ -2202,6 +2200,9 @@ button {
 .more-chronological-list .swiper-button-next:after,
 .more-chronological-list .swiper-button-prev:after {
   display: none;
+}
+.more-chronological-list path {
+  stroke-width: 2px;
 }
 .more-chronological-list .list-sub-tit {
   font-weight: 700;

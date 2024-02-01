@@ -471,9 +471,8 @@
       display: block;
       @include mob-tit(30px);
       // color: blueviolet;
-      background: blueviolet;
+      // background: blueviolet;
       margin-top: 0;
-      background: blueviolet;
       margin-top: 0;
       height: 50px;
       width: 210px;
@@ -732,6 +731,9 @@
   .swiper-button-next:after,
   .swiper-button-prev:after {
     display: none;
+  }
+  path {
+    stroke-width: 2px;
   }
   .list-sub-tit {
     @include web-tit(40px);
