@@ -1,3 +1,5 @@
+
+
 // main slide
 var swiper = new Swiper(".main-swiper", {
   slidesPerView: 1,
@@ -16,8 +18,6 @@ var swiper = new Swiper(".main-swiper", {
   },
 });
 
-
-
 // 공연정보 슬라이드
 var swiper = new Swiper(".swiper-performance", {
   slidesPerView: "auto",
@@ -26,8 +26,6 @@ var swiper = new Swiper(".swiper-performance", {
     el: ".swiper-scrollbar",
   },
 });
-
-
 
 // banner ver2
 $(window).on("load", function () {

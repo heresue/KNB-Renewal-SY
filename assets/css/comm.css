@@ -1075,8 +1075,12 @@ section {
   padding-bottom: 80px;
 }
 
+.swiper-performance {
+  height: 62%;
+}
+
 .performance-inner.swiper-slide {
-  height: auto;
+  height: 683px;
   width: 367px;
   text-align: left;
   display: flex;
@@ -1084,7 +1088,6 @@ section {
   flex-wrap: wrap;
 }
 .performance-inner.swiper-slide .thumb {
-  width: 100%;
   height: 482px;
 }
 .performance-inner.swiper-slide .thumb img {
@@ -1129,28 +1132,30 @@ section {
 .intro-sec .txt-wrap {
   position: absolute;
   padding: 0 80px;
-  margin-top: -119px;
+  margin-top: -72px;
   width: 100%;
 }
 .intro-sec .txt-wrap h2 {
   position: relative;
-  right: 0;
   font-size: 96px;
   font-weight: bold;
   line-height: 62%;
   color: rgba(255, 255, 255, 0.6);
 }
-.intro-sec .txt-wrap h2:nth-child(2) {
-  text-align: right;
+.intro-sec .txt-wrap .txt-red {
+  left: 758px;
   color: #d92b2b;
   opacity: 80%;
 }
+.intro-sec .txt-wrap .txt-red.knba {
+  left: 425px;
+}
 .intro-sec .txt-wrap p {
   width: 70%;
-  margin: 24px 0 0 5px;
 }
-.intro-sec .txt-wrap p:nth-child(1) {
+.intro-sec .txt-wrap p:first-child {
   font-size: 50px;
+  margin: 45px 0 24px 0;
 }
 .intro-sec .knb-1 {
   background-image: url(/images/main/knb_1.jpg);
