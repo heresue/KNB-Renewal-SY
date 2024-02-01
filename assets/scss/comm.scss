@@ -44,6 +44,11 @@
     position: relative;
     // border-top: 1px solid $primary;
   }
+  @media screen and (max-width: 1280px) {
+    .wrapper {
+      // display: block;
+    }
+  }
   .inner {
     max-width: 1280px;
     width: 1280px;
@@ -182,6 +187,7 @@
     bottom: 0;
     right: 0;
     left: 100%;
+    height: 100vh;
     opacity: 0;
     padding-top: 100px;
     background: $primary;
@@ -591,6 +597,7 @@
           height: 40px;
           line-height: 40px;
           font-size: 14px;
+          font-weight: 700;
         }
       }
     }
