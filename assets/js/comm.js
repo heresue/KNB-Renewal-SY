@@ -176,21 +176,21 @@ $(function () {
   ];
 
   // 이미지 미리로딩 함수
-  function preloadImages(urls, callback) {
-    let loaded = 0;
-    urls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-      img.addEventListener("load", () => {
-        loaded++;
-        console.log(`Image loaded: ${url}`);
-        if (loaded === urls.length) {
-          console.log("All images loaded!");
-          callback();
-        }
-      });
-    });
-  }
+  // function preloadImages(urls, callback) {
+  //   let loaded = 0;
+  //   urls.forEach((url) => {
+  //     const img = new Image();
+  //     img.src = url;
+  //     img.addEventListener("load", () => {
+  //       loaded++;
+  //       console.log(`Image loaded: ${url}`);
+  //       if (loaded === urls.length) {
+  //         console.log("All images loaded!");
+  //         callback();
+  //       }
+  //     });
+  //   });
+  // }
 
   // 이미지 미리로딩 호출
   preloadImages(imageUrls);
