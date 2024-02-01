@@ -1132,7 +1132,7 @@ section {
 .intro-sec .txt-wrap {
   position: absolute;
   padding: 0 80px;
-  margin-top: -72px;
+  margin-top: -110px;
   width: 100%;
 }
 .intro-sec .txt-wrap h2 {
@@ -1153,9 +1153,12 @@ section {
 .intro-sec .txt-wrap p {
   width: 70%;
 }
-.intro-sec .txt-wrap p:first-child {
-  font-size: 50px;
+.intro-sec .txt-wrap p:first-of-type {
+  font-size: 28px;
   margin: 45px 0 24px 0;
+}
+.intro-sec .txt-wrap p:nth-last-of-type(1) {
+  font-size: 14px;
 }
 .intro-sec .knb-1 {
   background-image: url(/images/main/knb_1.jpg);
@@ -1196,7 +1199,7 @@ section {
 
 .ytb-bg {
   background-image: url(/images/main/ytb_bg.jpg);
-  height: 75%;
+  height: 77%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1234,6 +1237,7 @@ section {
 .notice-sec .inner .txt-wrap {
   display: flex;
   flex-direction: column;
+  width: 30%;
 }
 .notice-sec .inner .txt-wrap em {
   padding: 0px 0 24px 0;
@@ -1241,7 +1245,7 @@ section {
 
 .notice-wrap {
   width: 100%;
-  padding-left: 100px;
+  padding-left: 103px;
 }
 .notice-wrap li {
   height: 90px;
@@ -1298,26 +1302,30 @@ section {
 
 .bnr-wrap {
   display: flex;
+  overflow: hidden;
   height: 100px;
   width: 100%;
   align-items: center;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  overflow: hidden;
   position: relative;
 }
 .bnr-wrap .bnr-inner {
   display: flex;
   width: 200%;
-  height: 35px;
-  position: absolute;
-  overflow: hidden;
-  animation: marquee 10s linear infinite;
+  overflow-x: hidden;
+  padding: 25px 0;
 }
 .bnr-wrap .bnr-list {
   display: flex;
-  float: left;
-  width: 100%;
+  animation-name: main-marquee-ani;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 700;
 }
 .bnr-wrap .bnr-list a {
   padding: 0 80px;
@@ -1333,15 +1341,15 @@ section {
 .bnr-wrap .bnr-list a:hover img {
   filter: none;
 }
-@keyframes marquee {
+@keyframes main-marquee-ani {
   0% {
-    left: 0;
+    transform: translateX(0);
   }
   100% {
-    left: -200%;
+    transform: translateX(-100%);
   }
 }
-.bnr-wrap .bnr-inner:hover {
+.bnr-wrap .bnr-list:hover {
   animation-play-state: paused;
 }
 
