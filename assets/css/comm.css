@@ -664,6 +664,16 @@ button {
 
 @media screen and (max-width: 1280px) {
   #header {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header {
     height: 60px;
   }
 }
@@ -719,10 +729,20 @@ button {
 }
 @media screen and (max-width: 1280px) {
   #main .inner {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #main .inner {
     max-width: 768px;
   }
 }
 @media screen and (max-width: 768px) {
+  #main .inner {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 480px) {
   #main .inner {
     max-width: 328px;
   }
