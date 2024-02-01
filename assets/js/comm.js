@@ -167,12 +167,12 @@ $(function () {
 
   // 이미지 주소 배열
   const imageUrls = [
-    "/images/sub2/perfermance-info/poster-1.jpg",
-    "/images/sub2/perfermance-info/poster-2.jpg",
-    "/images/sub2/perfermance-info/poster-3.jpg",
-    "/images/sub2/perfermance-info/poster-4.jpg",
-    "/images/sub2/perfermance-info/poster-5.jpg",
-    "/images/sub2/perfermance-info/poster-6.png",
+    "https://chkim9910.github.io/KNB-Renewal/sub2/images/sub2/perfermance-info/poster-1.jpg",
+    "https://chkim9910.github.io/KNB-Renewal/sub2/images/sub2/perfermance-info/poster-2.jpg",
+    "https://chkim9910.github.io/KNB-Renewal/sub2/images/sub2/perfermance-info/poster-3.jpg",
+    "https://chkim9910.github.io/KNB-Renewal/sub2/images/sub2/perfermance-info/poster-4.jpg",
+    "https://chkim9910.github.io/KNB-Renewal/sub2/images/sub2/perfermance-info/poster-5.jpg",
+    "https://chkim9910.github.io/KNB-Renewal/sub2/images/sub2/perfermance-info/poster-6.png",
   ];
 
   // 이미지 미리로딩 함수
