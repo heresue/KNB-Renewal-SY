@@ -342,22 +342,22 @@
 
     &:nth-child(1) {
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(/images/sub1/cards/card1.png);
+        url(../../images/sub1/cards/card1.png);
       background-size: cover;
     }
     &:nth-child(2) {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(/images/sub1/cards/card2.png);
+        url(../../images/sub1/cards/card2.png);
       background-size: cover;
     }
     &:nth-child(3) {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(/images/sub1/cards/card3.jpg);
+        url(../../images/sub1/cards/card3.jpg);
       background-size: cover;
     }
     &:nth-child(4) {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(/images/sub1/cards/card4.jpg);
+        url(../../images/sub1/cards/card4.jpg);
       background-size: cover;
     }
   }
