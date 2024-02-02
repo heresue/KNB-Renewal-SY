@@ -26,8 +26,6 @@ section {
   z-index: -1;
 }
 
-
-
 // main section //
 
 .main-swiper-wrap {
@@ -114,8 +112,12 @@ section {
 // txt만 스크롤되면서 올라옴 (그라데이션 배경까지)
 
 .intro-sec {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
   .img-wrap {
-    // position: relative;
+    position: relative;
+    z-index: 1;
     width: 87%;
     height: 80%;
     &.right {
@@ -124,6 +126,7 @@ section {
   }
   .txt-wrap {
     position: absolute;
+    z-index: 2;
     padding: 0 80px;
     margin-top: -110px;
     width: 100%;

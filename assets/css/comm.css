@@ -1123,7 +1123,14 @@ section {
   height: 37px;
 }
 
+.intro-sec {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 .intro-sec .img-wrap {
+  position: relative;
+  z-index: 1;
   width: 87%;
   height: 80%;
 }
@@ -1132,6 +1139,7 @@ section {
 }
 .intro-sec .txt-wrap {
   position: absolute;
+  z-index: 2;
   padding: 0 80px;
   margin-top: -110px;
   width: 100%;

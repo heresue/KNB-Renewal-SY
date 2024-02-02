@@ -24,3 +24,5 @@ var swiper = new Swiper(".swiper-performance", {
     el: ".swiper-scrollbar",
   },
 });
+
+// intro section

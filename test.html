@@ -7,82 +7,93 @@
 </head>
 <body>
     <style>
-        .auto-scroll-wrap {
-  margin-top: 50px;
-  .splide {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .splide__track {
-    overflow: visible;
-  }
-  .splide__slide img {
-    width: 100%;
-    height: auto;
-  }
+.intro-sec {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.parallax-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateZ(0);
+}
+.intro-bg {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+    no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+.intro-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+}
+
+.intro-tit {
+  position: absolute;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  top: 50%; /* 초기 위치 조정 */
+}
+
+.extra-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 높이를 충분히 주어 스크롤 생성 */
+  background-color: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 3rem;
+  color: #fff;
 }
     </style>
 
 
-    <!-- cdn 추가 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
-<!-- auto scroll -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-
-<div class="auto-scroll-wrap">
-  <div id="splide-autoscroll" class="splide" aria-label="Beautiful Images">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682685797769-481b48222adf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682685797208-c741d58c2eff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682685797769-481b48222adf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682685797208-c741d58c2eff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682685797769-481b48222adf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682685797208-c741d58c2eff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-        <li class="splide__slide">
-          <img src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
-        </li>
-      </ul>
-    </div>
+<div class="intro-sec">
+    <div class="parallax-element intro-bg"></div>  
+    <strong class="parallax-element intro-tit">글씨는 스크롤이 느림</strong>
   </div>
-</div>
-
-<br><br><br><br><br><br>
+  
+  <div class="extra-content">
+    <p>Parallax Scrolling</p>
+  </div>
     
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-  var splide = new Splide('#splide-autoscroll', {
-    type   : 'loop',
-    drag   : 'free',
-    focus  : 'center',
-    perPage: 3,
-    autoScroll: {
-      speed: 1,
-    },
-  });
 
-  splide.mount(window.splide.Extensions);
+
+
+
+<script>
+window.addEventListener('scroll', function () {
+  // 스크롤 이벤트 리스너 등록
+  const sections = document.querySelector('.intro-sec'); // 모든 섹션을 가져옴
+
+  const background = sections.querySelector('.intro-bg'); // 배경 요소
+  const title = sections.querySelector('.intro-tit'); // 제목 요소
+
+
+  const scrolled = window.scrollY // 윈도우의 스크롤값
+  
+  console.log("scrollY : " + scrolled)
+
+  background.style.transform = `translateY(${scrolled * 0.8}px)`; 
+  // 제목을 스크롤 속도의 80%(빠르게)로 이동
+  title.style.transform = `translateY(${scrolled * 0}px)`; 
+  // 배경을 스크롤 속도의 30%(느리게)로 이동
+
 });
 </script>
 </body>
