@@ -904,9 +904,9 @@ button {
 }
 @media screen and (max-width: 768px) {
   #main .main-visual .side-bar-wrap .side-bar-li {
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
     font-weight: 700;
   }
@@ -1686,9 +1686,30 @@ button {
 .performance-info .tit-page .tit {
   margin-right: 12px;
 }
+@media screen and (max-width: 1280px) {
+  .performance-info .tit-page {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .performance-info {
+    /** 타블렛 가로, 노트북 */
+  }
+}
+@media screen and (max-width: 768px) {
+  .performance-info .tit-page {
+    padding: 150px 0;
+    height: auto;
+  }
+}
 .performance-info .poster-wrap {
   position: relative;
   height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .performance-info .poster-wrap {
+    height: auto;
+  }
 }
 .performance-info .poster {
   position: absolute;
@@ -1706,6 +1727,16 @@ button {
   width: 1280px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1280px) {
+  .performance-info .poster {
+    gap: 46px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .performance-info .poster {
+    position: relative;
+  }
+}
 .performance-info .post-tit {
   display: block;
   height: 70px;
@@ -1718,6 +1749,32 @@ button {
   margin-bottom: 36px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
+@media screen and (max-width: 1280px) {
+  .performance-info .post-tit {
+    height: 57px;
+    width: 330px;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+    margin-bottom: 2 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .performance-info .post-tit {
+    height: 50px;
+    width: 200px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}
 .performance-info .poster-4 .post-tit {
   width: 456px;
 }
@@ -1728,6 +1785,16 @@ button {
   letter-spacing: normal;
   line-height: 1.5;
   color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .performance-info .post-date,
+  .performance-info .post-locate {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+  }
 }
 .performance-info .poster-1 {
   background: conic-gradient(from -43deg at 44.72% 48.26%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.38% 54.89%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-1.jpg) no-repeat 50% 100%/cover;
@@ -1747,6 +1814,16 @@ button {
 .performance-info .poster-6 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), conic-gradient(from -39deg at 43.61% 53.1%, rgba(0, 0, 0, 0.2) 0deg, rgba(0, 0, 0, 0) 360deg), conic-gradient(from 225deg at 45.59% 54.76%, rgba(0, 0, 0, 0.7) 0deg, rgba(0, 0, 0, 0) 360deg), url(../../images/sub2/perfermance-info/poster-6.png) no-repeat 50% 100%/cover;
 }
+@media screen and (max-width: 1280px) {
+  .performance-info .arr-icon {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .performance-info .arr-icon {
+    width: 36px;
+  }
+}
 
 .before-monthly-schedule {
   height: 100vh;
@@ -1760,7 +1837,12 @@ button {
   transform: rotate(180deg);
 }
 .before-monthly-schedule .inner {
-  padding: 12.5vw 5.556vw 0 !important;
+  padding: 12.5vw 4.444vw 0 0 !important;
+}
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule .inner {
+    padding: 12.5vw 0 !important;
+  }
 }
 .before-monthly-schedule .highlight-tit {
   font-family: "Roboto", sans-serif;
@@ -1779,9 +1861,44 @@ button {
   width: 500px;
   transform: translateX(616px);
 }
+@media screen and (max-width: 1280px) {
+  .before-monthly-schedule .highlight-tit {
+    font-size: 65px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule .highlight-tit {
+    font-size: 38px;
+  }
+}
 .before-monthly-schedule .highlight-sub-tit,
 .before-monthly-schedule .arr-down {
   text-align: right;
+}
+.before-monthly-schedule .highlight-sub-tit {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  color: #fff;
+}
+@media screen and (max-width: 1280px) {
+  .before-monthly-schedule .highlight-sub-tit {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule .highlight-sub-tit {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.42px;
+    line-height: normal;
+    color: #fff;
+  }
 }
 .before-monthly-schedule .arr-down {
   height: 94px;
@@ -1789,6 +1906,16 @@ button {
   align-items: center;
   justify-content: flex-end;
   margin-top: 50px;
+}
+@media screen and (max-width: 1280px) {
+  .before-monthly-schedule .arr-down {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule .arr-down {
+    margin-top: 10px;
+  }
 }
 .before-monthly-schedule .arr-down-icon {
   transform: rotate(90deg) scale(1.5);
@@ -1802,7 +1929,22 @@ button {
     transform: rotate(90deg) scale(1.8) translateX(10px);
   }
 }
+@media screen and (max-width: 1280px) {
+  .before-monthly-schedule .arr-down-icon {
+    height: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule .arr-down-icon {
+    height: 7px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .before-monthly-schedule {
+    height: auto;
+  }
+}
 .monthly-schedule .txt-wrap {
   display: flex;
   align-items: baseline;
@@ -1831,7 +1973,7 @@ button {
 }
 .monthly-schedule .fc-col-header {
   height: 44px;
-  background: rgba(217, 43, 43, 0.3);
+  background: rgb(217, 43, 43);
   line-height: 44px;
 }
 .monthly-schedule .fc-daygrid-day-top {
@@ -1845,11 +1987,40 @@ button {
 .monthly-schedule .fc-daygrid-day-number:hover {
   color: white;
 }
+@media screen and (max-width: 1280px) {
+  .monthly-schedule .fc-toolbar-title {
+    font-size: 24px;
+  }
+  .monthly-schedule .fc-daygrid-day-number,
+  .monthly-schedule .fc-event-title {
+    font-size: 12px;
+  }
+  .monthly-schedule .fc-button {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+  }
+}
 
+@media screen and (max-width: 1280px) {
+  .monthly-schedule {
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .monthly-schedule {
+    margin: 120px 0 100px;
+  }
+}
 .chronological-list .txt-wrap {
   display: flex;
   align-items: baseline;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .txt-wrap {
+    flex-direction: column;
+  }
 }
 .chronological-list .tit {
   margin-right: 12px;
@@ -1860,19 +2031,74 @@ button {
   padding: 110px 112px 0 0;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .chronological-list .scroll-wrap {
+    flex-direction: column;
+    padding: 50px 0 0;
+  }
+}
 .chronological-list .scroll-tit {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 90px;
   letter-spacing: normal;
   line-height: normal;
   color: #fff;
   margin-top: 190px;
+}
+@media screen and (max-width: 1280px) {
+  .chronological-list .scroll-tit {
+    font-weight: 700;
+    font-size: 70px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .scroll-tit {
+    display: none;
+  }
+}
+.chronological-list .scroll-tit-mob {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .scroll-tit-mob {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    margin-top: 0;
+    margin-top: 0;
+    height: 50px;
+    width: 210px;
+    line-height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
 }
 .chronological-list .scroll-contents-box {
   position: absolute;
   right: 0;
   height: 1350px;
   width: 528px;
+}
+@media screen and (max-width: 1280px) {
+  .chronological-list .scroll-contents-box {
+    width: 419px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .scroll-contents-box {
+    position: relative;
+    width: 308px;
+    height: auto;
+    left: 0;
+  }
 }
 .chronological-list .content {
   padding: 50px 0;
@@ -1884,7 +2110,7 @@ button {
   border-bottom: none;
 }
 .chronological-list .cont-txt-wrap {
-  width: 528px;
+  width: 100%;
 }
 .chronological-list .cont-tit {
   display: block;
@@ -1895,9 +2121,31 @@ button {
   color: #fff;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+  .chronological-list .cont-tit {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+}
 .chronological-list .txt-list {
   display: flex;
   gap: 72px;
+}
+@media screen and (max-width: 1280px) {
+  .chronological-list .txt-list {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .txt-list {
+    gap: 20px;
+  }
 }
 .chronological-list .txt-list-month {
   display: block;
@@ -1909,6 +2157,30 @@ button {
   color: #fff;
   color: rgba(255, 255, 255, 0.8);
 }
+@media screen and (max-width: 1280px) {
+  .chronological-list .txt-list-month {
+    width: 32px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .txt-list-month {
+    width: 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
 .chronological-list .txt-list-cont {
   font-weight: 400;
   font-size: 18px;
@@ -1916,6 +2188,26 @@ button {
   line-height: 1.5;
   color: #fff;
   color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 1280px) {
+  .chronological-list .txt-list-cont {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+@media screen and (max-width: 768px) {
+  .chronological-list .txt-list-cont {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.42px;
+    line-height: normal;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 .chronological-list .more-info {
   display: block;
@@ -1927,8 +2219,24 @@ button {
 }
 .chronological-list .more-info .more-icon {
   position: absolute;
+  width: 100%;
+}
+@media screen and (max-width: 1280px) {
+  .chronological-list .more-info {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .chronological-list .more-info {
+    width: 30px;
+  }
 }
 
+@media screen and (max-width: 768px) {
+  .chronological-list {
+    margin: 100px 0;
+  }
+}
 .more-chronological-list {
   margin-bottom: 80px;
 }
@@ -1939,8 +2247,19 @@ button {
   height: 1px;
   background: linear-gradient(to right, #fff, #000);
 }
+@media screen and (max-width: 768px) {
+  .more-chronological-list .txt-wrap:after {
+    width: 90%;
+  }
+}
 .more-chronological-list .tit {
   margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .tit {
+    line-height: 150% !important;
+    margin-bottom: 30px !important;
+  }
 }
 .more-chronological-list .date-btn-wrap {
   text-align: center;
@@ -2007,17 +2326,45 @@ button {
   width: 50px;
   height: 50px;
 }
+@media screen and (max-width: 1280px) {
+  .more-chronological-list .swiper-button-next,
+  .more-chronological-list .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .swiper-button-next,
+  .more-chronological-list .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}
 .more-chronological-list .swiper-button-prev {
   transform: rotate(180deg);
   top: -50px;
   left: 85%;
 }
+@media screen and (max-width: 768px) {
+  .more-chronological-list .swiper-button-prev {
+    top: -40px;
+    left: 75%;
+  }
+}
 .more-chronological-list .swiper-button-next {
   top: -50px;
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .swiper-button-next {
+    top: -40px;
+  }
 }
 .more-chronological-list .swiper-button-next:after,
 .more-chronological-list .swiper-button-prev:after {
   display: none;
+}
+.more-chronological-list path {
+  stroke-width: 2px;
 }
 .more-chronological-list .list-sub-tit {
   font-weight: 700;
@@ -2028,9 +2375,32 @@ button {
   display: block;
   margin-bottom: 35px;
 }
+@media screen and (max-width: 1280px) {
+  .more-chronological-list .list-sub-tit {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list .list-sub-tit {
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
 .more-chronological-list .cont {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 12px;
+}
+@media screen and (max-width: 1280px) {
+  .more-chronological-list .cont {
+    margin-bottom: 8px;
+  }
 }
 
 .more-chronological-list-file-info {
@@ -2046,6 +2416,26 @@ button {
   line-height: normal;
   color: #fff;
 }
+@media screen and (max-width: 1280px) {
+  .more-chronological-list-file-info .tit-small {
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .more-chronological-list-file-info .tit-small {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+}
 .more-chronological-list-file-info .file-info {
   color: #fff;
   padding-bottom: 10px;
@@ -2053,7 +2443,21 @@ button {
   display: flex;
   gap: 90px;
 }
+@media screen and (max-width: 768px) {
+  .more-chronological-list-file-info .file-info {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+    line-height: normal;
+    color: #fff;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .more-chronological-list-file-info {
+    margin: 100px 0;
+  }
+}
 .behind-tit {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 700;
@@ -2070,4 +2474,34 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -1;
+}
+
+@media screen and (max-width: 1280px) {
+  .behind-tit {
+    width: 2000px;
+    top: -70px;
+    font-weight: 700;
+    font-size: 110px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .behind-tit {
+    top: -30px;
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 22.61%, rgba(255, 255, 255, 0) 71.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }/*# sourceMappingURL=comm.css.map */
