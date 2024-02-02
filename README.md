@@ -4,10 +4,10 @@
 본 페이지는
 브랜드 이미지 제고 및 UI/UX 경험 향상을 목표로 제작하였습니다.
 
-모던하며 세련된 이미지를 테마로 하여,
+모던하고 세련된 이미지를 테마로 하여
 로고와 주조색, 레이아웃 디자인과 인터렉션 등을 리뉴얼하였습니다.
 
-아래의 링크로 리뉴얼한 페이지들을 구경해보세요.  :sparkles:
+아래의 링크를 통해 페이지들을 확인해보세요.  :sparkles:
 
 - <a href="https://chkim9910.github.io/KNB-Renewal/">Main page</a>
 - <a href="https://chkim9910.github.io/KNB-Renewal/sub1">국립발레단 소개</a>
