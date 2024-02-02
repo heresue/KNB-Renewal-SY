@@ -113,12 +113,14 @@
   .post-locate {
     @include web-bd(16px);
   }
+
   @media screen and (max-width: 768px) {
     .post-date,
     .post-locate {
       @include web-bd(14px);
     }
   }
+
   .poster-1 {
     background: conic-gradient(
         from -43deg at 44.72% 48.26%,
