@@ -1027,6 +1027,7 @@ button {
 }
 section {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .btmgrd :before {
@@ -1300,57 +1301,45 @@ section {
   padding: 50px;
 }
 
-.bnr-wrap {
+.ptn-auto-scroll-wrap {
   display: flex;
-  overflow: hidden;
   height: 100px;
   width: 100%;
   align-items: center;
+  margin-top: 70px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+}
+.ptn-auto-scroll-wrap .splide {
+  max-width: 100%;
+  margin: 0 auto;
   position: relative;
 }
-.bnr-wrap .bnr-inner {
+.ptn-auto-scroll-wrap .splide__track {
+  overflow: visible;
+}
+.ptn-auto-scroll-wrap .splide__slide {
+  flex-grow: 1;
   display: flex;
-  width: 200%;
-  overflow-x: hidden;
-  padding: 25px 0;
+  align-items: center;
 }
-.bnr-wrap .bnr-list {
-  display: flex;
-  animation-name: main-marquee-ani;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  white-space: nowrap;
-  font-size: 24px;
-  font-weight: 700;
+.ptn-auto-scroll-wrap .splide__slide a {
+  width: 100%;
+  height: 30px;
 }
-.bnr-wrap .bnr-list a {
-  padding: 0 80px;
-  width: 300px;
-}
-.bnr-wrap .bnr-list a img {
-  width: 140px;
-  height: 35px;
+.ptn-auto-scroll-wrap .splide__slide img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  filter: grayscale(100%);
+  filter: grayscale(100%) opacity(70%);
 }
-.bnr-wrap .bnr-list a:hover img {
+.ptn-auto-scroll-wrap .splide__slide a:hover img {
   filter: none;
 }
-@keyframes main-marquee-ani {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.bnr-wrap .bnr-list:hover {
-  animation-play-state: paused;
+.ptn-auto-scroll-wrap .splide__arrows,
+.ptn-auto-scroll-wrap .splide__pagination {
+  display: none;
 }
 
 @media screen and (max-width: 1280px) {

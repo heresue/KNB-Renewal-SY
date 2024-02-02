@@ -1,5 +1,6 @@
 section {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 // 이미지 하단 gradient
@@ -24,6 +25,8 @@ section {
   background: black;
   z-index: -1;
 }
+
+
 
 // main section //
 
@@ -105,6 +108,10 @@ section {
 }
 
 // introduce section //
+
+// 스크롤 다운 시, 이미지top = window top이 되면
+// 이미지는 멈춰있고
+// txt만 스크롤되면서 올라옴 (그라데이션 배경까지)
 
 .intro-sec {
   .img-wrap {
@@ -304,72 +311,44 @@ section {
   }
 }
 
-.bnr-wrap {
+.ptn-auto-scroll-wrap {
   display: flex;
-  overflow: hidden;
   height: 100px;
   width: 100%;
   align-items: center;
+  margin-top: 70px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  position: relative;
-  .bnr-inner {
-    display: flex;
-    width: 200%;
-    overflow-x: hidden;
-    padding: 25px 0;
+  .splide {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
   }
-  .bnr-list {
+  .splide__track {
+    overflow: visible;
+  }
+  .splide__slide {
+    flex-grow: 1;
     display: flex;
-    animation-name: main-marquee-ani;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-    animation-direction: normal;
-    animation-timing-function: linear;
-    white-space: nowrap;
-    font-size: 24px;
-    font-weight: 700;
+    align-items: center;
     a {
-      padding: 0 80px;
-      width: 300px;
-      img {
-        width: 140px;
-        height: 35px;
-        object-fit: contain;
-        filter: grayscale(100%);
-      }
+      width: 100%;
+      height: 30px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(70%);
     }
     a:hover img {
       filter: none;
     }
   }
-  @keyframes main-marquee-ani {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .splide__arrows,
+  .splide__pagination {
+    display: none;
   }
-  .bnr-list:hover {
-    animation-play-state: paused;
-  }
-
-
-
-
-  // @keyframes marquee {
-  //   0% {
-  //     left: 0;
-  //   }
-  //   100% {
-  //     left: -200%;
-  //   }
-  // }
-
-  // .bnr-inner:hover {
-  //   animation-play-state: paused;
-  // }
 }
 
 @media screen and (max-width: 1280px) {
