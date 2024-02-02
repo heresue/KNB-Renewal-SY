@@ -389,6 +389,7 @@ $(function () {
     handleWindowWidth();
     $window.on("resize", handleWindowWidth);
     ScrollTrigger.refresh();
+
     // *****monthly-schedule*****
     const monthlySchedule = $(".monthly-schedule");
     const calendar = $(".calendar");
@@ -411,23 +412,34 @@ $(function () {
         },
       })
       .fromTo(
-        [ms_tit, ms_subtit],
+        [ms_tit, ms_subtit, ms_behindTit],
         { y: 100, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8 }
       )
-      .fromTo(
-        ms_behindTit,
-        { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.6 }
-      )
+      // .fromTo(
+      //   ms_behindTit,
+      //   { x: 100, opacity: 0 },
+      //   { x: 0, opacity: 1, duration: 0.6 }
+      // )
       .to(calendar, {
         y: 0,
         autoAlpha: 1,
       });
 
     // *****chronological-list*****
-
-    function handleResize() {
+    function throttle(func, limit) {
+      let inThrottle;
+      return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => (inThrottle = false), limit);
+        }
+      };
+    }
+    function handleResizeThrottled() {
       const chronologicalList = $(".chronological-list");
       const scrollWrap1 = $(".scroll-1");
       const scrollWrap2 = $(".scroll-2");
@@ -458,15 +470,15 @@ $(function () {
           })
 
           .fromTo(
-            [cl_tit, cl_subtit],
+            [cl_tit, cl_subtit, cl_behindTit],
             { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.5 }
           )
-          .fromTo(
-            cl_behindTit,
-            { x: 100, opacity: 0 },
-            { x: 0, opacity: 1, duration: 0.6 }
-          )
+          // .fromTo(
+          //   cl_behindTit,
+          //   { x: 100, opacity: 0 },
+          //   { x: 0, opacity: 1, duration: 0.6 }
+          // )
           .to(scrollWrap1, {
             y: 0,
             autoAlpha: 1,
@@ -534,15 +546,15 @@ $(function () {
             },
           })
           .fromTo(
-            [cl_tit, cl_subtit],
+            [cl_tit, cl_subtit, cl_behindTit],
             { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.5 }
           )
-          .fromTo(
-            cl_behindTit,
-            { x: 100, opacity: 0 },
-            { x: 0, opacity: 1, duration: 0.5 }
-          )
+          // .fromTo(
+          //   cl_behindTit,
+          //   { x: 100, opacity: 0 },
+          //   { x: 0, opacity: 1, duration: 0.5 }
+          // )
           .to(scrollWrap1, {
             y: 0,
             autoAlpha: 1,
@@ -600,11 +612,14 @@ $(function () {
         );
       }
     }
+
+    const throttledHandleResize = throttle(handleResizeThrottled, 200); // Adjust the throttling time as needed
     // 초기에 실행
-    handleResize();
+    throttledHandleResize();
+    // handleResize();
     ScrollTrigger.refresh();
     // 창 크기가 변경될 때마다 실행
-    $window.on("resize", handleResize);
+    $window.on("resize", throttledHandleResize);
 
     // *****more-chronological-list*****
     const moreCl = $(".more-chronological-list");
@@ -623,7 +638,7 @@ $(function () {
         { y: 100, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.8 }
       );
-    const moreClFiTl = gsap
+    gsap
       .timeline({
         scrollTrigger: {
           trigger: moreClFi,
@@ -635,7 +650,7 @@ $(function () {
       .fromTo(
         moreClFi,
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 }
+        { y: 0, opacity: 1, duration: 1 }
       );
     var swiper = new Swiper(".swiper-more-chronological-list", {
       slidesPerView: 2,
@@ -656,5 +671,3 @@ $(function () {
     });
   }
 });
-
-// );

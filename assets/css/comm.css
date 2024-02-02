@@ -1554,6 +1554,11 @@ button {
     padding: 0;
   }
 }
+@media screen and (max-width: 1024px) {
+  .performance-info {
+    /** 타블렛 가로, 노트북 */
+  }
+}
 @media screen and (max-width: 768px) {
   .performance-info .tit-page {
     padding: 150px 0;
