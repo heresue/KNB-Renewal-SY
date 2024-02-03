@@ -1025,18 +1025,23 @@ button {
     gap: 10px;
   }
 }
-section {
+body {
   height: 100vh;
   overflow-x: hidden;
 }
 
-.btmgrd :before {
+.btmgrd ::before {
   content: "";
   background: linear-gradient(to top, black, transparent);
   position: absolute;
   bottom: 0;
   height: 13%;
   width: 100%;
+}
+
+.topgrd {
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
 }
 
 .transper {
@@ -1130,18 +1135,24 @@ section {
 }
 .intro-sec .img-wrap {
   position: relative;
-  z-index: 1;
   width: 87%;
   height: 80%;
 }
 .intro-sec .img-wrap.right {
   margin-left: auto;
 }
+.intro-sec .grdient {
+  background: linear-gradient(to top, red, transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: -110px;
+}
 .intro-sec .txt-wrap {
   position: absolute;
   z-index: 2;
   padding: 0 80px;
-  margin-top: -110px;
+  width: 100%;
   width: 100%;
 }
 .intro-sec .txt-wrap h2 {
