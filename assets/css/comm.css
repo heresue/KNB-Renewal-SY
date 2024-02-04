@@ -1026,8 +1026,11 @@ button {
   }
 }
 body {
-  height: 100vh;
   overflow-x: hidden;
+}
+
+section {
+  height: 100vh !important;
 }
 
 .btmgrd ::before {
@@ -1044,32 +1047,26 @@ body {
   position: absolute;
 }
 
-.transper {
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black);
-          mask-image: linear-gradient(to bottom, transparent, black);
+.main-swiper img {
   width: 100%;
-  height: 200px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: black;
-  z-index: -1;
-}
-
-.main-swiper-wrap {
   height: 100vh;
-}
-.main-swiper-wrap .main-swiper {
-  height: 100%;
-}
-.main-swiper-wrap .main-swiper img {
-  width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
 }
-.main-swiper-wrap .button {
-  color: white;
+@media screen and (max-width: 768px) {
+  .main-swiper {
+    position: relative;
+    z-index: -1;
+  }
+  .main-swiper.btmgrd ::before {
+    height: 20%;
+  }
+}
+
+.button {
+  display: none;
 }
 
 .performance-sec {
@@ -1080,23 +1077,20 @@ body {
 .performance-sec h2 {
   padding-bottom: 80px;
 }
-
-.swiper-performance {
+.performance-sec .swiper-performance {
   height: 62%;
 }
-
-.performance-inner.swiper-slide {
-  height: 683px;
+.performance-sec .performance-inner {
   width: 367px;
   text-align: left;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.performance-inner.swiper-slide .thumb {
+.performance-sec .performance-inner .thumb {
   height: 482px;
 }
-.performance-inner.swiper-slide .thumb img {
+.performance-sec .performance-inner .thumb img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1104,42 +1098,60 @@ body {
      object-fit: cover;
   border-radius: 10px;
 }
-.performance-inner.swiper-slide .txt-wrap {
+.performance-sec .performance-inner .txt-wrap {
   width: 100%;
-  padding: 0px 0;
+  padding: 21px 0;
 }
-.performance-inner.swiper-slide .txt-wrap strong {
+.performance-sec .performance-inner .txt-wrap strong {
   padding-bottom: 4px;
   font-size: 30px;
+  font-weight: 700;
 }
-.performance-inner.swiper-slide .txt-wrap button {
+.performance-sec .performance-inner .txt-wrap button {
   border-radius: 10px;
   color: white;
 }
-.performance-inner.swiper-slide .content-wrap {
+.performance-sec .performance-inner .content-wrap {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
   border-top: 1px solid white;
 }
-.performance-inner.swiper-slide button {
+.performance-sec .performance-inner button {
   background: #d92b2b;
   width: 160px;
   height: 37px;
 }
+@media screen and (max-width: 768px) {
+  .performance-sec {
+    margin-top: -20%;
+    padding: 0 0 0 16px;
+  }
+  .performance-sec h2 {
+    padding-bottom: 5px !important;
+  }
+  .performance-sec .performance-inner .thumb {
+    height: 700px;
+  }
+}
 
 .intro-sec {
-  height: 100vh;
   position: relative;
   overflow: hidden;
 }
-.intro-sec .img-wrap .image {
+.intro-sec .img-wrap {
+  background: black;
+}
+.intro-sec .img-wrap .intro-image {
   position: relative;
   z-index: 1;
 }
+.intro-sec .img-wrap .right {
+  margin: 0 0 0 20%;
+}
 .intro-sec .grdient {
   display: flex;
-  background: linear-gradient(transparent, black 40%);
+  background: linear-gradient(transparent, black 18%);
   margin-top: -110px;
   position: relative;
   z-index: 2;
@@ -1148,76 +1160,89 @@ body {
   padding: 0 80px;
   width: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .intro-sec .txt-wrap::after {
   content: "";
   background-color: black;
-  /* 검은색 배경 */
   position: absolute;
   top: 100%;
-  /* 섹션 아래로 이동 */
   left: 0;
   width: 100%;
   height: 100vh;
-  /* 현재 뷰포트의 높이만큼 */
   z-index: -1;
 }
 .intro-sec .txt-wrap h2 {
   position: relative;
-  font-size: 96px;
+  font-size: 115px;
   font-weight: bold;
   line-height: 62%;
   color: rgba(255, 255, 255, 0.6);
 }
-.intro-sec .txt-wrap .txt-red {
-  left: 758px;
+.intro-sec .txt-red {
+  text-align: right;
   color: #d92b2b;
   opacity: 80%;
 }
-.intro-sec .txt-wrap .txt-red.knba {
-  left: 425px;
+.intro-sec p {
+  width: 60%;
 }
-.intro-sec .txt-wrap p {
-  width: 70%;
-}
-.intro-sec .txt-wrap p:first-of-type {
+.intro-sec p:first-of-type {
   font-size: 28px;
   margin: 45px 0 24px 0;
 }
-.intro-sec .txt-wrap p:nth-last-of-type(1) {
+.intro-sec p:nth-last-of-type(1) {
   font-size: 14px;
 }
-.intro-sec .knb-1 {
+.intro-sec a {
+  margin-top: 20px;
+}
+@media screen and (max-width: 1280px) {
+  .intro-sec h2 {
+    font-size: 98px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro-sec h2 {
+    font-size: 56px !important;
+  }
+  .intro-sec p {
+    white-space: nowrap;
+  }
+  .intro-sec p:nth-last-of-type(1) {
+    display: none;
+  }
+  .intro-sec a {
+    margin-top: -10px;
+  }
+}
+
+.intro-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 666px;
+  margin: 0 20% 0 0;
+  z-index: -2;
+  background-position: center;
+}
+
+.knb-1 {
   background-image: url(/images/main/knb_1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 666px;
-  z-index: -2;
 }
-.intro-sec .knb-2 {
+
+.knb-2 {
   background-image: url(/images/main/knb_2-2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 666px;
-  z-index: -2;
+  background-position: 100% 43%;
 }
-.intro-sec .knba-1 {
+
+.knba-1 {
   background-image: url(/images/main/knba_1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 666px;
-  z-index: -2;
 }
-.intro-sec .knba-2 {
+
+.knba-2 {
   background-image: url(/images/main/knba_2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 666px;
-  z-index: -2;
 }
 
 .intro-end {
@@ -1226,7 +1251,7 @@ body {
 
 .ytb-bg {
   background-image: url(/images/main/ytb_bg.jpg);
-  height: 77%;
+  height: 60%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1247,6 +1272,11 @@ body {
 }
 .ytb-bg .txt-wrap p {
   font-weight: 200 !important;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  line-height: normal;
+  color: #fff;
 }
 .ytb-bg .ytb {
   width: 850px;
@@ -1268,6 +1298,7 @@ body {
 }
 .notice-sec .inner .txt-wrap em {
   padding: 0px 0 24px 0;
+  white-space: nowrap;
 }
 
 .notice-wrap {

@@ -23,6 +23,17 @@ var swiper = new Swiper(".swiper-performance", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1.1,
+    },
+    768: {
+      slidesPerView: "auto",
+    },
+  }
 });
+
+
+// intro
 
 
