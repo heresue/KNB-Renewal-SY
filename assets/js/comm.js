@@ -1,4 +1,3 @@
-
 // sub1-----------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const sectionWork = document.querySelector(".sec-work");
@@ -28,27 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
       txtGoto.style.opacity = "0";
       txtGoto.style.visibility = "hidden";
     }
-  });
-
-  //sidebar-------------------------------------------------
-  $(".smoothscroll").on("click", function (e) {
-    e.preventDefault();
-
-    var target = this.hash,
-      $target = $(target);
-
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $target.offset().top,
-        },
-        1500,
-        "swing",
-        function () {
-          window.location.hash = target;
-        }
-      );
   });
 
   AOS.init({
@@ -129,7 +107,7 @@ $(function () {
   $window.on("scroll", _.throttle(hdScroll, 300));
   function hdScroll() {
     if (!mNav.hasClass("active")) {
-      console.log("mNav does not have active class"); // 디버깅용 메시지
+      // console.log("mNav does not have active class"); // 디버깅용 메시지
       if ($window.scrollTop() >= ($window.width() >= 1280 ? 100 : 60)) {
         gsap.to($header, {
           y: $window.width() >= 1280 ? -100 : -60,

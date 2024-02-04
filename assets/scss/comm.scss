@@ -19,7 +19,12 @@
   overflow: hidden;
 
   // margin-left: 5.556vw;
+
+  ::selection {
+    background-color: $secondary; // 사용자가 텍스트를 선택했을 때의 배경색
+  }
 }
+
 #header {
   position: fixed;
   top: 0;
@@ -39,6 +44,13 @@
     position: relative;
     // border-top: 1px solid $primary;
   }
+
+  @media screen and (max-width: 1280px) {
+    .wrapper {
+      // display: block;
+    }
+  }
+
   .inner {
     max-width: 1280px;
     width: 1280px;
@@ -177,6 +189,7 @@
     bottom: 0;
     right: 0;
     left: 100%;
+    height: 100vh;
     opacity: 0;
     padding-top: 100px;
     background: $primary;
@@ -417,44 +430,54 @@
       }
     }
   }
-  .goto-top {
-    width: 45px;
-    height: 45px;
-    // background: rgba(255, 255, 255, 0.1);
-    // background: rgb(203, 172, 223, 1);
-    background: rgb(217, 43, 43, 0.1);
-    backdrop-filter: blur(2px);
-    border-radius: 45px;
-    text-align: center;
-    line-height: 45px;
-    position: fixed;
-    position: fixed;
-    top: 900px;
-    right: 25px;
-    &:hover {
-      background: $secondary;
-    }
-  }
-  .goto-top-icon-box {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .goto-top-icon {
-    color: $primaryWhite;
-    font-size: 30px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 45px;
-    &:hover {
-      color: $primaryWhite;
-    }
-  }
 }
 @media screen and (max-width: 1280px) {
   #header {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header {
     height: 60px;
+  }
+}
+.goto-top {
+  width: 45px;
+  height: 45px;
+  // background: rgba(255, 255, 255, 0.1);
+  // background: rgb(203, 172, 223, 1);
+  background: rgb(217, 43, 43, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 45px;
+  text-align: center;
+  line-height: 45px;
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 100;
+  &:hover {
+    background: $secondary;
+  }
+}
+.goto-top-icon-box {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.goto-top-icon {
+  color: $primaryWhite;
+  font-size: 30px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 45px;
+  &:hover {
+    color: $primaryWhite;
   }
 }
 .section {
@@ -474,10 +497,20 @@
   }
   @media screen and (max-width: 1280px) {
     .inner {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .inner {
       max-width: 768px;
     }
   }
   @media screen and (max-width: 768px) {
+    .inner {
+      max-width: 480px;
+    }
+  }
+  @media screen and (max-width: 480px) {
     .inner {
       max-width: 328px;
     }
@@ -512,6 +545,16 @@
   .content,
   .side-bar-li {
     @include web-bd(18px);
+  }
+  @media screen and (max-width: 1280px) {
+    .content {
+      @include web-bd(16px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .content {
+      @include mob-bd(14px);
+    }
   }
   .main-visual {
     .inner {
@@ -572,16 +615,16 @@
       }
       @media screen and (max-width: 768px) {
         .side-bar-li {
-          width: 80px;
-          height: 30px;
-          line-height: 30px;
+          width: 90px;
+          height: 40px;
+          line-height: 40px;
           font-size: 14px;
+          font-weight: 700;
         }
       }
     }
   }
 }
-
 
 @media screen and (max-width: 1280px) {
   .inner {
@@ -596,7 +639,7 @@
     padding: 4vw 0;
     max-width: 1280px;
     margin: 0 auto;
-  }  
+  }
 }
 
 .note-sns {
@@ -664,6 +707,11 @@
       &:nth-child(2) {
         margin-left: 8px;
       }
+
+      &::placeholder {
+        font-size: 16px;
+        color: $txtSub2;
+      }
     }
 
     button {
@@ -686,7 +734,7 @@
 @media screen and (max-width: 1280px) {
   #footer {
     .inner {
-      max-width: 768px;
+      padding: 4vw 5.556vw;
     }
   }
 
@@ -736,12 +784,12 @@
     align-items: center;
     gap: 5px;
   }
-};
+}
 
 @media screen and (max-width: 768px) {
   #footer {
     .inner {
-      max-width: 328px;
+      padding: 4vw 5.556vw;
     }
   }
 
@@ -787,10 +835,8 @@
       gap: 10px;
     }
   }
-};
+}
 // footer end-----------------------------------------------------------
-
-
 
 // --------------------------------------------------------
 
