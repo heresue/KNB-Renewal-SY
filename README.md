@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 -->
 <img src="./images/comm/logo-black.png" width="18%">
 
-<center><h2>국립발레단 리뉴얼</h2></center>
+<h2 align="center">국립발레단 리뉴얼</h2>
 <!-- markdownlint-enable MD033 -->
 ---
 
