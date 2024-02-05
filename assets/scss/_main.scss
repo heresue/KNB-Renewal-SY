@@ -1,8 +1,8 @@
-body {
-  overflow-x: hidden;
-}
+// body {
+//   overflow-x: hidden;
+// }
 
-section {
+.mainsection {
   height: 100vh !important;
 }
 
@@ -19,9 +19,7 @@ section {
 .topgrd {
   background: linear-gradient(to top, black, transparent);
   position: absolute;
-
 }
-
 
 // -----------------------main-section-----------------------
 
@@ -49,7 +47,6 @@ section {
   display: none;
 }
 
-
 // -----------------------performance-section-----------------------
 
 .performance-sec {
@@ -60,7 +57,6 @@ section {
   h2 {
     padding-bottom: 80px;
   }
-
 
   .swiper-performance {
     height: 62%;
@@ -132,9 +128,6 @@ section {
   }
 }
 
-
-
-
 // -----------------------introduce-section-----------------------
 .intro-sec {
   position: relative;
@@ -187,7 +180,6 @@ section {
       color: $txtSub2;
     }
   }
-  
 
   .txt-red {
     text-align: right;
@@ -264,11 +256,9 @@ section {
   background-image: url(/images/main/knba_2.jpg);
 }
 
-
 .intro-end {
   margin-bottom: 197px;
 }
-
 
 // -----------------------youtube-section-----------------------
 
@@ -278,8 +268,6 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-
-
 
   .txt-wrap {
     width: 850px;
@@ -308,20 +296,19 @@ section {
     height: auto;
     padding-top: 30px;
   }
-//   .ytb {
-//     position:relative;
-//     height:0;
-//     padding-bottom:56.25%;
-//   }
-//   iframe {
-//   position:absolute;
-//   top:0;
-//   left:0;
-//   width:100%;
-//   height:100%;
-// }
+  //   .ytb {
+  //     position:relative;
+  //     height:0;
+  //     padding-bottom:56.25%;
+  //   }
+  //   iframe {
+  //   position:absolute;
+  //   top:0;
+  //   left:0;
+  //   width:100%;
+  //   height:100%;
+  // }
 }
-
 
 // -----------------------notice-section-----------------------
 .notice-sec {
@@ -375,7 +362,8 @@ section {
   }
 
   .noti-icon {
-    background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
+    background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center
+      center;
     width: 0;
     height: 0;
     background-size: contain;
@@ -393,7 +381,6 @@ section {
     margin-right: 8px;
   }
 }
-
 
 // -----------------------partner-section-----------------------
 
@@ -460,7 +447,6 @@ section {
 }
 
 @media screen and (max-width: 1280px) {
-
   // intro-sec
   .intro-sec {
     .txt-wrap {
