@@ -1,10 +1,11 @@
+<!-- markdownlint-disable MD033 -->
 <img src="./images/comm/logo-black.png" width="18%">
 
-<h2><center>국립발레단 리뉴얼</center></h2>
-
+<center><h2>국립발레단 리뉴얼</h2></center>
+<!-- markdownlint-enable MD033 -->
 ---
 
-<h4>Intro</h4>
+<h3>Intro</h3>
 
 > <br>본 페이지는,
 > **UI/UX 경험 향상**과 그에 따른 **브랜드 이미지 제고**를 목표로 제작하였습니다. <br>
