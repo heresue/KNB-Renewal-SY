@@ -3,7 +3,8 @@
 // }
 
 .mainsection {
-  height: 100vh !important;
+  height: 100vh;
+  background: black;
 }
 
 // 이미지 하단 gradient
@@ -134,11 +135,16 @@
   overflow: hidden;
   .img-wrap {
     background: black;
-
     .intro-image {
       position: relative;
       // height: 90%;
       z-index: 1;
+      filter: saturate(50%);
+      transition: all 0.3s;
+    }
+    .intro-image:hover {
+      filter: saturate(100%);
+      transform: scale(1.025);
     }
 
     .right {
@@ -177,19 +183,24 @@
       font-size: 115px;
       font-weight: bold;
       line-height: 62%;
+    }
+    @media screen and (max-width: 1280px) {
+      h2 {
+        font-size: 72px;
+      }
+    }
+    .txt-wt {
       color: $txtSub2;
     }
-  }
-
-  .txt-red {
-    text-align: right;
-    color: $secondary;
-    opacity: 80%;
+    .txt-red {
+      text-align: right;
+      color: $secondary;
+      opacity: 80%;
+    }
   }
 
   p {
     width: 60%;
-
     &:first-of-type {
       font-size: 28px;
       margin: 45px 0 24px 0;
@@ -203,17 +214,7 @@
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 1280px) {
-    h2 {
-      font-size: 98px !important;
-    }
-  }
-
   @media screen and (max-width: 768px) {
-    h2 {
-      font-size: 56px !important;
-    }
-
     p {
       white-space: nowrap;
 
@@ -221,7 +222,6 @@
         display: none;
       }
     }
-
     a {
       margin-top: -10px;
     }
@@ -261,6 +261,9 @@
 }
 
 // -----------------------youtube-section-----------------------
+.ytb-sec {
+  position: relative;
+}
 
 .ytb-bg {
   background-image: url(/images/main/ytb_bg.jpg);
@@ -296,18 +299,6 @@
     height: auto;
     padding-top: 30px;
   }
-  //   .ytb {
-  //     position:relative;
-  //     height:0;
-  //     padding-bottom:56.25%;
-  //   }
-  //   iframe {
-  //   position:absolute;
-  //   top:0;
-  //   left:0;
-  //   width:100%;
-  //   height:100%;
-  // }
 }
 
 // -----------------------notice-section-----------------------
@@ -424,13 +415,13 @@
     align-items: center;
 
     a {
-      width: 100%;
-      height: 30px;
+      width: 130px;
+      height: 10px;
     }
 
     img {
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
       object-fit: contain;
       filter: grayscale(100%) opacity(70%);
     }
@@ -448,13 +439,6 @@
 
 @media screen and (max-width: 1280px) {
   // intro-sec
-  .intro-sec {
-    .txt-wrap {
-      h2 {
-        font-size: 72px;
-      }
-    }
-  }
 
   // notice section //
   .notice-sec {

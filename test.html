@@ -1,100 +1,309 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-.intro-sec {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-.parallax-element {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  transform: translateZ(0);
-}
-.intro-bg {
-  position: relative;
-  background: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-    no-repeat center center;
-  background-size: cover;
-  z-index: 1;
-}
-.intro-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  opacity: 0.3;
-}
+      .intro-sec {
+        position: relative;
+        overflow: hidden;
+        .img-wrap {
+          background: black;
 
-.intro-tit {
-  position: absolute;
-  font-size: 3em;
-  color: white;
-  text-align: center;
-  width: 100%;
-  z-index: 2;
-  top: 50%; /* 초기 위치 조정 */
-}
+          .intro-image {
+            position: relative;
+            z-index: 1;
+          }
 
-.extra-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* 높이를 충분히 주어 스크롤 생성 */
-  background-color: #333;
-  padding: 20px;
-  box-sizing: border-box;
-  font-size: 3rem;
-  color: #fff;
-}
+          .right {
+            margin: 0 0 0 20%;
+          }
+        }
+
+        .grdient {
+          display: flex;
+          background: linear-gradient(transparent, black 18%);
+          margin-top: -110px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .txt-wrap {
+          padding: 0 80px;
+          width: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          &::after {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+          }
+
+          h2 {
+            position: relative;
+            font-size: 115px;
+            font-weight: bold;
+            line-height: 62%;
+          }
+          .txt-wt {
+            color: white;
+          }
+          .txt-red {
+            text-align: right;
+            color: red;
+            opacity: 80%;
+          }
+        }
+
+        p {
+          width: 60%;
+          &:first-of-type {
+            font-size: 28px;
+            margin: 45px 0 24px 0;
+          }
+
+          &:nth-last-of-type(1) {
+            font-size: 14px;
+          }
+        }
+        a {
+          margin-top: 20px;
+        }
+
+        @media screen and (max-width: 1280px) {
+          h2 {
+            font-size: 98px !important;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          h2 {
+            font-size: 56px !important;
+          }
+
+          p {
+            white-space: nowrap;
+
+            &:nth-last-of-type(1) {
+              display: none;
+            }
+          }
+
+          a {
+            margin-top: -10px;
+          }
+        }
+      }
+
+      .intro-image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 666px;
+        margin: 0 20% 0 0;
+        z-index: -2;
+        background-position: center;
+      }
+
+      .knb-1 {
+        background-image: url(/images/main/knb_1.jpg);
+      }
+
+      .knb-2 {
+        background-image: url(/images/main/knb_2-2.jpg);
+        background-position: 100% 43%;
+      }
+
+      .knba-1 {
+        background-image: url(/images/main/knba_1.jpg);
+      }
+
+      .knba-2 {
+        background-image: url(/images/main/knba_2.jpg);
+      }
+
+      .intro-end {
+        margin-bottom: 197px;
+      }
     </style>
 
+    <section class="mainsection intro-sec">
+      <div class="inner-fp">
+        <div class="img-wrap">
+          <div class="knb-1 intro-image"></div>
+        </div>
+        <div class="grdient">
+          <div class="txt-wrap">
+            <h2 class="txt-wt">KOREAN NATIONAL</h2>
+            <h2 class="txt-red">BALLET</h2>
+            <p>한국 발레 역사의 상징, 국립발레단</p>
+            <p>
+              국립발레단은 1962년 창단된 대한민국 최초의 직업발레단으로,<br />
+              60여 년의 시간 동안 수많은 무용수와 안무가, 그리고 훌륭한
+              예술감독과 작품 덕분에 국립발레단은 국내뿐만 아니라 해외에서도 그
+              위상을 인정받고 있습니다. 현재 국내 최정상 무용수 60여 명과
+              세계적인 명작들을 레퍼토리로 보유하고 있으며, 정기공연을 비롯한
+              다양한 공연을 통해 끊임없이 관객들을 찾아가고 있습니다.
+            </p>
+            <a href="sub1.html">
+              <span>
+                <svg
+                  class="arr-icon"
+                  width="40"
+                  height="13"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mainsection intro-sec">
+      <div class="inner-fp">
+        <div class="img-wrap btmgrd">
+          <div class="knb-2 intro-image right"></div>
+        </div>
+        <div class="grdient">
+          <div class="txt-wrap">
+            <h2 class="txt-wt">KOREAN NATIONAL</h2>
+            <h2 class="txt-red">BALLET</h2>
+            <p>한국 발레 역사의 상징, 국립발레단</p>
+            <p>
+              국립발레단은 1962년 창단된 대한민국 최초의 직업발레단으로,<br />
+              60여 년의 시간 동안 수많은 무용수와 안무가, 그리고 훌륭한
+              예술감독과 작품 덕분에 국립발레단은 국내뿐만 아니라 해외에서도 그
+              위상을 인정받고 있습니다. 현재 국내 최정상 무용수 60여 명과
+              세계적인 명작들을 레퍼토리로 보유하고 있으며, 정기공연을 비롯한
+              다양한 공연을 통해 끊임없이 관객들을 찾아가고 있습니다.
+            </p>
+            <a href="sub1.html">
+              <span>
+                <svg
+                  class="arr-icon"
+                  width="40"
+                  height="13"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mainsection intro-sec">
+      <div class="inner-fp">
+        <div class="img-wrap btmgrd">
+          <div class="knba-1 intro-image"></div>
+        </div>
+        <div class="grdient">
+          <div class="txt-wrap">
+            <h2 class="txt-wt">KOREAN NATIONAL</h2>
+            <h2 class="txt-red knba">BALLET ACADEMY</h2>
+            <p>국내 최초 발레단 산하 아카데미</p>
+            <p>
+              1993년 개설된 국립발레단 부설 교육 기관인 문화학교(현 국립발레단
+              부설 발레아카데미)는 당시 불모지이던 국내 발레교육에 해외유학이
+              아닌 자체 조기교육을 통해 발레 인재 육성을 위한 체계적인 교육
+              과정을 구축하였습니다. 또한 볼쇼이 발레학교와의 오랜 교류로 러시아
+              발레 메소드를 기초로 미래 인재 양성을 위해 최선을 다하고 있으며,
+              많은 스타 무용수들을 배출하여 국내 발레교육의 명실상부한 리더로
+              성장하고 있습니다.
+            </p>
+            <a href="sub1.html">
+              <span>
+                <svg
+                  class="arr-icon"
+                  width="40"
+                  height="13"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mainsection intro-sec intro-end">
+      <div class="inner-fp">
+        <div class="img-wrap btmgrd">
+          <div class="knba-2 intro-image right"></div>
+        </div>
+        <div class="grdient">
+          <div class="txt-wrap">
+            <h2 class="txt-wt">KOREAN NATIONAL</h2>
+            <h2 class="txt-red knba">BALLET ACADEMY</h2>
+            <p>한국 발레 역사의 상징, 국립발레단</p>
+            <p>
+              1993년 개설된 국립발레단 부설 교육 기관인 문화학교(현 국립발레단
+              부설 발레아카데미)는 당시 불모지이던 국내 발레교육에 해외유학이
+              아닌 자체 조기교육을 통해 발레 인재 육성을 위한 체계적인 교육
+              과정을 구축하였습니다. 또한 볼쇼이 발레학교와의 오랜 교류로 러시아
+              발레 메소드를 기초로 미래 인재 양성을 위해 최선을 다하고 있으며,
+              많은 스타 무용수들을 배출하여 국내 발레교육의 명실상부한 리더로
+              성장하고 있습니다.
+            </p>
+            <a href="sub1.html">
+              <span>
+                <svg
+                  class="arr-icon"
+                  width="40"
+                  height="13"
+                  viewBox="0 0 47 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 14H46L35.875 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-<div class="intro-sec">
-    <div class="parallax-element intro-bg"></div>  
-    <strong class="parallax-element intro-tit">글씨는 스크롤이 느림</strong>
-  </div>
-  
-  <div class="extra-content">
-    <p>Parallax Scrolling</p>
-  </div>
-    
-
-
-
-
-<script>
-window.addEventListener('scroll', function () {
-  // 스크롤 이벤트 리스너 등록
-  const sections = document.querySelector('.intro-sec'); // 모든 섹션을 가져옴
-
-  const background = sections.querySelector('.intro-bg'); // 배경 요소
-  const title = sections.querySelector('.intro-tit'); // 제목 요소
-
-
-  const scrolled = window.scrollY // 윈도우의 스크롤값
-  
-  console.log("scrollY : " + scrolled)
-
-  background.style.transform = `translateY(${scrolled * 0.8}px)`; 
-  // 제목을 스크롤 속도의 80%(빠르게)로 이동
-  title.style.transform = `translateY(${scrolled * 0}px)`; 
-  // 배경을 스크롤 속도의 30%(느리게)로 이동
-
-});
-</script>
-</body>
+    <script></script>
+  </body>
 </html>
