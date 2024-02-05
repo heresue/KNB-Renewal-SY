@@ -1,5 +1,5 @@
 <img src="./images/comm/logo-black.png" width="18%"> 
-<center><h2>국립발레단 리뉴얼 페이지</center>
+<center><h2>국립발레단 리뉴얼 페이지</h2></center>
 
 ---
 
