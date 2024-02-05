@@ -19,7 +19,7 @@
 - :gem: @minji0164 ([link to github](https://github.com/minji0164))
 - :gem: @heresue ([link to github](https://github.com/heresue))
 - :gem: @chkim9910 ([link to github](https://github.com/chkim9910))
-  <br>
+<br>
 <br>
 <h2>Page Link</h2>
 
@@ -28,7 +28,8 @@
 - :small_orange_diamond: <a href="https://chkim9910.github.io/KNB-Renewal/">Main page</a>
 - :small_orange_diamond: <a href="https://chkim9910.github.io/KNB-Renewal/sub1">Sub page-1 국립발레단 소개</a>
 - :small_orange_diamond: <a href="https://chkim9910.github.io/KNB-Renewal/sub2">Sub page-2 공연 정보</a>
-- Design with Figma <a href="https://www.figma.com/file/Cl8l0xViAvpO7k100UhVrT/%EA%B5%AD%EB%A6%BD%EB%B0%9C%EB%A0%88%EB%8B%A8?type=design&node-id=0%3A1&mode=design&t=OUFoSFTYoxJQC6MN-1">국립발레단 리뉴얼 페이지</a><br><br>
+- Design with Figma <a href="https://www.figma.com/file/Cl8l0xViAvpO7k100UhVrT/%EA%B5%AD%EB%A6%BD%EB%B0%9C%EB%A0%88%EB%8B%A8?type=design&node-id=0%3A1&mode=design&t=OUFoSFTYoxJQC6MN-1">국립발레단 리뉴얼 페이지</a>
+<br>
 <br>
 <h2>Technology Stack</h2>
 
