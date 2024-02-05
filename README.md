@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 <img src="./images/comm/logo-black.png" width="18%">
 
 <h1 align="center">국립발레단 리뉴얼</h1>
