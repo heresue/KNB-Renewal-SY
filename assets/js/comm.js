@@ -206,6 +206,8 @@ $(function () {
     gsap.registerPlugin(ScrollTrigger);
     const txtWrap = $(".performance-info .txt-wrap");
     const behindTit = $(".behind-tit");
+
+    gsap.registerPlugin(ScrollTrigger);
     gsap
       .timeline({
         scrollTrigger: {
@@ -230,65 +232,107 @@ $(function () {
     const poster = $(".poster");
     const posters = gsap.utils.toArray(".poster");
     const title = $(".tit-page");
+
     // tit-page 위로 posters 올라올 수 있도록 핀 설정
     const titleTl = gsap.timeline({
       scrollTrigger: {
         trigger: title,
         // pin: title,
-        pinSpacing: false,
+        // pinSpacing: false,
         start: "bottom bottom",
         // end: "+=30%",
         scrub: 0.5,
         // markers: true,
       },
     });
-    // poster-wrap 핀 설정
-    const sectionTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: posterWrap,
-        pin: posterWrap,
-        start: "top top",
-        end: "+=700%",
-        scrub: 0.5,
-        // markers: true,
-      },
-    });
-    // 각각의 poster에 대한 애니메이션
-    posters.forEach(function (elem, i) {
-      const tlDelay = i * 2;
-      const contentTl = gsap.timeline();
-      const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
-      const posterArr = gsap.utils.toArray(".poster .go-to-link");
-      console.log(elem);
-      // poster에 인덱스를 부여해 위로 겹칠 수 있도록 설정
-      gsap.set(poster, {
-        zIndex: (i, target, targets) => i,
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 768) {
+      // poster-wrap 핀 설정
+      const sectionTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: posterWrap,
+          pin: posterWrap,
+          start: "top top",
+          end: "+=700%",
+          scrub: 0.5,
+          // markers: true,
+        },
       });
-      // 각각의 poster에 애니메이션 설정
-      contentTl
-        .to(elem, { autoAlpha: 1 }, tlDelay)
-        .to([posterTxt[i], posterArr[i]], { autoAlpha: 0, y: 100 }, tlDelay)
-        // .to(elem, { autoAlpha: 1 })
-        .from(elem, {
-          yPercent: 100,
-          duration: 2,
-          ease: "power2.out",
-        })
-        .to(
-          [posterTxt[i], posterArr[i]],
-          {
+      // 각각의 poster에 대한 애니메이션
+      posters.forEach(function (elem, i) {
+        const tlDelay = i * 2;
+        const contentTl = gsap.timeline();
+        const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
+        const posterArr = gsap.utils.toArray(".poster .go-to-link");
+        // console.log(elem);
+        // poster에 인덱스를 부여해 위로 겹칠 수 있도록 설정
+        gsap.set(poster, {
+          zIndex: (i, target, targets) => i,
+        });
+        // 각각의 poster에 애니메이션 설정
+        contentTl
+          .to(elem, { autoAlpha: 1 }, tlDelay)
+          .to([posterTxt[i], posterArr[i]], { autoAlpha: 0, y: 100 }, tlDelay)
+          // .to(elem, { autoAlpha: 1 })
+          .from(elem, {
+            yPercent: 100,
+            duration: 2,
+            ease: "power2.out",
+          })
+          .to(
+            [posterTxt[i], posterArr[i]],
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 1,
+              ease: "power2.out",
+            },
+            tlDelay + 2
+          )
+          .to(elem, { yPercent: 0, duration: 2 });
+
+        // 각 포스터에 대한 애니메이션을 순차적으로 실행되도록 설정
+        sectionTl.add(contentTl, tlDelay);
+      });
+    } else {
+      // poster-wrap 핀 설정
+      const sectionTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: posterWrap,
+          start: "top bottom",
+          // end: "+=600%",
+          scrub: 0.5,
+        },
+      });
+      // 각각의 poster에 대한 애니메이션
+      posters.forEach(function (elem, i) {
+        const tlDelay = i * 1;
+        const contentTl = gsap.timeline();
+        const posterTxt = gsap.utils.toArray(".poster .txt-wrap");
+        const posterArr = gsap.utils.toArray(".poster .go-to-link");
+        // 각각의 poster에 애니메이션 설정
+        contentTl
+          .from([posterTxt[i], posterArr[i]], { autoAlpha: 0, y: 100 })
+          .to(posterTxt[i], {
             autoAlpha: 1,
             y: 0,
-            duration: 1,
+            duration: 0.3,
             ease: "power2.out",
-          },
-          tlDelay + 2
-        )
-        .to(elem, { yPercent: 0, duration: 2 });
+            // stagger: 0.2,
+          })
+          .to(posterArr[i], {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            delay: 0.5,
+            // stagger: 0.2,
+          });
 
-      // 각 포스터에 대한 애니메이션을 순차적으로 실행되도록 설정
-      sectionTl.add(contentTl, tlDelay);
-    });
+        // 각 포스터에 대한 애니메이션을 순차적으로 실행되도록 설정
+        sectionTl.add(contentTl, tlDelay);
+      });
+    }
 
     // *****before-monthly-schedule*****
     const beforeSchedule = $(".before-monthly-schedule");
