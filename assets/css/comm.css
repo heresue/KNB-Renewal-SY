@@ -1082,11 +1082,7 @@ button {
     gap: 10px;
   }
 }
-body {
-  overflow-x: hidden;
-}
-
-section {
+.mainsection {
   height: 100vh !important;
 }
 
