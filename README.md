@@ -1,9 +1,9 @@
 <img src="./images/comm/logo-black.png" width="18%"> 
-<center><h2>국립발레단 리뉴얼 페이지</center>
+<center>국립발레단 리뉴얼 페이지</center>
 
 ---
 
-###Intro
+<h3>Intro</h3>h3>
 
 본 페이지는
 UI/UX 경험 향상과 그에 따른 브랜드 이미지 제고를 목표로 제작하였습니다.
