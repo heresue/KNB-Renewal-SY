@@ -1328,7 +1328,7 @@ button {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.42px;
-  line-height: normal;
+  line-height: 1.5;
   color: #fff;
 }
 .ytb-bg .ytb {
@@ -1452,11 +1452,6 @@ button {
   display: none;
 }
 
-
-@media screen and (max-width: 768px) {
-  .sec {
-    margin: 50px 0;
-
 @media screen and (max-width: 1280px) {
   .intro-sec .txt-wrap h2 {
     font-size: 72px;
@@ -1487,7 +1482,11 @@ button {
   }
   .notice-wrap .noti-date {
     font-size: 12px;
-
+  }
+}
+@media screen and (max-width: 768px) {
+  .sec {
+    margin: 50px 0;
   }
 }
 .main-visual-sub1 {
@@ -2245,7 +2244,7 @@ button {
     font-weight: 400;
     font-size: 14px;
     letter-spacing: -0.42px;
-    line-height: normal;
+    line-height: 1.5;
     color: #fff;
   }
 }
@@ -2553,7 +2552,7 @@ button {
     font-weight: 400;
     font-size: 14px;
     letter-spacing: -0.42px;
-    line-height: normal;
+    line-height: 1.5;
     color: #fff;
     color: rgba(255, 255, 255, 0.8);
   }
@@ -2797,7 +2796,7 @@ button {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: -0.48px;
-    line-height: normal;
+    line-height: 1.5;
     color: #fff;
   }
 }
