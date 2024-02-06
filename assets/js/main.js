@@ -25,12 +25,18 @@ var swiper = new Swiper(".swiper-performance", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1.1,
+      slidesPerView: 1.2,
     },
     768: {
+      slidesPerView: "3.3",
+    },
+    1280: {
       slidesPerView: "auto",
     },
   }
 });
 
 
+
+
+// ytb
