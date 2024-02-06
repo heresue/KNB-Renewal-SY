@@ -1,350 +1,666 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HOME | 국립발레단</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="페이지 제목" />
-    <meta property="og:description" content="페이지 설명" />
-    <meta
-      property="og:image"
-      content="http://www.mysite.com/article/article1_featured_image.jpg"
-    />
-    <meta
-      property="og:url"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="페이지 제목" />
-    <meta name="twitter:description" content="페이지 설명" />
-    <meta
-      name="twitter:image"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:domain" content="사이트 명" />
-    <!-- favicon -->
-    <link rel="icon" href="./favicon.png" />
-    <!-- reset.css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
-    <!-- google font -->
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-    />
-    
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <!-- my -->
-    <link rel="stylesheet" href="./assets/css/comm.css" />
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!-- my -->
-    <script defer src="./assets/js/comm.js"></script>
-    <!-- defer: body를 다 읽은 후에 script를 읽도록 하는 명령어 -->
-  </head>
-  <body>
-    <!-- reset.scss의 u-skip 구조 참고해서 마크업해줌 -->
-    <div id="u-skip">
-      <a href="#gnb">주메뉴 바로가기</a>
-      <!-- #gnb: #gnb에게 연결되도록 함 -->
-      <a href="#main">본문 바로가기</a>
-    </div>
-    <div class="wrap">
-      <header id="header" class="logo">
-        <!-- width:100% -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME | 국립발레단</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="페이지 제목" />
+  <meta property="og:description" content="페이지 설명" />
+  <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+  <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="페이지 제목" />
+  <meta name="twitter:description" content="페이지 설명" />
+  <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+  <meta name="twitter:domain" content="사이트 명" />
+  <!-- favicon -->
+  <link rel="icon" href="./favicon.png" />
+  <!-- reset.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <!-- google font -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- swiper -->
+  <!-- 메인 섹션 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- partner banner (splidejs Auto Scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <!-- auto scroll -->
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+  <!-- gsap (main intro section) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+
+  <!-- header -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+  <!-- footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- my -->
+  <link rel="stylesheet" href="./assets/css/comm.css" />
+  <script defer src="./assets/js/comm.js"></script>
+  <script defer src="./assets/js/main.js"></script>
+  <!-- defer: body를 다 읽은 후에 script를 읽도록 하는 명령어 -->
+</head>
+
+<body>
+  <!-- reset.scss의 u-skip 구조 참고해서 마크업해줌 -->
+  <div id="u-skip">
+    <a href="#gnb">주메뉴 바로가기</a>
+    <!-- #gnb: #gnb에게 연결되도록 함 -->
+    <a href="#main">본문 바로가기</a>
+  </div>
+  <div class="wrap">
+    <header id="header">
+      <div class="wrapper">
         <div class="inner">
-          <!-- max-width:1280px; margin:0 auto; -->
-          <!-- inner나 container로 씀 -->
-          <h1 id="logo">
-            <a href="#">logo</a>
-          </h1>
-          <div class="col-right">
-            <div class="gnb-wrap">
-              <input
-                
-                type="checkbox"
-                name="gnbNav"
-                id="gnbNav"
-                class="inp-burger"
-              />
-              <!-- script 표기법인 카멜표기로 사용 >> 동적처리가 가능해야 하기 때문-->
-              <!-- css 표기법과 구분해서 사용해주는 것이 좋음! -->
-              <label for="gnbNav" class="label-burger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <div class="blind">전체 메뉴 보기</div>
-              </label>
-              <nav id="gnb">전체 메뉴</nav>
+          <div id="logo" class="logo">
+            <a href="#" class="logo-inner">
+              <h1 class="blind">국립발레단</h1>
+            </a>
+          </div>
+          <div class="depth">
+            <ul class="dep-1-box">
+              <li class="dep-1-li">
+                <a href="#" class="dep-1-el">국립발레단 소개</a>
+                <ul class="dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">인사말</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">대표작품</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">CI소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">찾아오시는 길</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">인사말</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dep-1-li">
+                <a href="#" class="dep-1-el">조직도</a>
+                <ul class="dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">예술스태프</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아티스트</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">행정스태프</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">역대 단장</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dep-1-li">
+                <a href="#" class="dep-1-el">공연 정보</a>
+                <ul class="dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">공연일정</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">월간일정</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">공연연보</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dep-1-li">
+                <a href="#" class="dep-1-el">후원회</a>
+                <ul class="dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">인사말 및 후원예우</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">후원 조직</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">후원회 지원사업</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dep-1-li">
+                <a href="#" class="dep-1-el">아카데미</a>
+                <ul class="dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">교장 인사말</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아카데미 소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">강사진 소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">갤러리</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">강좌 및 등록안내</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아카데미 소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아카데미 공지사항</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">자주 묻는 질문</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dep-1-li">
+                <a href="#" class="dep-1-el">소식</a>
+                <ul class="dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">공지사항</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">뉴스레터</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">1:1문의</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="icon-box">
+            <div class="language icon-el">
+              <a href="#" class="icon-inner">
+                <span class="blind">언어선택</span>
+                <span class="material-symbols-outlined hd-icon">
+                  language
+                </span>
+                <div class="select-lang">
+                  <span class="lang-el ko">한국어</span>
+                  <span class="lang-el en">ENG</span>
+                </div>
+              </a>
             </div>
-            <div class="util">
-              <ul>
-                <li>
-                  <a href="#" class="link-g link-lang"
-                    ><span class="blind">language</span></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-g link-search">
-                    <span class="blind">search</span></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-g link-mypage">
-                    <span class="blind">mypage</span>
-                  </a>
-                </li>
-              </ul>
+            <div class="login icon-el">
+              <a href="#" class="icon-inner">
+                <span class="blind">로그인</span>
+                <span class="material-symbols-outlined hd-icon">
+                  logout
+                </span>
+              </a>
+            </div>
+            <div class="hamburger m-menu">
+              <a href="#" class="menu-box">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+              </a>
+            </div>
+          </div>
+          <div class="m-nav">
+            <div class="m-select">
+              <div class="select-el login-box">
+                <a href="#" class="login"> LOGIN </a>
+              </div>
+              <div class="select-el request-box">
+                <a href="#" class="request">1:1문의</a>
+              </div>
+            </div>
+            <ul class="m-dep-1-box">
+              <li class="m-dep-1-li">
+                <a href="#" class="dep-1-el">국립발레단 소개
+                  <span class="material-symbols-outlined arr-icon">
+                    expand_more
+                  </span>
+                </a>
+                <ul class="m-dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">인사말</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">대표작품</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">CI소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">찾아오시는 길</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">인사말</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-dep-1-li">
+                <a href="#" class="dep-1-el">조직도
+                  <span class="material-symbols-outlined arr-icon">
+                    expand_more
+                  </span>
+                </a>
+                <ul class="m-dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">예술스태프</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아티스트</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">행정스태프</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">역대 단장</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-dep-1-li">
+                <a href="#" class="dep-1-el">공연 정보
+                  <span class="material-symbols-outlined arr-icon">
+                    expand_more
+                  </span>
+                </a>
+                <ul class="m-dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">공연일정</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">월간일정</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">공연연보</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-dep-1-li">
+                <a href="#" class="dep-1-el">후원회
+                  <span class="material-symbols-outlined arr-icon">
+                    expand_more
+                  </span>
+                </a>
+                <ul class="m-dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">인사말 및 후원예우</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">후원 조직</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">후원회 지원사업</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-dep-1-li">
+                <a href="#" class="dep-1-el">아카데미
+                  <span class="material-symbols-outlined arr-icon">
+                    expand_more
+                  </span>
+                </a>
+                <ul class="m-dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">교장 인사말</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아카데미 소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">강사진 소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">갤러리</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">강좌 및 등록안내</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아카데미 소개</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">아카데미 공지사항</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">자주 묻는 질문</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="m-dep-1-li">
+                <a href="#" class="dep-1-el">소식
+                  <span class="material-symbols-outlined arr-icon">
+                    expand_more
+                  </span>
+                </a>
+                <ul class="m-dep-2-box">
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">공지사항</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">뉴스레터</a>
+                  </li>
+                  <li class="dep-2-li">
+                    <a href="#" class="dep-2-el">1:1문의</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="m-language">
+              <a href="#" class="lang ko">KOR</a>
+              <a href="#" class="lang en">ENG</a>
+            </div>
+            <p class="copyright">
+              copyright &copy; 2024 Korean National Ballet
+            </p>
+          </div>
+          <div class="goto-top">
+            <a class="goto-top-icon-box" href="#">
+              <span class="material-symbols-outlined goto-top-icon">
+                north
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="mainsection main-sec">
+        <div class="main-swiper-wrap">
+          <div class="swiper main-swiper btmgrd">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/main/main_1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/main/main_2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-next button"></div>
+            <div class="swiper-button-prev button"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="mainsection performance-sec">
+        <div class="performance-wrap">
+          <div class="txt-wrap">
+            <h2 class="tit">공연정보</h2>
+          </div>
+          <!-- slides per view auto -->
+          <div class="swiper swiper-performance">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide performance-inner">
+                <div class="thumb">
+                  <img src="./images/main/perfermance-info/poster-1.jpg" alt="백조의 호수" />
+                </div>
+                <div class="txt-wrap">
+                  <strong class="post-tit">백조의 호수</strong>
+                  <div class="content-wrap">
+                    <p class="content">2024.03.27 - 03.31</p>
+                    <p class="content">LG아트센터 서울</p>
+                  </div>
+                  <button>
+                    <span>자세히 보기</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide performance-inner">
+                <div class="thumb">
+                  <img src="./images/main/perfermance-info/poster-2.jpg" alt="인어공주" />
+                </div>
+                <div class="txt-wrap">
+                  <strong class="post-tit">인어공주</strong>
+                  <div class="content-wrap">
+                    <p class="content">2024.05.01 - 05.05</p>
+                    <p class="content">예술의전당 오페라극장</p>
+                  </div>
+                  <button>
+                    <span>자세히 보기</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide performance-inner">
+                <div class="thumb">
+                  <img src="./images/main/perfermance-info/poster-3.jpg" alt="돈키호테" />
+                </div>
+                <div class="txt-wrap">
+                  <strong class="post-tit">돈키호테</strong>
+                  <div class="content-wrap">
+                    <p class="content">2024.06.05 - 06.09</p>
+                    <p class="content">예술의전당 오페라극장</p>
+                  </div>
+                  <button>
+                    <span>자세히 보기</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide performance-inner">
+                <div class="thumb">
+                  <img src="./images/main/perfermance-info/poster-4.jpg" alt="KNB Movement Series 9" />
+                </div>
+                <div class="txt-wrap">
+                  <strong class="post-tit">KNB Movement Series 9</strong>
+                  <div class="content-wrap">
+                    <p class="content">2024.06.22 - 06.23</p>
+                    <p class="content">국립극장 하늘극장</p>
+                  </div>
+                  <button>
+                    <span>자세히 보기</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide performance-inner">
+                <div class="thumb">
+                  <img src="./images/main/perfermance-info/poster-5.jpg" alt="라 바야데르" />
+                </div>
+                <div class="txt-wrap">
+                  <strong class="post-tit">라 바야데르</strong>
+                  <div class="content-wrap">
+                    <p class="content">2024.10.30 - 11.03</p>
+                    <p class="content">예술의전당 오페라극장</p>
+                  </div>
+                  <button>
+                    <span>자세히 보기</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide performance-inner">
+                <div class="thumb">
+                  <img src="./images/main/perfermance-info/poster-6.jpg" alt="호두까기 인형" />
+                </div>
+                <div class="txt-wrap">
+                  <strong class="post-tit">호두까기 인형</strong>
+                  <div class="content-wrap">
+                    <p class="content">2024.12.14 - 12.25</p>
+                    <p class="content">예술의전당 오페라극장</p>
+                  </div>
+                  <button>
+                    <span>자세히 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="mainsection intro-sec">
+        <div class="inner-fp">
+          <div class="img-wrap">
+            <div class="knb-1 intro-image"></div>
+          </div>
+
+          <div class="grdient">
+            <div class="txt-wrap">
+              <h2 class="txt-wt">KOREAN NATIONAL</h2>
+              <h2 class="txt-red">BALLET</h2>
+              <p>한국 발레 역사의 상징, 국립발레단</p>
+              <p>
+                국립발레단은 1962년 창단된 대한민국 최초의 직업발레단으로,<br />
+                60여 년의 시간 동안 수많은 무용수와 안무가, 그리고 훌륭한
+                예술감독과 작품 덕분에 국립발레단은 국내뿐만 아니라 해외에서도
+                그 위상을 인정받고 있습니다. 현재 국내 최정상 무용수 60여 명과
+                세계적인 명작들을 레퍼토리로 보유하고 있으며, 정기공연을 비롯한
+                다양한 공연을 통해 끊임없이 관객들을 찾아가고 있습니다.
+              </p>
+              <a href="sub1.html">
+                <span>
+                  <svg class="arr-icon" width="40" height="13" viewBox="0 0 47 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 14H46L35.875 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </section>
+      <section class="mainsection intro-sec">
+        <div class="inner-fp">
+          <div class="img-wrap btmgrd">
+            <div class="knb-2 intro-image right"></div>
+          </div>
+          <div class="grdient">
+            <div class="txt-wrap">
+              <h2 class="txt-wt">KOREAN NATIONAL</h2>
+              <h2 class="txt-red">BALLET</h2>
+              <p>한국 발레 역사의 상징, 국립발레단</p>
+              <p>
+                국립발레단은 1962년 창단된 대한민국 최초의 직업발레단으로,<br />
+                60여 년의 시간 동안 수많은 무용수와 안무가, 그리고 훌륭한
+                예술감독과 작품 덕분에 국립발레단은 국내뿐만 아니라 해외에서도
+                그 위상을 인정받고 있습니다. 현재 국내 최정상 무용수 60여 명과
+                세계적인 명작들을 레퍼토리로 보유하고 있으며, 정기공연을 비롯한
+                다양한 공연을 통해 끊임없이 관객들을 찾아가고 있습니다.
+              </p>
+              <a href="sub1.html">
+                <span>
+                  <svg class="arr-icon" width="40" height="13" viewBox="0 0 47 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 14H46L35.875 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
             </div>
           </div>
         </div>
-      </header>
-      <main id="main">
-        <section class="sec main-sec">
-          <swiper-container
-          class="slide-intro"
-          pagination="true"
-          pagination-clickable="true"
-          navigation="true"
-          space-between="30"
-          loop="true"
-        >
-          <swiper-slide>
-            <img src="./images/main/main_1.jpg" alt="">
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./images/main/main_2.jpg" alt="">
-          </swiper-slide>
-          <swiper-slide>
-            <img src="./images/main/main_3.jpg" alt="">
-          </swiper-slide>
-          <div class="transper"></div>
-        </swiper-container>
-        </section>
-
-
-
-        <section class="sec performance-sec">
-          <!-- slides per view auto -->
-          <div class="swiper swiperPf">
+      </section>
+      <section class="mainsection intro-sec">
+        <div class="inner-fp">
+          <div class="img-wrap btmgrd">
+            <div class="knba-1 intro-image"></div>
+          </div>
+          <div class="grdient">
             <div class="txt-wrap">
-              <h2 class="tit">공연정보</h2>
+              <h2 class="txt-wt">KOREAN NATIONAL</h2>
+              <h2 class="txt-red knba">BALLET ACADEMY</h2>
+              <p>국내 최초 발레단 산하 아카데미</p>
+              <p>
+                1993년 개설된 국립발레단 부설 교육 기관인 문화학교(현 국립발레단
+                부설 발레아카데미)는 당시 불모지이던 국내 발레교육에 해외유학이
+                아닌 자체 조기교육을 통해 발레 인재 육성을 위한 체계적인 교육
+                과정을 구축하였습니다. 또한 볼쇼이 발레학교와의 오랜 교류로
+                러시아 발레 메소드를 기초로 미래 인재 양성을 위해 최선을 다하고
+                있으며, 많은 스타 무용수들을 배출하여 국내 발레교육의 명실상부한
+                리더로 성장하고 있습니다.
+              </p>
+              <a href="sub1.html">
+                <span>
+                  <svg class="arr-icon" width="40" height="13" viewBox="0 0 47 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 14H46L35.875 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
             </div>
-            <div class="swiper-container">
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-1.jpg" alt="백조의 호수">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">백조의 호수</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.03.27 - 03.31</p>
-                          <p class="content">LG아트센터 서울</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-2.jpg" alt="인어공주">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">인어공주</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.05.01 - 05.05</p>
-                          <p class="content">예술의전당 오페라극장</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-3.jpg" alt="돈키호테">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">돈키호테</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.06.05 - 06.09</p>
-                          <p class="content">예술의전당 오페라극장</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-1.jpg" alt="백조의 호수">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">백조의 호수</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.03.27 - 03.31</p>
-                          <p class="content">LG아트센터 서울</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-4.jpg" alt="KNB Movement Series 9">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">KNB Movement Series 9</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.06.22 - 06.23</p>
-                          <p class="content">국립극장 하늘극장</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-5.jpg" alt="라 바야데르">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">라 바야데르</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.10.30 - 11.03</p>
-                          <p class="content">예술의전당 오페라극장</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper-slide performance-inner">
-                    <div class="thumb">
-                        <img src="./images/main/perfermance-info/poster-6.jpg" alt="호두까기 인형">
-                    </div>
-                    <div class="txt-wrap">
-                        <strong class="post-tit">호두까기 인형</strong>
-                        <div class="content-wrap">
-                          <p class="content">2024.12.14 - 12.25</p>
-                          <p class="content">예술의전당 오페라극장</p>
-                        </div>
-                        <button>
-                          <span>자세히 보기</span>
-                        </button>
-                    </div>
-                </div>
-
-              
-            </div>
-            <!-- <div class="swiper-scrollbar"></div> --> 
           </div>
-        
-          <script>
-            var swiper = new Swiper(".swiperPf", {
-              slidesPerView: "auto",
-              spaceBetween: 20, 
-              scrollbar: {
-                el: ".swiper-scrollbar",
-              },
-            });
-          </script>
-        </section>
+        </div>
+      </section>
 
-
-        <section class="sec intro-sec">
-          <div class="inner-fp">
-            <div class="img-wrap">
-              <img src="./images/main/knb_1.jpg" alt="국립발레단 소개1">
-              <div class="transper">
-              </div>
-            </div>
+      <section class="mainsection intro-sec intro-end">
+        <div class="inner-fp">
+          <div class="img-wrap btmgrd">
+            <div class="knba-2 intro-image right"></div>
+          </div>
+          <div class="grdient">
             <div class="txt-wrap">
-              <h2>KOREAN NATIONAL</h2>
-              <h2>BALLET</h2>
-              <P>한국 발레 역사의 상징, 국립발레단</P>
-              <P>국립발레단은 1962년 창단된 대한민국 최초의 직업발레단으로,<br>
-                60여 년의 시간 동안 수많은 무용수와 안무가, 그리고 훌륭한 예술감독과 작품 덕분에 국립발레단은 국내뿐만 아니라 해외에서도 그 위상을 인정받고 있다.
-                 현재 국내 최정상 무용수 60여 명과 세계적인 명작들을 레퍼토리로 보유하고 있으며, 정기공연을 비롯한 다양한 공연을 통해 끊임없이 관객들을 찾아가고 있습니다.</P>
+              <h2 class="txt-wt">KOREAN NATIONAL</h2>
+              <h2 class="txt-red knba">BALLET ACADEMY</h2>
+              <p>한국 발레 역사의 상징, 국립발레단</p>
+              <p>
+                1993년 개설된 국립발레단 부설 교육 기관인 문화학교(현 국립발레단
+                부설 발레아카데미)는 당시 불모지이던 국내 발레교육에 해외유학이
+                아닌 자체 조기교육을 통해 발레 인재 육성을 위한 체계적인 교육
+                과정을 구축하였습니다. 또한 볼쇼이 발레학교와의 오랜 교류로
+                러시아 발레 메소드를 기초로 미래 인재 양성을 위해 최선을 다하고
+                있으며, 많은 스타 무용수들을 배출하여 국내 발레교육의 명실상부한
+                리더로 성장하고 있습니다.
+              </p>
+              <a href="sub1.html">
+                <span>
+                  <svg class="arr-icon" width="40" height="13" viewBox="0 0 47 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 14H46L35.875 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </a>
             </div>
           </div>
-        </section>
-        <section class="sec intro-sec">
-          <div class="inner-fp">
-          <div class="img-wrap right">
-            <img src="./images/main/knb_2.jpg" alt="국립발레단 소개2">
-            <div class="transper">
-            </div>
-          </div>
+        </div>
+      </section>
+      <script>
+        gsap.utils.toArray(".img-wrap").forEach((panel, i) => {
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+          });
+        });
+      </script>
+
+      <section class="mainsection ytb-sec">
+        <div class="ytb-bg">
           <div class="txt-wrap">
-            <h2>KOREAN NATIONAL</h2>
-            <h2>BALLET</h2>
-            <P>한국 발레 역사의 상징, 국립발레단</P>
-            <P>국립발레단은 1962년 창단된 대한민국 최초의 직업발레단으로,<br>
-              60여 년의 시간 동안 수많은 무용수와 안무가, 그리고 훌륭한 예술감독과 작품 덕분에 국립발레단은 국내뿐만 아니라 해외에서도 그 위상을 인정받고 있다.
-               현재 국내 최정상 무용수 60여 명과 세계적인 명작들을 레퍼토리로 보유하고 있으며, 정기공연을 비롯한 다양한 공연을 통해 끊임없이 관객들을 찾아가고 있습니다.</P>
+            <h2 class="tit">KNB Talkshow</h2>
+            <em class="sub-tit">국립발레단 인터뷰</em>
+            <p class="content">
+              공연 비하인드 스토리와 국립발레단 단원들의 못다한 이야기들을
+              지금 바로 만나보세요!
+            </p>
           </div>
-        </div></section>
-        <section class="sec intro-sec">
-          <div class="inner-fp">
-            <div class="img-wrap">
-              <img src="./images/main/knba_1.jpg" alt="국립발레단 아카데미 소개1">
-              <div class="transper">
-              </div>
-            </div>
-            <div class="txt-wrap">
-              <h2>KOREAN NATIONAL</h2>
-              <h2>BALLET</h2>
-              <P>국내 최초 발레단 산하 아카데미</P>
-              <P>1993년 개설된 국립발레단 부설 교육 기관인 문화학교(현 국립발레단 부설 발레아카데미)는 당시 불모지이던 국내 발레교육에 해외유학이 아닌 자체 조기교육을 통해 발레 인재 육성을 위한 체계적인 교육 과정을 구축하였습니다.  또한 볼쇼이 발레학교와의 오랜 교류로 러시아 발레 메소드를 기초로 미래 인재 양성을 위해 최선을 다하고 있으며, 많은 스타 무용수들을 배출하여 국내 발레교육의 명실상부한 리더로 성장하고 있습니다.</P>
-            </div>
-          </div>
-        </section>
-        <section class="sec intro-sec">
-            <div class="inner-fp">
-            <div class="img-wrap right">
-              <img src="./images/main/knba_2.jpg" alt="국립발레단 아카데미 소개2">
-              <div class="transper">
-              </div>
-            </div>
-            <div class="txt-wrap">
-              <h2>KOREAN NATIONAL</h2>
-              <h2>BALLET</h2>
-              <P>한국 발레 역사의 상징, 국립발레단</P>
-              <P>1993년 개설된 국립발레단 부설 교육 기관인 문화학교(현 국립발레단 부설 발레아카데미)는 당시 불모지이던 국내 발레교육에 해외유학이 아닌 자체 조기교육을 통해 발레 인재 육성을 위한 체계적인 교육 과정을 구축하였습니다.  또한 볼쇼이 발레학교와의 오랜 교류로 러시아 발레 메소드를 기초로 미래 인재 양성을 위해 최선을 다하고 있으며, 많은 스타 무용수들을 배출하여 국내 발레교육의 명실상부한 리더로 성장하고 있습니다.</P>
-            </div>
-          </div>
-        </section>
-
-        <section class="sec ytb-sec">
-          <div class="ytb-bg">
-            <div class="txt-wrap">
-              <h2 class="tit">KNB Talkshow</h2>
-              <em class="sub-tit">국립발레단 인터뷰</em>
-              <p class="content">공연 비하인드 스토리와 극립발레단 단원들의 못다한 이야기들을 지금 바로 만나보세요!</p>
-            </div>
-            <div class="ytb">
-              <iframe width="850" height="478"
-              src="https://www.youtube.com/embed/6O-mnAfrUIU?si=gxmxhEW6wt3iWONz&amp;controls=0
-              &amp;
+          <div class="ytb">
+            <iframe width="850" height="478" src="https://www.youtube.com/embed/6O-mnAfrUIU?si=gxmxhEW6wt3iWONz&amp;
               controls=0
               &autoplay=1
               &mute=1
@@ -353,145 +669,209 @@
               &cc_load_policy=0
               &iv_load_policy=3
               &autohide=1
-              &playsinline=1"
-              title="YouTube video player"
-              frameborder="0"
+              &playsinline=1" title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen>
             </iframe>
-            </div>
           </div>
-        </section>
-
-        <section class="sec notice-sec">
-          <div class="inner">
-            <div class="txt-wrap">
-              <h2 class="tit">NOTICE</h2>
-              <p class="content">국립발레단의 다양한 소식을 만나보세요.</p>
-              <span>
-                <svg
-                class="arr-icon"
-                width="47"
-                height="15"
-                viewBox="0 0 47 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path
-                d="M1 14H46L35.875 1"
-                stroke="white"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                />
-                </svg>
-              </span>
-            </div>
-            <div class="notice-wrap">
-              <ul>
-                <li class="list-top">
-                  <a href="#">
-                    <h3>
-                      <span class="mover"></span>
-                      2024 강원 동계청소년올림픽 대회 기념 문화예술공연 <해설이 있는 전막발레 해적> 티켓 오픈 안내
-                    </h3>
-                    <span>2024-01-05</span>
-                  </a>
-                </li>
-                <li class="list">
-                  <a href="#">
-                    <h3>
-                      <span class="mover"></span>
-                      국립발레단 신입단원(연수단원) 채용공고
-                    </h3>
-                    <span>2024-01-02</span>
-                  </a>
-                </li>
-                <li class="list">
-                  <a href="#">
-                    <h3>
-                      <span class="mover"></span>
-                      국립발레단 신입단원(준단원) 채용공고
-                    </h3>
-                    <span>2024-01-02</span>
-                  </a>
-                </li>
-                <li class="list">
-                  <a href="#">
-                    <h3>
-                      <span class="mover"></span>
-                      KNB 2024 LINE UP
-                    </h3>
-                    <span>2023-12-07</span>
-                  </a>
-                </li>
-                <li class="list">
-                  <a href="#">
-                    <h3>
-                      <span class="mover"></span>
-                      [국립발레단] 2024 <KNB Movement Series 9> 티켓 오픈 안내
-                    </h3>
-                    <span>2023-11-17</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-
-
-        <section class="sec ptn-sec">
-          <div class="inner-fp-ptn">
-            <div class="txt-wrap">
-              <h2 class="tit">Partners</h2>
-            </div>
-            <div class="logo-wrap">
-              <!-- 로고 이미지 수정 (흑백/color) -->
-              <!-- 몽베스트, 스파이더 -->
-              <a href="https://www.culture.go.kr/wday/index.do">
-                <img src="/images/main/icon/ptn_1_cultureday.png" alt="문화가 있는 날">
-              </a>
-              <a href="https://artsarchive.arko.or.kr/">
-                <img src="/images/main/icon/ptn_2_artsarchive.png" alt="아르코예술기록원">
-              </a>
-              <a href="https://www.acrc.go.kr/">
-                <img src="/images/main/icon/ptn_3_acrc.png" alt="국민권익위원회">
-              </a>
-              <a href="https://www.mcst.go.kr/kor/main.jsp">
-                <img src="/images/main/icon/ptn_4_mcst.png" alt="문화체육관광부">
-              </a>
-              <a href="https://www.clean.go.kr/index.es?sid=a1">
-                <img src="/images/main/icon/ptn_5_clean.png" alt="청렴신문고">
-              </a>
-              <a href="https://www.samsungfire.com/">
-                <img src="/images/main/icon/ptn_6_samsung.png" alt="삼성화재">
-              </a>
-              <a href="https://www.kbfg.com/kor/index.jsp">
-                <img src="/images/main/icon/ptn_7_kb.png" alt="KB금융그룹">
-              </a>
-              <a href="https://spyder.co.kr/main/main">
-                <img src="/images/main/icon/ptn_8_spyder.png" alt="스파이더">
-              </a>
-              <a href="https://montbest.com/">
-                <img src="/images/main/icon/ptn_9_mbst.png" alt="몽베스트">
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <!-- slide-swiper -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-      </main>
-      <footer id="footer">
-        <h1 class="logo">
-          <a href="#">logo</a>
-        </h1>
-        <div class="sns">
-          <a href="#">instagram</a>
-          <a href="#">youtube</a>
-          <a href="#">blog</a>
         </div>
-      </footer>
-    </div>
-  </body>
+      </section>
+
+      <section class="mainsection notice-sec">
+        <div class="inner">
+          <div class="txt-wrap">
+            <h2 class="tit">NOTICE</h2>
+            <em class="content">국립발레단의 다양한 소식을 만나보세요.</em>
+            <span>
+              <svg class="arr-icon" width="47" height="15" viewBox="0 0 47 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 14H46L35.875 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <div class="notice-wrap">
+            <ul>
+              <li class="list-top">
+                <a href="#">
+                  <h3 class="noti-tit">
+                    <span class="noti-icon"></span>
+                    2024 강원 동계청소년올림픽 대회 기념 문화예술공연 <해설이 있는 전막발레 해적> 티켓 오픈 안내
+                  </h3>
+                  <span class="noti-date">2024-01-05</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <h3 class="noti-tit">
+                    <span class="noti-icon"></span>
+                    국립발레단 신입단원(연수단원) 채용공고
+                  </h3>
+                  <span class="noti-date">2024-01-02</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <h3 class="noti-tit">
+                    <span class="noti-icon"></span>
+                    국립발레단 신입단원(준단원) 채용공고
+                  </h3>
+                  <span class="noti-date">2024-01-02</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <h3 class="noti-tit">
+                    <span class="noti-icon"></span>
+                    KNB 2024 LINE UP
+                  </h3>
+                  <span class="noti-date">2023-12-07</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <h3 class="noti-tit">
+                    <span class="noti-icon"></span>
+                    [국립발레단] 2024 &lt;KNB Movement Series 9&gt; 티켓 오픈
+                    안내
+                  </h3>
+                  <span class="noti-date">2023-11-17</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mainsection ptn-sec">
+        <div class="ptn-wrap">
+          <div class="txt-wrap">
+            <h2 class="tit">Partners</h2>
+          </div>
+          <div class="ptn-auto-scroll-wrap">
+            <div id="ptn-splide-autoscroll" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_1_cultureday.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_2_artsarchive.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_3_acrc.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_4_mcst.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_5_clean.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_6_samsung.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_7_kb.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_8_spyder_wt.png" alt="" /></a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href=""><img src="./images/main/partners/ptn_9_montbest.png" alt="" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var splide = new Splide("#ptn-splide-autoscroll", {
+                type: "loop",
+                drag: "free",
+                focus: "center",
+                gap: "300px",
+                perPage: 4,
+                autoScroll: {
+                  speed: 2,
+                },
+              });
+
+              splide.mount(window.splide.Extensions);
+            });
+          </script>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="note-sns">
+          <p class="note">
+            (재)국립발레단은 공직유관단체로서 부정청탁 및 금품 등 수수의
+            금지에 관한 법률(청탁금지법) 적용대상 기관임을 알립니다.
+          </p>
+          <div class="sns-wrap">
+            <ul class="sns-list">
+              <li class="sns-item">
+                <a href="#" class="sns-link">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span class="blind">instagram link</span>
+                </a>
+              </li>
+              <li class="sns-item">
+                <a href="#" class="sns-link">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span class="blind">facebook link</span>
+                </a>
+              </li>
+              <li class="sns-item">
+                <a href="#" class="sns-link">
+                  <i class="fa-brands fa-twitter"></i>
+                  <span class="blind">twitter link</span>
+                </a>
+              </li>
+              <li class="sns-item">
+                <a href="#" class="sns-link">
+                  <i class="fa-brands fa-youtube"></i>
+                  <span class="blind">youtube link</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-letter">
+          <div class="info">
+            <ul class="info-list">
+              <li>
+                <span>주소 </span> 서울시 서초구 남부순환로 2406 예술의전당
+                오페라하우스 4층 (재)국립발레단 (우 06757)
+              </li>
+              <li>
+                <span>국립발레단 </span> Tel. 02-587-6180~5 | Fax. 02-587-6186
+                | Email. kballet@knballet.kr
+              </li>
+              <li><span>아카데미 </span>Tel. 02-587-6199</li>
+            </ul>
+            <div class="etc">
+              <a href="#">
+                <p class="pri">개인정보처리방침</p>
+              </a>
+              <p class="copy">Copyrightⓒ KOREAN NATIONAL BALLET 2017</p>
+            </div>
+          </div>
+          <div class="letter">
+            <span class="tit">뉴스레터</span>
+            <form name="newsletterForm" class="form">
+              <input type="text" name="uname" placeholder="이름" title="이름" />
+              <input type="text" name="email" placeholder="이메일" title="이메일" />
+              <button type="submit">등록</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+
+  </script>
+</body>
+
 </html>
