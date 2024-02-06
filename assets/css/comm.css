@@ -1452,6 +1452,11 @@ button {
   display: none;
 }
 
+
+@media screen and (max-width: 768px) {
+  .sec {
+    margin: 50px 0;
+
 @media screen and (max-width: 1280px) {
   .intro-sec .txt-wrap h2 {
     font-size: 72px;
@@ -1482,6 +1487,7 @@ button {
   }
   .notice-wrap .noti-date {
     font-size: 12px;
+
   }
 }
 @media screen and (max-width: 768px) {
