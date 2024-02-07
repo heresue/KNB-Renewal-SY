@@ -1355,20 +1355,20 @@ button {
 }
 
 .knb-1 {
-  background-image: url(/images/main/knb_1.jpg);
+  background-image: url(../../images/main/knb_1.jpg);
 }
 
 .knb-2 {
-  background-image: url(/images/main/knb_2-2.jpg);
+  background-image: url(../../images/main/knb_2-2.jpg);
   background-position: 100% 43%;
 }
 
 .knba-1 {
-  background-image: url(/images/main/knba_1.jpg);
+  background-image: url(../../images/main/knba_1.jpg);
 }
 
 .knba-2 {
-  background-image: url(/images/main/knba_2.jpg);
+  background-image: url(../../images/main/knba_2.jpg);
 }
 
 .ytb-sec {
