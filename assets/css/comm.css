@@ -1549,7 +1549,7 @@ button {
   flex: 1;
 }
 .notice-wrap .noti-icon {
-  background: url(/images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
+  background: url(../../images/main/icon/icon_dbarrow_wt.svg) no-repeat center center;
   width: 0;
   height: 0;
   background-size: contain;
