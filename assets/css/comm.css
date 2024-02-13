@@ -1316,16 +1316,13 @@ button {
   .intro-sec p:nth-last-of-type(1) {
     display: none;
   }
-  .intro-sec a {
-    padding: 0 0 0 5px;
-  }
 }
 .intro-sec .arr-icon {
   vertical-align: text-bottom;
 }
 @media screen and (max-width: 768px) {
   .intro-sec .arr-icon {
-    width: 40px;
+    width: 27px;
   }
   .intro-sec .arr-icon path {
     fill: none;
@@ -1361,6 +1358,7 @@ button {
 .knb-2 {
   background-image: url(../../images/main/knb_2-2.jpg);
   background-position: 100% 43%;
+  background-size: cover;
 }
 
 .knba-1 {
@@ -1376,7 +1374,7 @@ button {
 }
 
 .ytb-bg {
-  background-image: url(/images/main/ytb_bg.jpg);
+  background-image: url(../../images/main/ytb_bg.jpg);
   width: 100%;
   height: 77%;
   display: flex;
