@@ -262,9 +262,6 @@
         display: none;
       }
     }
-    a {
-      padding: 0 0 0 5px;
-    }
   }
 
   .arr-icon {
@@ -273,7 +270,7 @@
 
   @media screen and (max-width: 768px) {
     .arr-icon {
-      width: 40px;
+      width: 27px;
     }
 
     .arr-icon path {
@@ -312,6 +309,7 @@
 .knb-2 {
   background-image: url(../../images/main/knb_2-2.jpg);
   background-position: 100% 43%;
+  background-size: cover;
 }
 
 .knba-1 {
@@ -586,21 +584,3 @@
     display: none;
   }
 }
-
-// @media screen and (max-width: 768px) {
-//   .ytb-bg {
-//     .txt.wrap {
-//       width: 343px;
-//     }
-//   }
-
-//   .notice-wrap {
-//     .noti-tit {
-//       font-size: 14px;
-//     }
-
-//     .noti-date {
-//       font-size: 12px;
-//     }
-//   }
-// }
