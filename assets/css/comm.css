@@ -1194,11 +1194,14 @@ button {
 .performance-sec .performance-inner .content-wrap :nth-child(2) {
   text-align: right;
 }
-.performance-sec .performance-inner button {
+.performance-sec .performance-inner .btn {
+  display: block;
   background: #d92b2b;
   width: 160px;
   height: 37px;
   border-radius: 10px;
+  text-align: center;
+  line-height: 37px;
   color: white;
 }
 @media screen and (max-width: 768px) {
