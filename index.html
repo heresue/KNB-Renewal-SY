@@ -1082,19 +1082,31 @@
             </div>
             <div class="letter">
               <span class="tit">뉴스레터</span>
-              <form name="newsletterForm" class="form">
+              <form
+                name="newsletterForm"
+                class="form"
+                aria-label="뉴스레터 구독 양식"
+              >
+                <label for="name" class="hidden-label">이름</label>
                 <input
                   type="text"
-                  name="uname"
-                  placeholder="이름"
-                  title="이름"
+                  id="name"
+                  name="name"
+                  aria-label="이름"
+                  placeholder="이름을 입력하세요"
+                  required
                 />
+
+                <label for="email" class="hidden-label">이메일</label>
                 <input
-                  type="text"
+                  type="email"
+                  id="email"
                   name="email"
-                  placeholder="이메일"
-                  title="이메일"
+                  aria-label="이메일"
+                  placeholder="이메일 주소를 입력하세요"
+                  required
                 />
+
                 <button type="submit">등록</button>
               </form>
             </div>

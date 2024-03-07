@@ -923,6 +923,16 @@ button {
   max-width: 1280px;
   margin: 0 auto;
 }
+#footer .inner .hidden-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 .note-sns {
   display: flex;
@@ -1701,7 +1711,7 @@ button {
   font-size: 36px !important;
 }
 .sec-about .txt-profile .profile-wrap .position {
-  color: #d92b2b;
+  color: #ff3636;
 }
 .sec-about .pofile-img-wrap {
   position: relative;

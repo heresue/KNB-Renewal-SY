@@ -633,6 +633,17 @@
     padding: 4vw 0;
     max-width: 1280px;
     margin: 0 auto;
+
+    .hidden-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
   }
 }
 
