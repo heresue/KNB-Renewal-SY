@@ -93,7 +93,7 @@
       height: 57px;
       width: 330px;
       @include web-tit(35px);
-      margin-bottom: 2 0px;
+      margin-bottom: 20px;
     }
   }
   @media screen and (max-width: 768px) {
@@ -686,7 +686,7 @@
     &:before {
       content: "";
       display: block;
-      width: 200px px;
+      width: 200px;
       height: 483px;
       position: absolute;
       left: -200px;
