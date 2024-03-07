@@ -229,7 +229,7 @@
   .posters {
     display: flex;
     justify-content: space-between;
-    mask: linear-gradient(
+    mask-image: linear-gradient(
       to top,
       transparent 0%,
       black 10%,
