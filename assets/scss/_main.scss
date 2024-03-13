@@ -1,10 +1,7 @@
-// body {
-//   overflow-x: hidden;
-// }
-
 .mainsection {
   height: 100vh;
   background: black;
+  word-break: keep-all;
 }
 
 // 이미지 하단 gradient
@@ -15,11 +12,6 @@
   bottom: 0;
   height: 13%;
   width: 100%;
-}
-
-.topgrd {
-  background: linear-gradient(to top, black, transparent);
-  position: absolute;
 }
 
 // -----------------------main-section-----------------------
@@ -124,23 +116,13 @@
         text-align: right;
       }
     }
-    .btn {
-      display: block;
+    button {
       background: #d92b2b;
       width: 160px;
       height: 37px;
       border-radius: 10px;
-      text-align: center;
-      line-height: 37px;
       color: white;
     }
-    // button {
-    //   background: #d92b2b;
-    //   width: 160px;
-    //   height: 37px;
-    //   border-radius: 10px;
-    //   color: white;
-    // }
   }
 
   @media screen and (max-width: 768px) {
@@ -153,7 +135,7 @@
 
     .performance-inner {
       .thumb {
-        height: 70%;
+        height: 70%px;
       }
     }
   }
@@ -163,11 +145,14 @@
 .intro-sec {
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  .inner-fp {
+    height: 100%;
+  }
   .img-wrap {
     background: black;
     .intro-image {
       position: relative;
-      // height: 90%;
       z-index: 1;
       filter: saturate(50%);
       transition: all 0.3s;
@@ -176,26 +161,23 @@
       filter: saturate(120%) opacity(100%);
       transform: scale(1.025);
     }
-
     .right {
       margin: 0 0 0 20%;
     }
   }
-
   .grdient {
     display: flex;
-    background: linear-gradient(transparent, black 18%);
-    margin-top: -110px;
-    position: relative;
+    background: linear-gradient(transparent, black 50%);
     z-index: 2;
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 72px;
   }
-
   .txt-wrap {
     padding: 0 80px;
     width: 100%;
     display: flex;
     flex-direction: column;
-
     &::after {
       content: "";
       background-color: black;
@@ -206,7 +188,6 @@
       height: 100vh;
       z-index: -1;
     }
-
     h2 {
       position: relative;
       font-size: 115px;
@@ -219,7 +200,7 @@
       }
     }
     @media screen and (max-width: 768px) {
-      .instruction {
+      .desc {
         text-align: right;
         padding: 20px 20px;
       }
@@ -237,17 +218,26 @@
       opacity: 80%;
     }
   }
-
-  p {
-    width: 60%;
-    font-size: 28px;
-    margin-top: 52px;
-    &:nth-last-of-type(1) {
-      font-size: 14px;
-      margin: 24px 0 10px 0;
+  .desc-box {
+    width: 90%;
+    p {
+      font-size: 28px;
+      margin-top: 20px;
+      &:nth-child(2) {
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+    .sub-desc {
+      padding: 45px 0 20px;
+      font-size: 18px;
+    }
+    .desc-right {
+      text-align: right;
+      width: 100%;
+      padding-left: 100px;
     }
   }
-
   @media screen and (max-width: 1280px) {
     .txt-wrap {
       padding: 0 128px;
@@ -259,35 +249,25 @@
   a {
     margin-top: 20px;
   }
-
   @media screen and (max-width: 768px) {
     .txt-wrap {
       padding: 0 16px;
     }
-    p {
-      display: inline;
-      font-size: 18px;
-      // white-space: nowrap;
-      &:nth-last-of-type(1) {
-        display: none;
-      }
-    }
-  }
 
-  .arr-icon {
-    vertical-align: text-bottom;
-  }
-
-  @media screen and (max-width: 768px) {
     .arr-icon {
-      width: 27px;
+      vertical-align: text-bottom;
     }
 
-    .arr-icon path {
-      fill: none;
-      stroke: white;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    @media screen and (max-width: 768px) {
+      .arr-icon {
+        width: 27px;
+      }
+      .arr-icon path {
+        fill: none;
+        stroke: white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
     }
   }
 }
@@ -423,7 +403,7 @@
 
 // -----------------------notice-section-----------------------
 .notice-sec {
-  padding-top: 90px;
+  margin-top: 90px;
   .inner {
     display: flex;
     justify-content: space-between;
@@ -432,6 +412,9 @@
       display: flex;
       align-items: baseline;
       gap: 10px;
+      h2 {
+        line-height: 1 !important;
+      }
     }
     .arr-icon {
       width: 47px;
@@ -533,7 +516,7 @@
 .ptn-sec {
   height: 60vh;
   @media screen and (max-width: 768px) {
-    padding: 25% 0 0 0;
+    margin-top: 145px;
   }
 }
 
