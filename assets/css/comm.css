@@ -1094,13 +1094,12 @@ button {
 }
 .mainsection {
   height: 100vh;
-  background: black;
   word-break: keep-all;
 }
 
 .btmgrd ::before {
   content: "";
-  background: linear-gradient(to top, black, transparent);
+  background: linear-gradient(to top, #000 7%, transparent);
   position: absolute;
   bottom: 0;
   height: 13%;
@@ -1140,46 +1139,37 @@ button {
 .performance-sec h2 {
   padding-bottom: 80px;
 }
-.performance-sec .swiper-performance {
-  position: relative;
-}
 .performance-sec .performance-inner {
   width: 360px;
-  position: relative;
   text-align: left;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  opacity: 85%;
+  opacity: 70%;
   transition: all 0.5s;
 }
 .performance-sec .performance-inner .thumb {
   height: 400px;
-  position: relative;
 }
 .performance-sec .performance-inner .thumb img {
-  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
-  filter: saturate(60%) opacity(95%);
+  filter: saturate(60%);
 }
 .performance-sec .performance-inner:hover {
   opacity: 100%;
 }
 .performance-sec .performance-inner:hover img {
-  filter: saturate(110%) opacity(100%) brightness(110%);
+  filter: saturate(110%) opacity(100%) brightness(115%);
 }
 .performance-sec .performance-inner .txt-wrap {
   width: 100%;
   padding: 21px 0;
 }
 .performance-sec .performance-inner .txt-wrap strong {
-  display: block;
-  width: 100%;
-  position: relative;
   padding-bottom: 4px;
   font-size: 30px;
   font-weight: 700;
@@ -1191,8 +1181,7 @@ button {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
-  border-top: 1px solid white;
-  word-break: keep-all;
+  border-top: 1px solid #fff;
 }
 .performance-sec .performance-inner .content-wrap p {
   font-size: 16px;
@@ -1200,12 +1189,15 @@ button {
 .performance-sec .performance-inner .content-wrap :nth-child(2) {
   text-align: right;
 }
-.performance-sec .performance-inner button {
+.performance-sec .performance-inner .btn {
+  display: block;
   background: #d92b2b;
   width: 160px;
   height: 37px;
   border-radius: 10px;
-  color: white;
+  text-align: center;
+  line-height: 37px;
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   .performance-sec {
@@ -1215,9 +1207,6 @@ button {
   .performance-sec h2 {
     padding-bottom: 5px !important;
   }
-  .performance-sec .performance-inner .thumb {
-    height: 70% px;
-  }
 }
 
 .intro-sec {
@@ -1225,15 +1214,10 @@ button {
   overflow: hidden;
   height: 100vh;
 }
-.intro-sec .inner-fp {
-  height: 100%;
-}
 .intro-sec .img-wrap {
-  background: black;
+  background: #000;
 }
 .intro-sec .img-wrap .intro-image {
-  position: relative;
-  z-index: 1;
   filter: saturate(50%);
   transition: all 0.3s;
 }
@@ -1245,28 +1229,18 @@ button {
   margin: 0 0 0 20%;
 }
 .intro-sec .grdient {
+  width: 100%;
   display: flex;
-  background: linear-gradient(transparent, black 50%);
-  z-index: 2;
+  background: linear-gradient(transparent, #000 50%);
   bottom: 0;
   position: absolute;
-  padding-bottom: 72px;
+  padding-bottom: 165px;
 }
 .intro-sec .txt-wrap {
   padding: 0 80px;
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-.intro-sec .txt-wrap::after {
-  content: "";
-  background-color: black;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
 }
 .intro-sec .txt-wrap h2 {
   position: relative;
@@ -1296,8 +1270,11 @@ button {
   color: #d92b2b;
   opacity: 80%;
 }
+.intro-sec .txt-right {
+  align-items: flex-end;
+}
 .intro-sec .desc-box {
-  width: 90%;
+  width: 100%;
 }
 .intro-sec .desc-box p {
   font-size: 28px;
@@ -1306,15 +1283,19 @@ button {
 .intro-sec .desc-box p:nth-child(2) {
   font-size: 18px;
   margin: 0;
+  padding-top: 5px;
 }
-.intro-sec .desc-box .sub-desc {
-  padding: 45px 0 20px;
+.intro-sec .desc-box .desc-sub {
+  padding: 5px 0 0px;
   font-size: 18px;
+  font-weight: 200;
 }
 .intro-sec .desc-box .desc-right {
   text-align: right;
   width: 100%;
-  padding-left: 100px;
+}
+.intro-sec .arr-wrap {
+  margin-top: 10px;
 }
 @media screen and (max-width: 1280px) {
   .intro-sec .txt-wrap {
@@ -1322,6 +1303,9 @@ button {
   }
   .intro-sec p {
     width: 100%;
+  }
+  .intro-sec .desc-box .desc-right {
+    padding: 0;
   }
 }
 .intro-sec a {
@@ -1332,7 +1316,7 @@ button {
     padding: 0 16px;
   }
   .intro-sec .arr-icon {
-    vertical-align: text-bottom;
+    display: none;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
@@ -1341,14 +1325,14 @@ button {
   }
   .intro-sec .arr-icon path {
     fill: none;
-    stroke: white;
+    stroke: #fff;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
 }
 
 .intro-end {
-  height: 140vh;
+  height: 100vh;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1359,10 +1343,8 @@ button {
 .intro-image {
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   height: 600px;
   margin: 0 20% 0 0;
-  z-index: -2;
   background-position: center;
 }
 
@@ -1373,7 +1355,6 @@ button {
 .knb-2 {
   background-image: url(../../images/main/knb_2-2.jpg);
   background-position: 100% 43%;
-  background-size: cover;
 }
 
 .knba-1 {
@@ -1413,15 +1394,15 @@ button {
   flex-direction: column;
 }
 .ytb-bg .txt-wrap .tit {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
   margin-right: -50vw !important;
   padding: 25px 0;
 }
 .ytb-bg .txt-wrap .sub-tit {
   padding: 15px 0 5px 0;
 }
-.ytb-bg .txt-wrap .content {
-  opacity: 100%;
+.ytb-bg .txt-wrap .sub-tit2 {
+  font-weight: 300;
 }
 @media screen and (max-width: 1280px) {
   .ytb-bg .txt-wrap {
@@ -1432,7 +1413,7 @@ button {
   .ytb-bg .txt-wrap .sub-tit {
     display: none;
   }
-  .ytb-bg .txt-wrap .content {
+  .ytb-bg .txt-wrap .sub-tit2 {
     padding-top: 10px;
   }
 }
@@ -1518,11 +1499,11 @@ button {
   vertical-align: text-bottom;
 }
 .notice-sec .content {
-  opacity: 80%;
+  color: #9e9e9e;
 }
 @media screen and (max-width: 768px) {
   .notice-sec .inner .txt-wrap .arr-icon {
-    width: 20px;
+    display: none;
   }
 }
 
@@ -1606,13 +1587,11 @@ button {
   width: 100%;
   align-items: center;
   margin-top: 70px;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .ptn-auto-scroll-wrap .splide {
   max-width: 100%;
-  margin: 0 auto;
-  position: relative;
 }
 .ptn-auto-scroll-wrap .splide__track {
   overflow: visible;
@@ -1629,7 +1608,6 @@ button {
 .ptn-auto-scroll-wrap .splide__slide .ptn-img {
   width: 150px;
   height: 100px;
-  position: relative;
   -o-object-fit: contain;
      object-fit: contain;
   filter: grayscale(100%) opacity(90%);
